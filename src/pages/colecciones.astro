@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+
+const colecciones = [
+  {
+    title: "Hogar",
+    slug: "hogar",
+    description: "Transforma tu espacio en un refugio acogedor con productos cuidadosamente seleccionados.",
+    image: "/images/collections/hogar.jpg",
+    items: "24 productos",
+  },
+  {
+    title: "Bienestar",
+    slug: "bienestar",
+    description: "Cuida de ti con productos naturales que nutren cuerpo y alma.",
+    image: "/images/collections/bienestar.jpg",
+    items: "18 productos",
+  },
+  {
+    title: "Accesorios",
+    slug: "accesorios",
+    description: "Detalles únicos que marcan la diferencia en tu estilo personal.",
+    image: "/images/collections/accesorios.jpg",
+    items: "32 productos",
+  },
+  {
+    title: "Decoración",
+    slug: "decoracion",
+    description: "Estilo minimalista y atemporal para cada rincón de tu hogar.",
+    image: "/images/collections/decoracion.jpg",
+    items: "28 productos",
+  },
+  {
+    title: "Cocina",
+    slug: "cocina",
+    description: "Utensilios y accesorios que hacen de cocinar un placer.",
+    image: "/images/collections/cocina.jpg",
+    items: "20 productos",
+  },
+  {
+    title: "Textiles",
+    slug: "textiles",
+    description: "Tejidos naturales y suaves que aportan calidez a tu espacio.",
+    image: "/images/collections/textiles.jpg",
+    items: "16 productos",
+  },
+];
+---
+
+<Layout 
+  title="Colecciones - ELEMATT"
+  description="Explora nuestras colecciones cuidadosamente curadas de productos para hogar, bienestar y estilo de vida."
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <Hero
+    title="Nuestras Colecciones"
+    subtitle="Explora"
+    description="Descubre productos organizados por categorías que reflejan tu estilo de vida"
+  />
+
+  <!-- Introducción -->
+  <Section background="blanco" centered={true}>
+    <div class="intro-content">
+      <p class="intro-text">
+        Cada colección ha sido cuidadosamente curada para ofrecerte productos 
+        que combinan funcionalidad, estética y calidad. Explora y encuentra 
+        aquellos que resuenan con tu estilo personal.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Colecciones Grid -->
+  <Section background="lino">
+    <div class="colecciones-grid">
+      {colecciones.map((coleccion) => (
+        <a href={`/colecciones/${coleccion.slug}`} class="coleccion-card">
+          <div class="coleccion-image">
+            <img src={coleccion.image} alt={coleccion.title} loading="lazy" />
+            <div class="coleccion-overlay">
+              <span class="coleccion-items">{coleccion.items}</span>
+            </div>
+          </div>
+          <div class="coleccion-content">
+            <h3 class="coleccion-title">{coleccion.title}</h3>
+            <p class="coleccion-description">{coleccion.description}</p>
+            <span class="coleccion-link">Explorar →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="perla" centered={true}>
+    <div class="cta-section">
+      <h2>¿No encuentras lo que buscas?</h2>
+      <p>Contáctanos y te ayudaremos a encontrar el producto perfecto</p>
+      <a href="/contacto" class="btn btn-primary">
+        Contáctanos
+      </a>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  /* Introducción */
+  .intro-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--color-gris-oscuro);
+    text-align: center;
+  }
+
+  /* Colecciones Grid */
+  .colecciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .coleccion-card {
+    background-color: var(--color-blanco);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coleccion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .coleccion-image {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 Aspect Ratio */
+    overflow: hidden;
+    background-color: var(--color-perla);
+  }
+
+  .coleccion-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .coleccion-card:hover .coleccion-image img {
+    transform: scale(1.1);
+  }
+
+  .coleccion-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: var(--spacing-sm);
+  }
+
+  .coleccion-items {
+    background-color: var(--color-melon);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .coleccion-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .coleccion-title {
+    font-family: var(--font-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-salvia);
+    margin: 0;
+  }
+
+  .coleccion-description {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-gris-oscuro);
+    margin: 0;
+  }
+
+  .coleccion-link {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-melon);
+    transition: all var(--transition-fast);
+  }
+
+  .coleccion-card:hover .coleccion-link {
+    color: var(--color-salvia);
+    transform: translateX(5px);
+    display: inline-block;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  .cta-section h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-salvia);
+  }
+
+  .cta-section p {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .colecciones-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+    }
+
+    .cta-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+

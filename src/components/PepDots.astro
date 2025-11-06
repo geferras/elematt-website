@@ -1,0 +1,99 @@
+---
+/**
+ * Componente PepDots - Patrón de puntos decorativos inspirado en Pep
+ * Basado en el diseño del logo de ELEMATT
+ */
+
+interface Props {
+  variant?: 'melon' | 'salvia' | 'arena' | 'mixed';
+  size?: 'sm' | 'md' | 'lg';
+  opacity?: number;
+  animated?: boolean;
+}
+
+const { 
+  variant = 'mixed', 
+  size = 'md',
+  opacity = 0.3,
+  animated = false 
+} = Astro.props;
+
+const sizeMap = {
+  sm: { min: 4, max: 12 },
+  md: { min: 8, max: 24 },
+  lg: { min: 12, max: 36 }
+};
+
+const colorMap = {
+  melon: '#E7B49D',
+  salvia: '#6C806B',
+  arena: '#DABF9C',
+  mixed: ['#E7B49D', '#6C806B', '#DABF9C']
+};
+
+// Generar posiciones aleatorias para los puntos
+const dots = Array.from({ length: 20 }, (_, i) => ({
+  id: i,
+  x: Math.random() * 100,
+  y: Math.random() * 100,
+  size: Math.random() * (sizeMap[size].max - sizeMap[size].min) + sizeMap[size].min,
+  color: Array.isArray(colorMap[variant]) 
+    ? colorMap[variant][Math.floor(Math.random() * colorMap[variant].length)]
+    : colorMap[variant],
+  delay: Math.random() * 2
+}));
+---
+
+<div class="pep-dots" data-animated={animated}>
+  {dots.map(dot => (
+    <div
+      class="pep-dot"
+      style={`
+        left: ${dot.x}%;
+        top: ${dot.y}%;
+        width: ${dot.size}px;
+        height: ${dot.size}px;
+        background-color: ${dot.color};
+        opacity: ${opacity};
+        animation-delay: ${dot.delay}s;
+      `}
+    />
+  ))}
+</div>
+
+<style>
+  .pep-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .pep-dot {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .pep-dots[data-animated="true"] .pep-dot {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.1);
+    }
+  }
+
+  .pep-dot:hover {
+    transform: scale(1.2);
+  }
+</style>
+

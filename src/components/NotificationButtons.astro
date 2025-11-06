@@ -1,0 +1,597 @@
+---
+interface Props {
+  productId?: string;
+  productName?: string;
+  variantId?: string;
+  variantName?: string;
+  position?: 'fixed' | 'inline';
+}
+
+const {
+  productId = 'general',
+  productName = 'Nuevos Productos',
+  variantId,
+  variantName,
+  position = 'fixed',
+} = Astro.props;
+---
+
+<div class={`notification-buttons ${position}`}>
+  <!-- Botón Nuevos Productos -->
+  <button
+    class="notify-btn notify-new-products"
+    data-type="new-products"
+    data-product-id={productId}
+    data-product-name={productName}
+    aria-label="Notificarme de nuevos productos"
+  >
+    <svg class="notify-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+    </svg>
+    <span class="notify-text">Nuevos Productos</span>
+  </button>
+
+  <!-- Botón Aviso de Stock -->
+  {variantId && (
+    <button
+      class="notify-btn notify-stock"
+      data-type="stock"
+      data-product-id={productId}
+      data-product-name={productName}
+      data-variant-id={variantId}
+      data-variant-name={variantName}
+      aria-label={`Notificarme cuando ${variantName} esté disponible`}
+    >
+      <svg class="notify-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
+      </svg>
+      <span class="notify-text">Aviso de Stock</span>
+    </button>
+  )}
+</div>
+
+<!-- Modal de Notificación -->
+<div class="notification-modal" id="notificationModal" aria-hidden="true" role="dialog">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Cerrar modal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <div class="modal-header">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+        </svg>
+      </div>
+      <h3 class="modal-title">Recibe Notificaciones</h3>
+      <p class="modal-subtitle" id="modalSubtitle">Te avisaremos cuando haya novedades</p>
+    </div>
+
+    <form class="notification-form" id="notificationForm">
+      <input type="hidden" id="notificationType" name="type">
+      <input type="hidden" id="notificationProductId" name="productId">
+      <input type="hidden" id="notificationProductName" name="productName">
+      <input type="hidden" id="notificationVariantId" name="variantId">
+      <input type="hidden" id="notificationVariantName" name="variantName">
+
+      <div class="form-group">
+        <label for="notificationEmail">Email</label>
+        <input
+          type="email"
+          id="notificationEmail"
+          name="email"
+          placeholder="tu@email.com"
+          required
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="notificationName">Nombre (opcional)</label>
+        <input
+          type="text"
+          id="notificationName"
+          name="name"
+          placeholder="Tu nombre"
+          autocomplete="name"
+        />
+      </div>
+
+      <div class="form-checkbox">
+        <input
+          type="checkbox"
+          id="notificationConsent"
+          name="consent"
+          required
+        />
+        <label for="notificationConsent">
+          Acepto recibir notificaciones de ELEMATT y entiendo que puedo darme de baja en cualquier momento.
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <span>Suscribirme</span>
+      </button>
+    </form>
+
+    <div class="modal-success" id="modalSuccess" style="display: none;">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h4>¡Suscripción Exitosa!</h4>
+      <p>Te avisaremos cuando haya novedades</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ===== BOTONES DE NOTIFICACIÓN ===== */
+  .notification-buttons {
+    display: flex;
+    gap: 0.75rem;
+    z-index: 100;
+  }
+
+  .notification-buttons.fixed {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    flex-direction: column;
+  }
+
+  .notification-buttons.inline {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .notify-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .notify-new-products {
+    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    color: white;
+  }
+
+  .notify-stock {
+    background: linear-gradient(135deg, var(--color-melon-dark), var(--color-melon));
+    color: white;
+  }
+
+  .notify-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .notify-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .notify-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+  }
+
+  .notify-text {
+    white-space: nowrap;
+  }
+
+  /* ===== MODAL ===== */
+  .notification-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .notification-modal.active {
+    display: flex;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .modal-content {
+    position: relative;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--color-perla);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .modal-close:hover {
+    background: var(--color-salvia);
+    transform: rotate(90deg);
+  }
+
+  .modal-close svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-gris-oscuro);
+  }
+
+  .modal-close:hover svg {
+    stroke: white;
+  }
+
+  .modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+    stroke-width: 2;
+  }
+
+  .modal-title {
+    font-family: var(--font-primary);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-subtitle {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-gris-oscuro);
+    opacity: 0.7;
+  }
+
+  /* ===== FORMULARIO ===== */
+  .notification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-gris-oscuro);
+  }
+
+  .form-group input {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--color-perla);
+    border-radius: 0.75rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--color-salvia);
+    box-shadow: 0 0 0 3px rgba(168, 181, 160, 0.1);
+  }
+
+  .form-checkbox {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .form-checkbox input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .form-checkbox label {
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    color: var(--color-gris-oscuro);
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+  .btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(108, 128, 107, 0.3);
+  }
+
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ===== MENSAJE DE ÉXITO ===== */
+  .modal-success {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #10B981, #34D399);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .success-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: white;
+    stroke-width: 2.5;
+  }
+
+  .modal-success h4 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-success p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-gris-oscuro);
+    opacity: 0.7;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .notification-buttons.fixed {
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .notify-btn {
+      padding: 0.625rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .notify-text {
+      display: none;
+    }
+
+    .notification-buttons.fixed .notify-btn {
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .notification-buttons.fixed .notify-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .modal-content {
+      padding: 2rem 1.5rem;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Elementos del DOM
+  const modal = document.getElementById('notificationModal');
+  const modalForm = document.getElementById('notificationForm') as HTMLFormElement;
+  const modalSuccess = document.getElementById('modalSuccess');
+  const modalSubtitle = document.getElementById('modalSubtitle');
+  const modalClose = document.querySelector('.modal-close');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const notifyButtons = document.querySelectorAll('.notify-btn');
+
+  // Campos ocultos del formulario
+  const typeInput = document.getElementById('notificationType') as HTMLInputElement;
+  const productIdInput = document.getElementById('notificationProductId') as HTMLInputElement;
+  const productNameInput = document.getElementById('notificationProductName') as HTMLInputElement;
+  const variantIdInput = document.getElementById('notificationVariantId') as HTMLInputElement;
+  const variantNameInput = document.getElementById('notificationVariantName') as HTMLInputElement;
+
+  // Abrir modal
+  notifyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const type = button.getAttribute('data-type');
+      const productId = button.getAttribute('data-product-id');
+      const productName = button.getAttribute('data-product-name');
+      const variantId = button.getAttribute('data-variant-id');
+      const variantName = button.getAttribute('data-variant-name');
+
+      // Rellenar campos ocultos
+      if (typeInput) typeInput.value = type || '';
+      if (productIdInput) productIdInput.value = productId || '';
+      if (productNameInput) productNameInput.value = productName || '';
+      if (variantIdInput) variantIdInput.value = variantId || '';
+      if (variantNameInput) variantNameInput.value = variantName || '';
+
+      // Actualizar subtítulo del modal
+      if (modalSubtitle) {
+        if (type === 'new-products') {
+          modalSubtitle.textContent = 'Te avisaremos cuando lancemos nuevos productos';
+        } else if (type === 'stock') {
+          modalSubtitle.textContent = `Te avisaremos cuando ${variantName} esté disponible`;
+        }
+      }
+
+      // Mostrar modal
+      modal?.classList.add('active');
+      modal?.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Cerrar modal
+  function closeModal() {
+    modal?.classList.remove('active');
+    modal?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    
+    // Reset form después de cerrar
+    setTimeout(() => {
+      modalForm?.reset();
+      if (modalSuccess) modalSuccess.style.display = 'none';
+      if (modalForm) modalForm.style.display = 'flex';
+    }, 300);
+  }
+
+  modalClose?.addEventListener('click', closeModal);
+  modalOverlay?.addEventListener('click', closeModal);
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal?.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // Enviar formulario
+  modalForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(modalForm);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log('Suscripción de notificación:', data);
+
+    // Aquí puedes agregar la lógica para enviar a tu backend
+    // Por ahora, simulamos el envío
+    try {
+      // Simular envío
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Mostrar mensaje de éxito
+      if (modalForm) modalForm.style.display = 'none';
+      if (modalSuccess) modalSuccess.style.display = 'block';
+
+      // Cerrar modal después de 2 segundos
+      setTimeout(() => {
+        closeModal();
+      }, 2500);
+
+    } catch (error) {
+      console.error('Error al suscribirse:', error);
+      alert('Hubo un error. Por favor, inténtalo de nuevo.');
+    }
+  });
+</script>
+

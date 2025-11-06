@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+---
+
+<Layout
+  title="ELEMATT | Productos para bebés diseñados con amor"
+  description="ELEMATT crea productos para bebés que combinan seguridad, diseño y emoción. Cada producto cuenta una historia única inspirada en la infancia de Elena y sus amigas."
+  image="/products/baby-mat/shared/hero-alfombra.jpeg"
+  keywords="ELEMATT, productos bebé, alfombra bebé, productos infantiles, diseño bebé, seguridad bebé, Elena, las 4 fantásticas"
+  type="website"
+>
+  <!-- Hero Principal -->
+  <Hero
+    title="Donde cada historia empieza"
+    subtitle="ELEMATT"
+    description="Productos para bebés diseñados con amor, seguridad y una historia única"
+    ctaText="Descubre nuestra historia"
+    ctaLink="/historia"
+    backgroundImage="/products/baby-mat/shared/hero-alfombra.jpeg"
+  />
+
+  <!-- Sobre ELEMATT -->
+  <Section title="Más que productos, son historias" background="lino" centered>
+    <div class="max-w-4xl mx-auto">
+      <p class="text-2xl text-gray-700 leading-relaxed mb-8">
+        ELEMATT nace del amor de una madre por su hija <strong>Elena</strong> y sus tres mejores amigas
+        de la guardería: <strong>Laia, Isabela y Olivia</strong>.
+      </p>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Cada producto que creamos está inspirado en sus aventuras, acompañadas siempre por
+        <strong>Pep</strong>, el elefante de peluche que se convirtió en el símbolo de nuestra marca.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Nuestro Primer Producto -->
+  <Section title="Nuestro Primer Producto" background="perla">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <img
+            src="/products/baby-mat/shared/alfombra-completa.png"
+            alt="Alfombra bebé acolchada plegable ELEMATT"
+            class="img-rounded shadow-lg"
+          />
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-salvia mb-6">
+            Alfombra Bebé Acolchada Plegable
+          </h3>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Una alfombra que no solo protege a tu bebé, sino que transforma tu hogar en un espacio
+            mágico de juego, aprendizaje y calma.
+          </p>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">Grosor de 1,5 cm</h4>
+                <p class="text-gray-600">Protección superior que otras alfombras no pueden ofrecer</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">Certificación 0+</h4>
+                <p class="text-gray-600">Segura desde el nacimiento, probada por laboratorio independiente</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">Diseño reversible</h4>
+                <p class="text-gray-600">Pueblo costero (calma) / Selva tropical (aventura)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">20 Tarjetas Sensoriales incluidas</h4>
+                <p class="text-gray-600">Ilustraciones en acuarela que estimulan la imaginación</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="/productos/alfombra-bebe/150x180" class="btn btn-primary mr-4">
+            Ver Variante Compacta (150×180)
+          </a>
+          <a href="/productos/alfombra-bebe/180x200" class="btn btn-secondary">
+            Ver Variante XL (180×200)
+          </a>
+        </div>
+      </div>
+
+      <!-- Dos Variantes -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card text-center hover-lift">
+          <div class="mb-4">
+            <span class="text-4xl">📦</span>
+          </div>
+          <h4 class="text-2xl font-bold text-salvia mb-3">Variante Compacta</h4>
+          <p class="text-3xl font-bold text-melon mb-4">150×180×1,5 cm</p>
+          <p class="text-gray-600 mb-6">
+            Ideal para habitaciones o espacios reducidos sin renunciar a toda la comodidad y seguridad.
+          </p>
+          <a href="/productos/alfombra-bebe/150x180" class="btn btn-outline">
+            Ver Detalles →
+          </a>
+        </div>
+
+        <div class="card text-center hover-lift">
+          <div class="mb-4">
+            <span class="text-4xl">🏠</span>
+          </div>
+          <h4 class="text-2xl font-bold text-salvia mb-3">Variante XL</h4>
+          <p class="text-3xl font-bold text-melon mb-4">180×200×1,5 cm</p>
+          <p class="text-gray-600 mb-6">
+            Perfecto para crear un espacio amplio de juegos familiares donde todos puedan disfrutar.
+          </p>
+          <a href="/productos/alfombra-bebe/180x200" class="btn btn-outline">
+            Ver Detalles →
+          </a>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Las 4 Fantásticas -->
+  <Section title="Las 4 Fantásticas" background="lino">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xl text-center text-gray-700 mb-12">
+        Elena, Laia, Isabela y Olivia formaron un vínculo especial en la guardería.
+        Sus aventuras juntas inspiraron las ilustraciones de nuestros productos.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card">
+          <img
+            src="/products/baby-mat/shared/tarjetas-pueblo-costero.png"
+            alt="Pueblo Costero"
+            class="img-rounded mb-4"
+          />
+          <h4 class="text-xl font-semibold text-salvia mb-2">Pueblo Costero</h4>
+          <p class="text-gray-600">
+            Calma, ternura y verano. Inspirado en las aventuras de las 4 fantásticas junto al mar.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="/products/baby-mat/shared/tarjetas-selva-tropical.png"
+            alt="Selva Tropical"
+            class="img-rounded mb-4"
+          />
+          <h4 class="text-xl font-semibold text-salvia mb-2">Selva Tropical</h4>
+          <p class="text-gray-600">
+            Aventura, curiosidad y naturaleza. Donde Pep y Elena exploran juntos.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <div class="bg-blanco p-8 rounded-2xl shadow-md inline-block">
+          <p class="text-lg italic text-salvia leading-relaxed">
+            "Para mis amigas Laia, Isabela y Olivia"
+          </p>
+          <p class="text-sm text-gray-600 mt-4">
+            — Dedicatoria de Elena al terminar la etapa de guardería
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CTA Final -->
+  <Section background="perla">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold text-salvia mb-6">
+        Descubre la historia completa
+      </h2>
+      <p class="text-xl text-gray-700 mb-8">
+        Conoce cómo nació ELEMATT y la inspiración detrás de cada producto
+      </p>
+      <a href="/historia" class="btn btn-primary btn-lg">
+        Leer Nuestra Historia
+      </a>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .hover-lift {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-lg {
+    padding: 1.25rem 3rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-salvia-dark);
+    color: var(--color-salvia-dark);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-salvia-dark);
+    color: white;
+  }
+</style>
+

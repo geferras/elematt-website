@@ -1,0 +1,82 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  background?: 'lino' | 'perla' | 'blanco';
+  centered?: boolean;
+  id?: string;
+}
+
+const {
+  title,
+  subtitle,
+  background = 'lino',
+  centered = false,
+  id,
+} = Astro.props;
+
+const bgClass = `bg-${background}`;
+---
+
+<section class={`section ${bgClass}`} id={id}>
+  <div class="container">
+    {(title || subtitle) && (
+      <div class={`section-header ${centered ? 'text-center' : ''}`}>
+        {subtitle && <p class="section-subtitle">{subtitle}</p>}
+        {title && <h2 class="section-title">{title}</h2>}
+      </div>
+    )}
+    
+    <div class="section-content">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .section-subtitle {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-melon);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .section-title {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-salvia);
+    line-height: 1.2;
+  }
+
+  .section-content {
+    width: 100%;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .section {
+      padding: var(--spacing-lg) 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+

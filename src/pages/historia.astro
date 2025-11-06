@@ -1,0 +1,175 @@
+---
+/**
+ * Página de Historia - ELEMATT
+ * La historia real de Elena, Pep y las 4 fantásticas
+ * Basado en el documento "Proyecto WEB ELEMATT 01.11.2025.docx"
+ */
+
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import PepDots from '../components/PepDots.astro';
+---
+
+<Layout 
+  title="Nuestra Historia - ELEMATT"
+  description="Descubre la historia real detrás de ELEMATT: Elena, Pep y las 4 fantásticas. Una historia de amistad, juego y amor que nació en la guardería."
+  image="/images/Logo Design 1.jpg"
+>
+  <!-- Hero -->
+  <Hero
+    title="Una historia real que nació jugando"
+    subtitle="ELEMATT"
+    description="Donde cada historia empieza sobre una alfombra"
+    backgroundImage="/images/Ilustración 2.png"
+    overlay={true}
+  />
+
+  <!-- El origen de ELEMATT -->
+  <Section title="El origen de ELEMATT" background="lino">
+    <div class="relative">
+      <PepDots variant="mixed" size="md" opacity={0.15} animated={true} />
+      <div class="max-w-4xl mx-auto relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <img 
+              src="/images/Icon Design 3.jpg" 
+              alt="Pep, el elefante de ELEMATT" 
+              class="w-full max-w-md mx-auto rounded-2xl shadow-lg"
+            />
+          </div>
+          <div>
+            <p class="text-lg mb-6 leading-relaxed">
+              ELEMATT nace de la historia de <strong class="text-salvia">Elena</strong>, 
+              una niña curiosa y soñadora, y su inseparable compañero 
+              <strong class="text-salvia">Pep</strong>, el elefante que la acompañó 
+              en cada aventura de la guardería.
+            </p>
+            <p class="text-lg mb-6 leading-relaxed">
+              Junto a sus tres amigas —<strong>Laia, Isabela y Olivia</strong>, 
+              conocidas como <strong class="text-melon">"las 4 fantásticas"</strong>— 
+              compartieron risas, canciones, descubrimientos y abrazos que inspiraron 
+              el universo de nuestras ilustraciones.
+            </p>
+            <p class="text-lg leading-relaxed">
+              De esos momentos nace ELEMATT: un homenaje a la amistad, la imaginación 
+              y la infancia vivida con amor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Pep, nuestro guía -->
+  <Section title="Pep, nuestro guía" background="blanco">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-xl mb-8 leading-relaxed font-medium text-salvia">
+        "Pep acompaña a Elena en cada aventura, recordándonos que jugar también es aprender."
+      </p>
+      <p class="text-lg mb-6 leading-relaxed">
+        Su presencia en cada producto ELEMATT simboliza la <strong>ternura</strong>, 
+        la <strong>curiosidad</strong> y la <strong>conexión emocional</strong> que 
+        queremos transmitir a cada familia.
+      </p>
+      <p class="text-lg leading-relaxed text-texto-claro">
+        Cada producto cuenta un fragmento de esa historia: una alfombra para jugar, 
+        unas tarjetas para descubrir, y un mundo lleno de amor y amistad.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Las 4 fantásticas -->
+  <Section title="Las 4 fantásticas" background="perla">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-lg leading-relaxed mb-6">
+          Elena, Laia, Isabela y Olivia formaron un vínculo especial en la guardería. 
+          Sus aventuras juntas inspiraron las ilustraciones de nuestros productos.
+        </p>
+        <div class="bg-blanco p-8 rounded-2xl shadow-md inline-block">
+          <p class="text-base italic text-salvia leading-relaxed">
+            "Para mis amigas Laia, Isabela y Olivia"
+          </p>
+          <p class="text-sm text-texto-claro mt-4">
+            — Dedicatoria de Elena al terminar la etapa de guardería
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="bg-blanco p-8 rounded-2xl shadow-sm">
+          <h3 class="text-xl font-semibold text-salvia mb-4">Pueblo Costero</h3>
+          <p class="text-base leading-relaxed">
+            Una de las caras de nuestra alfombra está inspirada en las aventuras 
+            de las 4 fantásticas en un pueblo costero: calma, ternura y verano.
+          </p>
+        </div>
+        <div class="bg-blanco p-8 rounded-2xl shadow-sm">
+          <h3 class="text-xl font-semibold text-salvia mb-4">Selva Tropical</h3>
+          <p class="text-base leading-relaxed">
+            La otra cara representa la selva tropical: aventura, curiosidad y 
+            naturaleza, donde Pep y Elena exploran juntos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Nuestra filosofía -->
+  <Section title="Nuestra filosofía" background="lino">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-xl mb-8 leading-relaxed font-medium text-melon">
+        "Cada historia empieza sobre una alfombra"
+      </p>
+      <p class="text-lg mb-6 leading-relaxed">
+        ELEMATT no es solo una alfombra, sino un mundo donde los niños crecen jugando 
+        y las madres encuentran belleza en lo cotidiano.
+      </p>
+      <p class="text-lg leading-relaxed">
+        Creemos en el <strong>diseño emocional</strong>, en productos que cuentan 
+        historias reales y en la magia de la infancia vivida con amor.
+      </p>
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="blanco">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold mb-6 text-salvia">Descubre nuestros productos</h2>
+      <p class="text-lg mb-8 text-texto-claro max-w-2xl mx-auto">
+        Cada producto ELEMATT está diseñado con amor, inspirado en historias reales 
+        y pensado para acompañar el crecimiento de tu bebé.
+      </p>
+      <a 
+        href="/colecciones" 
+        class="btn btn-primary inline-block"
+      >
+        Ver Colecciones
+      </a>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .text-salvia {
+    color: var(--color-salvia);
+  }
+
+  .text-melon {
+    color: var(--color-melon);
+  }
+
+  .text-texto-claro {
+    color: var(--color-texto-claro);
+  }
+
+  .bg-blanco {
+    background-color: var(--color-blanco);
+  }
+
+  .bg-perla {
+    background-color: var(--color-perla);
+  }
+</style>
+

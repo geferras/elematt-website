@@ -1,0 +1,25 @@
+# robots.txt para ELEMATT
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://elematt.com/sitemap.xml
+
+# Disallow admin/private areas (si las hay en el futuro)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all bots to crawl
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl-delay (opcional, solo si hay problemas de carga)
+# Crawl-delay: 1
+

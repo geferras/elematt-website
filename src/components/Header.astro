@@ -1,0 +1,494 @@
+---
+const navItems = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Historia', href: '/historia' },
+  {
+    name: 'Productos',
+    href: '#',
+    dropdown: [
+      {
+        name: 'Alfombra Bebé Plegable',
+        href: '/productos/alfombra-bebe',
+        submenu: [
+          { name: 'Compacta 150×180 cm', href: '/productos/alfombra-bebe/150x180' },
+          { name: 'XL 180×200 cm', href: '/productos/alfombra-bebe/180x200' },
+        ]
+      },
+    ]
+  },
+  { name: 'Contacto', href: '/contacto' },
+];
+
+const logoImage = '/brand/pep-elefante.jpg';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src={logoImage} alt="ELEMATT" class="logo-img" />
+      </a>
+
+      <!-- Menu Toggle (Mobile) -->
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Navigation -->
+      <ul class="nav-menu" id="navMenu">
+        {navItems.map((item) => (
+          <li class={`nav-item ${item.dropdown ? 'has-dropdown' : ''}`}>
+            {item.dropdown ? (
+              <>
+                <button class="nav-link dropdown-toggle" aria-expanded="false">
+                  {item.name}
+                  <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+                <ul class="dropdown-menu">
+                  {item.dropdown.map((subItem) => (
+                    <li class={subItem.submenu ? 'has-submenu' : ''}>
+                      {subItem.submenu ? (
+                        <>
+                          <a
+                            href={subItem.href}
+                            class={`dropdown-link ${currentPath === subItem.href ? 'active' : ''}`}
+                          >
+                            {subItem.name}
+                            <svg class="submenu-icon" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                          </a>
+                          <ul class="submenu">
+                            {subItem.submenu.map((subSubItem) => (
+                              <li>
+                                <a
+                                  href={subSubItem.href}
+                                  class={`submenu-link ${currentPath === subSubItem.href ? 'active' : ''}`}
+                                >
+                                  {subSubItem.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : (
+                        <a
+                          href={subItem.href}
+                          class={`dropdown-link ${currentPath === subItem.href ? 'active' : ''}`}
+                        >
+                          {subItem.name}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a
+                href={item.href}
+                class={`nav-link ${currentPath === item.href ? 'active' : ''}`}
+              >
+                {item.name}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-color: var(--color-blanco);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all var(--transition-normal);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    height: 50px;
+    width: auto;
+    transition: opacity var(--transition-fast);
+  }
+
+  .logo:hover .logo-img {
+    opacity: 0.85;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-salvia);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-gris-oscuro);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color var(--transition-fast);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-melon);
+    transition: width var(--transition-normal);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-salvia);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Dropdown */
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .dropdown-icon {
+    transition: transform var(--transition-fast);
+  }
+
+  .has-dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-blanco);
+    box-shadow: var(--shadow-md);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-fast);
+    z-index: 1000;
+    margin-top: 0.5rem;
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-gris-oscuro);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+  }
+
+  .dropdown-link:hover,
+  .dropdown-link.active {
+    background-color: var(--color-perla);
+    color: var(--color-salvia);
+  }
+
+  /* Submenu (segundo nivel) */
+  .has-submenu {
+    position: relative;
+  }
+
+  .submenu-icon {
+    transition: transform var(--transition-fast);
+    margin-left: 0.5rem;
+  }
+
+  .has-submenu:hover .submenu-icon {
+    transform: rotate(180deg);
+  }
+
+  .submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--color-blanco);
+    box-shadow: var(--shadow-md);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all var(--transition-fast);
+    z-index: 1001;
+    margin-left: 0.5rem;
+  }
+
+  .has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .submenu-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-gris-oscuro);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+  }
+
+  .submenu-link:hover,
+  .submenu-link.active {
+    background-color: var(--color-lino);
+    color: var(--color-melon-dark);
+    padding-left: 2rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--color-blanco);
+      flex-direction: column;
+      gap: 0;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+    }
+
+    .nav-menu.active {
+      max-height: 600px;
+    }
+
+    .nav-item {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-perla);
+    }
+
+    .nav-item:last-child {
+      border-bottom: none;
+    }
+
+    .nav-link {
+      justify-content: center;
+    }
+
+    .nav-link::after {
+      display: none;
+    }
+
+    /* Dropdown mobile */
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border-radius: 0;
+      margin-top: 0;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      max-height: 400px;
+    }
+
+    .dropdown-link {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      background-color: var(--color-perla);
+    }
+
+    .dropdown-toggle {
+      width: 100%;
+    }
+
+    /* Submenu mobile */
+    .submenu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+    }
+
+    .has-submenu.active .submenu {
+      max-height: 200px;
+    }
+
+    .submenu-link {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.85rem;
+      background-color: var(--color-lino);
+    }
+
+    .submenu-icon {
+      display: inline-block;
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle?.addEventListener('click', () => {
+    navMenu?.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.nav')) {
+      navMenu?.classList.remove('active');
+      // Close all dropdowns and submenus
+      document.querySelectorAll('.has-dropdown').forEach(item => {
+        item.classList.remove('active');
+      });
+      document.querySelectorAll('.has-submenu').forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+  });
+
+  // Dropdown toggle (mobile)
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = toggle.closest('.has-dropdown');
+        parent?.classList.toggle('active');
+      }
+    });
+  });
+
+  // Submenu toggle (mobile)
+  const dropdownLinks = document.querySelectorAll('.has-submenu > .dropdown-link');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = link.closest('.has-submenu');
+        parent?.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close menu when clicking on a submenu link
+  const submenuLinks = document.querySelectorAll('.submenu-link');
+  submenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu?.classList.remove('active');
+      document.querySelectorAll('.has-dropdown').forEach(item => {
+        item.classList.remove('active');
+      });
+      document.querySelectorAll('.has-submenu').forEach(item => {
+        item.classList.remove('active');
+      });
+    });
+  });
+
+  // Close menu when clicking on a regular link
+  const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu?.classList.remove('active');
+    });
+  });
+</script>
+

@@ -1,0 +1,385 @@
+---
+import NotificationButtons from './NotificationButtons.astro';
+
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  navegacion: [
+    { name: 'Inicio', href: '/' },
+    { name: 'Filosofía', href: '/filosofia' },
+    { name: 'Colecciones', href: '/colecciones' },
+    { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
+  ],
+  legal: [
+    { name: 'Política de Privacidad', href: '/privacidad' },
+    { name: 'Términos y Condiciones', href: '/terminos' },
+    { name: 'Política de Cookies', href: '/cookies' },
+  ],
+  social: [
+    { name: 'Instagram', href: 'https://instagram.com/elematt', icon: 'instagram' },
+    { name: 'Pinterest', href: 'https://pinterest.com/elematt', icon: 'pinterest' },
+    { name: 'Facebook', href: 'https://facebook.com/elematt', icon: 'facebook' },
+    { name: 'TikTok', href: 'https://tiktok.com/@elematt', icon: 'tiktok' },
+  ],
+};
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Columna 1: Logo y descripción -->
+      <div class="footer-column">
+        <h3 class="footer-logo">ELEMATT</h3>
+        <p class="footer-description">
+          Descubre la belleza en lo simple. Productos cuidadosamente seleccionados para tu hogar y bienestar.
+        </p>
+        <div class="social-links">
+          {footerLinks.social.map((link) => (
+            <a href={link.href} class="social-link" aria-label={link.name} target="_blank" rel="noopener noreferrer">
+              {link.icon === 'instagram' && (
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              )}
+              {link.icon === 'pinterest' && (
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                </svg>
+              )}
+              {link.icon === 'facebook' && (
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              )}
+              {link.icon === 'tiktok' && (
+                <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                </svg>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="footer-column">
+        <h4 class="footer-title">Navegación</h4>
+        <ul class="footer-links">
+          {footerLinks.navegacion.map((link) => (
+            <li>
+              <a href={link.href} class="footer-link">{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Columna 3: Legal -->
+      <div class="footer-column">
+        <h4 class="footer-title">Legal</h4>
+        <ul class="footer-links">
+          {footerLinks.legal.map((link) => (
+            <li>
+              <a href={link.href} class="footer-link">{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Columna 4: Notificaciones -->
+      <div class="footer-column">
+        <h4 class="footer-title">Mantente Informado</h4>
+        <p class="footer-newsletter-text">
+          Recibe avisos de nuevos productos y stock disponible.
+        </p>
+        <div class="footer-notify-buttons">
+          <button class="footer-notify-btn" data-type="new-products" data-product-id="general" data-product-name="Nuevos Productos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span>Nuevos Productos</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p class="copyright">
+        © {currentYear} ELEMATT. Todos los derechos reservados.
+      </p>
+      <p class="affiliate-disclaimer">
+        Como Asociado de Amazon, ganamos por compras calificadas.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-salvia);
+    color: var(--color-blanco);
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .footer-logo {
+    font-family: var(--font-primary);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-melon);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .footer-description {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-lino);
+    opacity: 0.9;
+  }
+
+  .footer-title {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-melon);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-link {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    color: var(--color-lino);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: all var(--transition-fast);
+  }
+
+  .footer-link:hover {
+    color: var(--color-melon);
+    opacity: 1;
+    padding-left: 0.5rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+  }
+
+  .social-link:hover {
+    background-color: var(--color-melon-dark);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 12px rgba(244, 194, 184, 0.4);
+  }
+
+  .social-icon {
+    width: 22px;
+    height: 22px;
+    transition: all var(--transition-fast);
+  }
+
+  .social-link:hover .social-icon {
+    transform: scale(1.1);
+  }
+
+  .footer-newsletter-text {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    color: var(--color-lino);
+    opacity: 0.9;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .newsletter-input {
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-blanco);
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+  }
+
+  .newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: var(--color-melon);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .newsletter-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-melon-dark);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+  }
+
+  .newsletter-button:hover {
+    background-color: var(--color-arena-dark);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Footer Notify Buttons */
+  .footer-notify-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .footer-notify-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-blanco);
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+  }
+
+  .footer-notify-btn:hover {
+    background-color: var(--color-melon-dark);
+    border-color: var(--color-melon-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 194, 184, 0.4);
+  }
+
+  .footer-notify-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: var(--spacing-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .copyright,
+  .affiliate-disclaimer {
+    font-family: var(--font-secondary);
+    font-size: 0.875rem;
+    color: var(--color-lino);
+    opacity: 0.8;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer {
+      padding: var(--spacing-lg) 0 var(--spacing-md);
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+</style>
+
+<script>
+  // Newsletter form submission
+  const newsletterForm = document.querySelector('.newsletter-form');
+
+  newsletterForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = newsletterForm.querySelector('.newsletter-input') as HTMLInputElement;
+    const email = input.value;
+
+    // Aquí puedes agregar la lógica para enviar el email a tu servicio de newsletter
+    console.log('Newsletter subscription:', email);
+
+    // Mostrar mensaje de éxito
+    alert('¡Gracias por suscribirte! Pronto recibirás nuestras novedades.');
+    input.value = '';
+  });
+
+  // Footer notify buttons - conectar con el modal de NotificationButtons
+  const footerNotifyButtons = document.querySelectorAll('.footer-notify-btn');
+
+  footerNotifyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Crear un evento personalizado para abrir el modal
+      const type = button.getAttribute('data-type');
+      const productId = button.getAttribute('data-product-id');
+      const productName = button.getAttribute('data-product-name');
+
+      // Buscar el botón de notificación correspondiente y hacer click
+      const notifyBtn = document.querySelector(`.notify-btn[data-type="${type}"]`) as HTMLElement;
+      if (notifyBtn) {
+        notifyBtn.click();
+      }
+    });
+  });
+</script>
+
+<!-- Modal de Notificación (compartido) -->
+<NotificationButtons productId="general" productName="Nuevos Productos" position="fixed" />

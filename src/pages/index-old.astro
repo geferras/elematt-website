@@ -1,0 +1,350 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout
+  title="ELEMATT - Descubre la belleza en lo simple"
+  description="ELEMATT nace del amor de Elena y Pep por crear espacios seguros y estimulantes para el desarrollo infantil. Descubre nuestra alfombra plegable y tarjetas sensoriales."
+>
+
+  <!-- Hero Section -->
+  <Hero
+    title="Donde cada historia empieza sobre una alfombra"
+    subtitle="ELEMATT"
+    description="Alfombra plegable + tarjetas sensoriales diseñadas con amor para crecer jugando"
+    ctaText="Descubre nuestra historia"
+    ctaLink="/historia"
+    backgroundImage="/images/pagina inicio.jpeg"
+  />
+
+  <!-- Sección: Nuestro Producto -->
+  <section id="producto" class="section bg-blanco">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-salvia mb-4">Nuestra Primera Creación</h2>
+        <p class="text-xl max-w-3xl mx-auto">
+          Alfombra plegable premium + Set de 20 tarjetas sensoriales ilustradas en acuarela
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Imagen del producto -->
+        <div class="order-2 md:order-1">
+          <img
+            src="/images/alfombra.png"
+            alt="Alfombra plegable ELEMATT con ilustraciones de pueblo costero y selva tropical"
+            class="img-rounded shadow-lg"
+          />
+        </div>
+
+        <!-- Descripción del producto -->
+        <div class="order-1 md:order-2">
+          <h3 class="text-melon mb-6">Alfombra Plegable Premium + 20 Tarjetas Sensoriales</h3>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3">
+              <span class="text-salvia text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1">Confort superior: grosor de 1,5 cm</h4>
+                <p class="text-gray-600">Acolchado ideal para proteger al bebé en cada movimiento</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-salvia text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1">Certificación 0+ (ZERO+)</h4>
+                <p class="text-gray-600">Apta desde el nacimiento, probada por laboratorio independiente</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-salvia text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1">Dos tamaños disponibles</h4>
+                <p class="text-gray-600">Grande: 180×200×1,5 cm | Mediana: 150×180×1,5 cm</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-salvia text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1">Diseño reversible</h4>
+                <p class="text-gray-600">Pueblo costero (calma) / Selva tropical (aventura)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-salvia text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1">20 Tarjetas Sensoriales (14×14 cm)</h4>
+                <p class="text-gray-600">Doble cara con ilustraciones en acuarela, estimulan lenguaje y observación</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-salvia text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1">Packaging premium</h4>
+                <p class="text-gray-600">Bolsa PU reutilizable con diseño original</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#comprar" class="btn btn-primary">
+            Ver en Amazon
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Las 4 Fantásticas -->
+  <section class="section bg-perla">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-salvia mb-4">Las 4 Fantásticas</h2>
+        <p class="text-xl max-w-3xl mx-auto">
+          Elena, Laia, Isabela y Olivia formaron un vínculo especial en la guardería. Sus aventuras juntas inspiraron las ilustraciones de nuestros productos.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Pueblo Costero -->
+        <div class="card text-center">
+          <div class="mb-4">
+            <img
+              src="/images/tarjetas-pueblo.png"
+              alt="Tarjetas sensoriales - Pueblo Costero"
+              class="img-rounded mx-auto"
+            />
+          </div>
+          <h3 class="text-xl mb-2 text-salvia">Pueblo Costero</h3>
+          <p class="text-sm">
+            Una de las caras de nuestra alfombra está inspirada en las aventuras de las 4 fantásticas en un pueblo costero: calma, ternura y verano.
+          </p>
+        </div>
+
+        <!-- Selva Tropical -->
+        <div class="card text-center">
+          <div class="mb-4">
+            <img
+              src="/images/tarjetas-selva.png"
+              alt="Tarjetas sensoriales - Selva Tropical"
+              class="img-rounded mx-auto"
+            />
+          </div>
+          <h3 class="text-xl mb-2 text-salvia">Selva Tropical</h3>
+          <p class="text-sm">
+            La otra cara representa la selva tropical: aventura, curiosidad y naturaleza, donde Pep y Elena exploran juntos.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <div class="bg-blanco p-8 rounded-2xl shadow-md inline-block max-w-2xl">
+          <p class="text-base italic text-salvia leading-relaxed">
+            "Para mis amigas Laia, Isabela y Olivia"
+          </p>
+          <p class="text-sm text-gray-600 mt-4">
+            — Dedicatoria de Elena al terminar la etapa de guardería
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Por qué ELEMATT -->
+  <section class="section bg-blanco">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-salvia mb-4">¿Por qué elegir ELEMATT?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-5xl mb-4">🎨</div>
+          <h3 class="text-xl mb-3 text-salvia">Diseño Cuidado</h3>
+          <p>
+            Cada detalle pensado para estimular el desarrollo visual y cognitivo del bebé
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-5xl mb-4">🛡️</div>
+          <h3 class="text-xl mb-3 text-salvia">Seguridad Certificada</h3>
+          <p>
+            Materiales de alta calidad con certificación 0+ para la tranquilidad de los padres
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-5xl mb-4">❤️</div>
+          <h3 class="text-xl mb-3 text-salvia">Hecho con Amor</h3>
+          <p>
+            Creado por padres para padres, con la experiencia de criar a nuestras propias hijas
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: CTA Final -->
+  <section class="section bg-salvia text-white">
+    <div class="container text-center">
+      <h2 class="mb-6 text-white">Descubre la historia detrás de ELEMATT</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Conoce a Elena y Pep, y cómo su amor por sus hijas inspiró la creación de productos únicos
+      </p>
+      <a href="/historia" class="btn btn-melon">
+        Nuestra Historia
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+
+  .mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .mb-3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .mb-1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .md\:order-1 {
+      order: 1;
+    }
+
+    .md\:order-2 {
+      order: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:grid-cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .max-w-3xl {
+    max-width: 48rem;
+  }
+
+  .max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .items-start {
+    align-items: flex-start;
+  }
+
+  .gap-12 {
+    gap: 3rem;
+  }
+
+  .gap-8 {
+    gap: 2rem;
+  }
+
+  .gap-3 {
+    gap: 0.75rem;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .text-gray-600 {
+    color: #4b5563;
+  }
+
+  .font-semibold {
+    font-weight: 600;
+  }
+
+  .opacity-90 {
+    opacity: 0.9;
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+</style>
+
