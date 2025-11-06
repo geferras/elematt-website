@@ -1,19 +1,23 @@
 ---
 import NotificationButtons from './NotificationButtons.astro';
+import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const currentYear = new Date().getFullYear();
 
 const footerLinks = {
   navegacion: [
-    { name: 'Inicio', href: '/' },
-    { name: 'Filosofía', href: '/filosofia' },
-    { name: 'Colecciones', href: '/colecciones' },
-    { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
+    { name: t('nav.home'), href: translatePath('/', lang) },
+    { name: t('nav.philosophy'), href: translatePath('/filosofia', lang) },
+    { name: t('nav.collections'), href: translatePath('/colecciones', lang) },
+    { name: t('nav.aboutUs'), href: translatePath('/sobre-nosotros', lang) },
   ],
   legal: [
-    { name: 'Política de Privacidad', href: '/privacidad' },
-    { name: 'Términos y Condiciones', href: '/terminos' },
-    { name: 'Política de Cookies', href: '/cookies' },
+    { name: t('footer.privacyPolicy'), href: translatePath('/privacidad', lang) },
+    { name: t('footer.termsConditions'), href: translatePath('/terminos', lang) },
+    { name: t('footer.cookiePolicy'), href: translatePath('/cookies', lang) },
   ],
   social: [
     { name: 'Instagram', href: 'https://instagram.com/elematt', icon: 'instagram' },
@@ -31,7 +35,7 @@ const footerLinks = {
       <div class="footer-column">
         <h3 class="footer-logo">ELEMATT</h3>
         <p class="footer-description">
-          Descubre la belleza en lo simple. Productos cuidadosamente seleccionados para tu hogar y bienestar.
+          {t('footer.description')}
         </p>
         <div class="social-links">
           {footerLinks.social.map((link) => (
@@ -63,7 +67,7 @@ const footerLinks = {
 
       <!-- Columna 2: Navegación -->
       <div class="footer-column">
-        <h4 class="footer-title">Navegación</h4>
+        <h4 class="footer-title">{t('footer.navigation')}</h4>
         <ul class="footer-links">
           {footerLinks.navegacion.map((link) => (
             <li>
@@ -75,7 +79,7 @@ const footerLinks = {
 
       <!-- Columna 3: Legal -->
       <div class="footer-column">
-        <h4 class="footer-title">Legal</h4>
+        <h4 class="footer-title">{t('footer.legal')}</h4>
         <ul class="footer-links">
           {footerLinks.legal.map((link) => (
             <li>
@@ -87,16 +91,16 @@ const footerLinks = {
 
       <!-- Columna 4: Notificaciones -->
       <div class="footer-column">
-        <h4 class="footer-title">Mantente Informado</h4>
+        <h4 class="footer-title">{t('footer.stayInformed')}</h4>
         <p class="footer-newsletter-text">
-          Recibe avisos de nuevos productos y stock disponible.
+          {t('footer.stayInformedDesc')}
         </p>
         <div class="footer-notify-buttons">
-          <button class="footer-notify-btn" data-type="new-products" data-product-id="general" data-product-name="Nuevos Productos">
+          <button class="footer-notify-btn" data-type="new-products" data-product-id="general" data-product-name={t('footer.newProducts')}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
             </svg>
-            <span>Nuevos Productos</span>
+            <span>{t('footer.newProducts')}</span>
           </button>
         </div>
       </div>
@@ -105,10 +109,10 @@ const footerLinks = {
     <!-- Copyright -->
     <div class="footer-bottom">
       <p class="copyright">
-        © {currentYear} ELEMATT. Todos los derechos reservados.
+        © {currentYear} ELEMATT. {t('footer.copyright')}
       </p>
       <p class="affiliate-disclaimer">
-        Como Asociado de Amazon, ganamos por compras calificadas.
+        {t('footer.amazonDisclaimer')}
       </p>
     </div>
   </div>

@@ -1,22 +1,28 @@
 ---
+import LanguageSelector from './LanguageSelector.astro';
+import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const navItems = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Historia', href: '/historia' },
+  { name: t('nav.home'), href: translatePath('/', lang) },
+  { name: t('nav.history'), href: translatePath('/historia', lang) },
   {
-    name: 'Productos',
+    name: t('nav.products'),
     href: '#',
     dropdown: [
       {
-        name: 'Alfombra Bebé Plegable',
-        href: '/productos/alfombra-bebe',
+        name: t('nav.babyMat'),
+        href: translatePath('/productos/alfombra-bebe', lang),
         submenu: [
-          { name: 'Compacta 150×180 cm', href: '/productos/alfombra-bebe/150x180' },
-          { name: 'XL 180×200 cm', href: '/productos/alfombra-bebe/180x200' },
+          { name: t('nav.compact'), href: translatePath('/productos/alfombra-bebe/150x180', lang) },
+          { name: t('nav.xl'), href: translatePath('/productos/alfombra-bebe/180x200', lang) },
         ]
       },
     ]
   },
-  { name: 'Contacto', href: '/contacto' },
+  { name: t('nav.contact'), href: translatePath('/contacto', lang) },
 ];
 
 const logoImage = '/brand/pep-elefante.jpg';
@@ -98,6 +104,11 @@ const currentPath = Astro.url.pathname;
             )}
           </li>
         ))}
+
+        <!-- Language Selector -->
+        <li class="nav-item nav-lang">
+          <LanguageSelector />
+        </li>
       </ul>
     </nav>
   </div>
@@ -140,19 +151,60 @@ const currentPath = Astro.url.pathname;
   .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    position: relative;
   }
 
-  .hamburger {
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
     width: 25px;
     height: 3px;
     background-color: var(--color-salvia);
     border-radius: 2px;
     transition: all var(--transition-fast);
+    display: block;
+  }
+
+  .hamburger {
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    top: 8px;
+  }
+
+  .menu-toggle.active .hamburger {
+    background-color: transparent;
+  }
+
+  .menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
   }
 
   .nav-menu {
@@ -202,6 +254,12 @@ const currentPath = Astro.url.pathname;
   .nav-link:hover::after,
   .nav-link.active::after {
     width: 100%;
+  }
+
+  /* Language Selector in Nav */
+  .nav-lang {
+    display: flex;
+    align-items: center;
   }
 
   /* Dropdown */
@@ -361,6 +419,12 @@ const currentPath = Astro.url.pathname;
       display: none;
     }
 
+    /* Language selector mobile */
+    .nav-lang {
+      justify-content: center;
+      padding: 1rem 0;
+    }
+
     /* Dropdown mobile */
     .dropdown-menu {
       position: static;
@@ -428,6 +492,7 @@ const currentPath = Astro.url.pathname;
 
   menuToggle?.addEventListener('click', () => {
     navMenu?.classList.toggle('active');
+    menuToggle?.classList.toggle('active');
   });
 
   // Close menu when clicking outside
@@ -435,6 +500,7 @@ const currentPath = Astro.url.pathname;
     const target = e.target as HTMLElement;
     if (!target.closest('.nav')) {
       navMenu?.classList.remove('active');
+      menuToggle?.classList.remove('active');
       // Close all dropdowns and submenus
       document.querySelectorAll('.has-dropdown').forEach(item => {
         item.classList.remove('active');
@@ -488,6 +554,7 @@ const currentPath = Astro.url.pathname;
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navMenu?.classList.remove('active');
+      menuToggle?.classList.remove('active');
     });
   });
 </script>

@@ -7,6 +7,15 @@ export default defineConfig({
   site: 'https://elematt.com',
   output: 'static',
 
+  // i18n configuration
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en', 'pt', 'it'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+
   build: {
     assets: 'assets',
   },
