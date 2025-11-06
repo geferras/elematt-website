@@ -1,0 +1,220 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { useTranslations, translatePath } from '../../i18n/utils';
+
+const lang = 'de';
+const t = useTranslations(lang);
+---
+
+<Layout
+  title={t('home.title')}
+  description={t('home.description')}
+  image="/products/baby-mat/shared/hero-alfombra.jpeg"
+  keywords={t('home.keywords')}
+  type="website"
+>
+  <!-- Hero Principal -->
+  <Hero
+    title={t('home.heroTitle')}
+    subtitle={t('home.heroSubtitle')}
+    description={t('home.heroDescription')}
+    ctaText={t('home.heroCta')}
+    ctaLink={translatePath('/historia', lang)}
+    backgroundImage="/products/baby-mat/shared/hero-alfombra.jpeg"
+  />
+
+  <!-- Sobre ELEMATT -->
+  <Section title={t('home.aboutTitle')} background="lino" centered>
+    <div class="max-w-4xl mx-auto">
+      <p class="text-2xl text-gray-700 leading-relaxed mb-8" set:html={t('home.aboutText1')} />
+      <p class="text-xl text-gray-600 leading-relaxed" set:html={t('home.aboutText2')} />
+    </div>
+  </Section>
+
+  <!-- Nuestro Primer Producto -->
+  <Section title={t('home.firstProductTitle')} background="perla">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <img
+            src="/products/baby-mat/shared/alfombra-completa.png"
+            alt={t('home.productName')}
+            class="img-rounded shadow-lg"
+          />
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-salvia mb-6">
+            {t('home.productName')}
+          </h3>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            {t('home.productDescription')}
+          </p>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">{t('home.feature1Title')}</h4>
+                <p class="text-gray-600">{t('home.feature1Desc')}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">{t('home.feature2Title')}</h4>
+                <p class="text-gray-600">{t('home.feature2Desc')}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">{t('home.feature3Title')}</h4>
+                <p class="text-gray-600">{t('home.feature3Desc')}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-melon text-2xl">✓</span>
+              <div>
+                <h4 class="font-semibold">{t('home.feature4Title')}</h4>
+                <p class="text-gray-600">{t('home.feature4Desc')}</p>
+              </div>
+            </div>
+          </div>
+
+          <a href={translatePath('/productos/alfombra-bebe/150x180', lang)} class="btn btn-primary mr-4">
+            {t('home.viewCompact')}
+          </a>
+          <a href={translatePath('/productos/alfombra-bebe/180x200', lang)} class="btn btn-secondary">
+            {t('home.viewXL')}
+          </a>
+        </div>
+      </div>
+
+      <!-- Dos Variantes -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card text-center hover-lift">
+          <div class="mb-4">
+            <span class="text-4xl">📦</span>
+          </div>
+          <h4 class="text-2xl font-bold text-salvia mb-3">{t('home.compactTitle')}</h4>
+          <p class="text-3xl font-bold text-melon mb-4">{t('home.compactSize')}</p>
+          <p class="text-gray-600 mb-6">
+            {t('home.compactDesc')}
+          </p>
+          <a href={translatePath('/productos/alfombra-bebe/150x180', lang)} class="btn btn-outline">
+            {t('home.viewDetails')}
+          </a>
+        </div>
+
+        <div class="card text-center hover-lift">
+          <div class="mb-4">
+            <span class="text-4xl">🏠</span>
+          </div>
+          <h4 class="text-2xl font-bold text-salvia mb-3">{t('home.xlTitle')}</h4>
+          <p class="text-3xl font-bold text-melon mb-4">{t('home.xlSize')}</p>
+          <p class="text-gray-600 mb-6">
+            {t('home.xlDesc')}
+          </p>
+          <a href={translatePath('/productos/alfombra-bebe/180x200', lang)} class="btn btn-outline">
+            {t('home.viewDetails')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Las 4 Fantásticas -->
+  <Section title={t('home.fantastic4Title')} background="lino">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xl text-center text-gray-700 mb-12">
+        {t('home.fantastic4Desc')}
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card">
+          <img
+            src="/products/baby-mat/shared/tarjetas-pueblo-costero.png"
+            alt={t('home.coastalVillageTitle')}
+            class="img-rounded mb-4"
+          />
+          <h4 class="text-xl font-semibold text-salvia mb-2">{t('home.coastalVillageTitle')}</h4>
+          <p class="text-gray-600">
+            {t('home.coastalVillageDesc')}
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="/products/baby-mat/shared/tarjetas-selva-tropical.png"
+            alt={t('home.tropicalJungleTitle')}
+            class="img-rounded mb-4"
+          />
+          <h4 class="text-xl font-semibold text-salvia mb-2">{t('home.tropicalJungleTitle')}</h4>
+          <p class="text-gray-600">
+            {t('home.tropicalJungleDesc')}
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <div class="bg-blanco p-8 rounded-2xl shadow-md inline-block">
+          <p class="text-lg italic text-salvia leading-relaxed">
+            {t('home.dedication')}
+          </p>
+          <p class="text-sm text-gray-600 mt-4">
+            {t('home.dedicationAuthor')}
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CTA Final -->
+  <Section background="perla">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold text-salvia mb-6">
+        {t('home.ctaTitle')}
+      </h2>
+      <p class="text-xl text-gray-700 mb-8">
+        {t('home.ctaDescription')}
+      </p>
+      <a href={translatePath('/historia', lang)} class="btn btn-primary btn-lg">
+        {t('home.ctaButton')}
+      </a>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .hover-lift {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-lg {
+    padding: 1.25rem 3rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-salvia-dark);
+    color: var(--color-salvia-dark);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-salvia-dark);
+    color: white;
+  }
+</style>
+

@@ -1,26 +1,19 @@
 ---
-/**
- * Página de Historia - ELEMATT
- * La historia real de Elena, Pep y las 4 fantásticas
- * Basado en el documento "Proyecto WEB ELEMATT 01.11.2025.docx"
- */
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import PepDots from '../../components/PepDots.astro';
+import { useTranslations, translatePath } from '../../i18n/utils';
 
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Section from '../components/Section.astro';
-import PepDots from '../components/PepDots.astro';
-import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
+const lang = 'en';
 const t = useTranslations(lang);
 ---
 
-<Layout
+<Layout 
   title={t('history.title')}
   description={t('history.description')}
   image="/images/Logo Design 1.jpg"
 >
-  <!-- Hero -->
   <Hero
     title={t('history.heroTitle')}
     subtitle={t('history.heroSubtitle')}
@@ -29,15 +22,14 @@ const t = useTranslations(lang);
     overlay={true}
   />
 
-  <!-- El origen de ELEMATT -->
   <Section title={t('history.originTitle')} background="lino">
     <div class="relative">
       <PepDots variant="mixed" size="md" opacity={0.15} animated={true} />
       <div class="max-w-4xl mx-auto relative z-10">
         <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <img
-              src="/images/Icon Design 3.jpg"
+            <img 
+              src="/images/Icon Design 3.jpg" 
               alt={t('history.pepAlt')}
               class="w-full max-w-md mx-auto rounded-2xl shadow-lg"
             />
@@ -45,111 +37,65 @@ const t = useTranslations(lang);
           <div>
             <p class="text-lg mb-6 leading-relaxed" set:html={t('history.originText1')} />
             <p class="text-lg mb-6 leading-relaxed" set:html={t('history.originText2')} />
-            <p class="text-lg leading-relaxed">
-              {t('history.originText3')}
-            </p>
+            <p class="text-lg leading-relaxed">{t('history.originText3')}</p>
           </div>
         </div>
       </div>
     </div>
   </Section>
 
-  <!-- Pep, nuestro guía -->
   <Section title={t('history.pepTitle')} background="blanco">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xl mb-8 leading-relaxed font-medium text-salvia">
-        {t('history.pepQuote')}
-      </p>
+      <p class="text-xl mb-8 leading-relaxed font-medium text-salvia">{t('history.pepQuote')}</p>
       <p class="text-lg mb-6 leading-relaxed" set:html={t('history.pepText1')} />
-      <p class="text-lg leading-relaxed text-texto-claro">
-        {t('history.pepText2')}
-      </p>
+      <p class="text-lg leading-relaxed text-texto-claro">{t('history.pepText2')}</p>
     </div>
   </Section>
 
-  <!-- Las 4 fantásticas -->
   <Section title={t('history.fantastic4Title')} background="perla">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12">
-        <p class="text-lg leading-relaxed mb-6">
-          {t('history.fantastic4Text')}
-        </p>
+        <p class="text-lg leading-relaxed mb-6">{t('history.fantastic4Text')}</p>
         <div class="bg-blanco p-8 rounded-2xl shadow-md inline-block">
-          <p class="text-base italic text-salvia leading-relaxed">
-            {t('history.dedication')}
-          </p>
-          <p class="text-sm text-texto-claro mt-4">
-            {t('history.dedicationAuthor')}
-          </p>
+          <p class="text-base italic text-salvia leading-relaxed">{t('history.dedication')}</p>
+          <p class="text-sm text-texto-claro mt-4">{t('history.dedicationAuthor')}</p>
         </div>
       </div>
-
       <div class="grid md:grid-cols-2 gap-8 mt-12">
         <div class="bg-blanco p-8 rounded-2xl shadow-sm">
           <h3 class="text-xl font-semibold text-salvia mb-4">{t('history.coastalTitle')}</h3>
-          <p class="text-base leading-relaxed">
-            {t('history.coastalText')}
-          </p>
+          <p class="text-base leading-relaxed">{t('history.coastalText')}</p>
         </div>
         <div class="bg-blanco p-8 rounded-2xl shadow-sm">
           <h3 class="text-xl font-semibold text-salvia mb-4">{t('history.jungleTitle')}</h3>
-          <p class="text-base leading-relaxed">
-            {t('history.jungleText')}
-          </p>
+          <p class="text-base leading-relaxed">{t('history.jungleText')}</p>
         </div>
       </div>
     </div>
   </Section>
 
-  <!-- Nuestra filosofía -->
   <Section title={t('history.philosophyTitle')} background="lino">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-xl mb-8 leading-relaxed font-medium text-melon">
-        {t('history.philosophyQuote')}
-      </p>
-      <p class="text-lg mb-6 leading-relaxed">
-        {t('history.philosophyText1')}
-      </p>
+      <p class="text-xl mb-8 leading-relaxed font-medium text-melon">{t('history.philosophyQuote')}</p>
+      <p class="text-lg mb-6 leading-relaxed">{t('history.philosophyText1')}</p>
       <p class="text-lg leading-relaxed" set:html={t('history.philosophyText2')} />
     </div>
   </Section>
 
-  <!-- CTA -->
   <Section background="blanco">
     <div class="text-center">
       <h2 class="text-3xl font-bold mb-6 text-salvia">{t('history.ctaTitle')}</h2>
-      <p class="text-lg mb-8 text-texto-claro max-w-2xl mx-auto">
-        {t('history.ctaText')}
-      </p>
-      <a
-        href={translatePath('/colecciones', lang)}
-        class="btn btn-primary inline-block"
-      >
-        {t('history.ctaButton')}
-      </a>
+      <p class="text-lg mb-8 text-texto-claro max-w-2xl mx-auto">{t('history.ctaText')}</p>
+      <a href={translatePath('/colecciones', lang)} class="btn btn-primary inline-block">{t('history.ctaButton')}</a>
     </div>
   </Section>
 </Layout>
 
 <style>
-  .text-salvia {
-    color: var(--color-salvia);
-  }
-
-  .text-melon {
-    color: var(--color-melon);
-  }
-
-  .text-texto-claro {
-    color: var(--color-texto-claro);
-  }
-
-  .bg-blanco {
-    background-color: var(--color-blanco);
-  }
-
-  .bg-perla {
-    background-color: var(--color-perla);
-  }
+  .text-salvia { color: var(--color-salvia); }
+  .text-melon { color: var(--color-melon); }
+  .text-texto-claro { color: var(--color-texto-claro); }
+  .bg-blanco { background-color: var(--color-blanco); }
+  .bg-perla { background-color: var(--color-perla); }
 </style>
 

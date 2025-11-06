@@ -7,12 +7,16 @@ import es from './es.json';
 import en from './en.json';
 import pt from './pt.json';
 import it from './it.json';
+import fr from './fr.json';
+import de from './de.json';
 
 export const languages = {
   es: 'Español',
   en: 'English',
   pt: 'Português',
   it: 'Italiano',
+  fr: 'Français',
+  de: 'Deutsch',
 };
 
 export const defaultLang = 'es';
@@ -22,6 +26,8 @@ export const ui = {
   en,
   pt,
   it,
+  fr,
+  de,
 } as const;
 
 export type Language = keyof typeof ui;
@@ -64,13 +70,13 @@ export function getLangFromUrl(url: URL): Language {
  */
 export function translatePath(path: string, lang: Language): string {
   // Remove leading slash and language prefix
-  const pathWithoutLang = path.replace(/^\/(es|en|pt|it)/, '').replace(/^\//, '');
-  
+  const pathWithoutLang = path.replace(/^\/(es|en|pt|it|fr|de)/, '').replace(/^\//, '');
+
   // If default language, don't add prefix
   if (lang === defaultLang) {
     return `/${pathWithoutLang}`;
   }
-  
+
   // Add language prefix
   return `/${lang}/${pathWithoutLang}`;
 }
