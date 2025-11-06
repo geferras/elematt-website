@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Section from '../components/Section.astro';
-import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import { useTranslations, translatePath } from '../../i18n/utils';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = 'pt';
 const t = useTranslations(lang);
 ---
 
