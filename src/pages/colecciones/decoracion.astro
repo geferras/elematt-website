@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -25,12 +26,12 @@ const productos = [
 ];
 ---
 
-<Layout 
+<Layout
   title="Colección Decoración - ELEMATT"
   description="Estilo minimalista para cada rincón. Descubre piezas decorativas atemporales."
 >
   <Header />
-  
+
   <Hero
     title="Colección Decoración"
     subtitle="Estilo atemporal"
@@ -40,7 +41,7 @@ const productos = [
   <Section background="blanco" centered={true}>
     <div class="intro-content">
       <p class="intro-text">
-        La decoración es el arte de crear espacios que reflejan tu esencia. 
+        La decoración es el arte de crear espacios que reflejan tu esencia.
         Nuestra colección reúne piezas atemporales con diseño minimalista y elegante.
       </p>
     </div>

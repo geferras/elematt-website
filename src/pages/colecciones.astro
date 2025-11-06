@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
 
@@ -49,12 +50,12 @@ const colecciones = [
 ];
 ---
 
-<Layout 
+<Layout
   title="Colecciones - ELEMATT"
   description="Explora nuestras colecciones cuidadosamente curadas de productos para hogar, bienestar y estilo de vida."
 >
   <Header />
-  
+
   <!-- Hero Section -->
   <Hero
     title="Nuestras Colecciones"
@@ -66,8 +67,8 @@ const colecciones = [
   <Section background="blanco" centered={true}>
     <div class="intro-content">
       <p class="intro-text">
-        Cada colección ha sido cuidadosamente curada para ofrecerte productos 
-        que combinan funcionalidad, estética y calidad. Explora y encuentra 
+        Cada colección ha sido cuidadosamente curada para ofrecerte productos
+        que combinan funcionalidad, estética y calidad. Explora y encuentra
         aquellos que resuenan con tu estilo personal.
       </p>
     </div>

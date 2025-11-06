@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -25,12 +26,12 @@ const productos = [
 ];
 ---
 
-<Layout 
+<Layout
   title="Colección Accesorios - ELEMATT"
   description="Detalles únicos que marcan la diferencia. Descubre accesorios con estilo y personalidad."
 >
   <Header />
-  
+
   <Hero
     title="Colección Accesorios"
     subtitle="Detalles únicos"
@@ -40,7 +41,7 @@ const productos = [
   <Section background="blanco" centered={true}>
     <div class="intro-content">
       <p class="intro-text">
-        Los detalles hacen la diferencia. Nuestra colección de accesorios reúne 
+        Los detalles hacen la diferencia. Nuestra colección de accesorios reúne
         piezas únicas que complementan tu estilo con elegancia y autenticidad.
       </p>
     </div>

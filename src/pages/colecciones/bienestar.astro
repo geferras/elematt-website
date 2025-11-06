@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -33,12 +34,12 @@ const productos = [
 ];
 ---
 
-<Layout 
+<Layout
   title="Colección Bienestar - ELEMATT"
   description="Productos naturales para cuidar de ti. Descubre nuestra selección de bienestar y autocuidado."
 >
   <Header />
-  
+
   <Hero
     title="Colección Bienestar"
     subtitle="Cuida de ti"
@@ -48,14 +49,14 @@ const productos = [
   <Section background="blanco" centered={true}>
     <div class="intro-content">
       <p class="intro-text">
-        El bienestar comienza con pequeños rituales diarios. Nuestra colección 
-        reúne productos naturales que te ayudan a crear momentos de autocuidado 
+        El bienestar comienza con pequeños rituales diarios. Nuestra colección
+        reúne productos naturales que te ayudan a crear momentos de autocuidado
         y conexión contigo mismo.
       </p>
     </div>
   </Section>
 
-  <Section 
+  <Section
     id="productos"
     title="Productos"
     subtitle="Nuestra Selección"

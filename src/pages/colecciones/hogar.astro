@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -261,9 +262,9 @@ const productos = [
         const cardCategory = card.querySelector('[class*="category-badge"]')?.textContent.toLowerCase();
 
         if (category === 'todos' || cardCategory === category) {
-          card.style.display = 'block';
+          (card as HTMLElement).style.display = 'block';
         } else {
-          card.style.display = 'none';
+          (card as HTMLElement).style.display = 'none';
         }
       });
     });
