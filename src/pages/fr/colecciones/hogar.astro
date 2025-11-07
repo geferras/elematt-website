@@ -1,0 +1,273 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Hero from '../../../components/Hero.astro';
+import Section from '../../../components/Section.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+
+// Productos de la colección Hogar (ejemplo - reemplazar con datos reales)
+const productos = [
+  {
+    title: "Vela Aromática de Soja",
+    description: "Vela artesanal de soja con aromas naturales. Perfecta para crear ambientes acogedores.",
+    image: "/images/products/hogar/vela-1.jpg",
+    price: "€24.99",
+    amazonLink: "#",
+    category: "Aromas",
+    featured: true,
+  },
+  {
+    title: "Cojín de Lino Natural",
+    description: "Cojín decorativo de lino 100% natural con diseño minimalista.",
+    image: "/images/products/hogar/cojin-1.jpg",
+    price: "€34.99",
+    amazonLink: "#",
+    category: "Textiles",
+  },
+  {
+    title: "Difusor de Aromas",
+    description: "Difusor de aceites esenciales con diseño elegante y moderno.",
+    image: "/images/products/hogar/difusor-1.jpg",
+    price: "€45.99",
+    amazonLink: "#",
+    category: "Aromas",
+  },
+  {
+    title: "Manta de Algodón",
+    description: "Manta suave de algodón orgánico, ideal para el sofá o la cama.",
+    image: "/images/products/hogar/manta-1.jpg",
+    price: "€59.99",
+    amazonLink: "#",
+    category: "Textiles",
+  },
+  {
+    title: "Portavelas de Cerámica",
+    description: "Set de portavelas artesanales de cerámica con acabado mate.",
+    image: "/images/products/hogar/portavelas-1.jpg",
+    price: "€29.99",
+    amazonLink: "#",
+    category: "Decoración",
+  },
+  {
+    title: "Alfombra de Yute",
+    description: "Alfombra natural de yute tejida a mano, perfecta para cualquier espacio.",
+    image: "/images/products/hogar/alfombra-1.jpg",
+    price: "€89.99",
+    amazonLink: "#",
+    category: "Textiles",
+  },
+];
+---
+
+<Layout
+  title="Colección Hogar - ELEMATT"
+  description="Descubre productos cuidadosamente seleccionados para transformar tu hogar en un refugio acogedor y lleno de estilo."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <Hero
+    title="Colección Hogar"
+    subtitle="Transforma tu espacio"
+    description="Productos que convierten tu casa en un refugio de paz y belleza"
+    ctaText="Ver todos los productos"
+    ctaLink="#productos"
+  />
+
+  <!-- Introducción -->
+  <Section background="blanco" centered={true}>
+    <div class="intro-content">
+      <p class="intro-text">
+        Nuestra colección Hogar reúne productos esenciales que transforman espacios
+        en experiencias. Desde textiles suaves hasta aromas envolventes, cada elemento
+        ha sido seleccionado para crear ambientes que nutren el alma.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Categorías -->
+  <Section
+    title="Categorías"
+    subtitle="Explora por tipo"
+    background="lino"
+  >
+    <div class="categorias-grid">
+      <button class="categoria-btn active" data-category="todos">
+        Todos
+      </button>
+      <button class="categoria-btn" data-category="aromas">
+        Aromas
+      </button>
+      <button class="categoria-btn" data-category="textiles">
+        Textiles
+      </button>
+      <button class="categoria-btn" data-category="decoracion">
+        Decoración
+      </button>
+    </div>
+  </Section>
+
+  <!-- Productos -->
+  <Section
+    id="productos"
+    title="Productos"
+    subtitle="Nuestra Selección"
+    background="perla"
+  >
+    <div class="productos-grid">
+      {productos.map((producto) => (
+        <ProductCard {...producto} />
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="blanco" centered={true}>
+    <div class="cta-section">
+      <h2>¿Buscas algo específico?</h2>
+      <p>Explora nuestras otras colecciones o contáctanos para ayudarte</p>
+      <div class="cta-buttons">
+        <a href="/colecciones" class="btn btn-secondary">
+          Ver todas las colecciones
+        </a>
+        <a href="/contacto" class="btn btn-primary">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  /* Introducción */
+  .intro-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--color-gris-oscuro);
+    text-align: center;
+  }
+
+  /* Categorías */
+  .categorias-grid {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .categoria-btn {
+    padding: 0.75rem 2rem;
+    background-color: var(--color-blanco);
+    color: var(--color-salvia-dark);
+    border: 2px solid var(--color-salvia-dark);
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+  }
+
+  .categoria-btn:hover,
+  .categoria-btn.active {
+    background-color: var(--color-salvia-dark);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Productos Grid */
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  .cta-section h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-salvia);
+  }
+
+  .cta-section p {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .productos-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .categorias-grid {
+      flex-direction: column;
+    }
+
+    .categoria-btn {
+      width: 100%;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  // Filtrado de productos por categoría
+  const categoryButtons = document.querySelectorAll('.categoria-btn');
+  const productCards = document.querySelectorAll('.productos-grid > *');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+
+      // Actualizar botón activo
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Filtrar productos
+      productCards.forEach(card => {
+        const cardCategory = card.querySelector('[class*="category-badge"]')?.textContent.toLowerCase();
+
+        if (category === 'todos' || cardCategory === category) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+

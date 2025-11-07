@@ -485,77 +485,95 @@ const currentPath = Astro.url.pathname;
   }
 </style>
 
-<script>
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
+<script is:inline>
+  function initHeader() {
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
 
-  menuToggle?.addEventListener('click', () => {
-    navMenu?.classList.toggle('active');
-    menuToggle?.classList.toggle('active');
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-    if (!target.closest('.nav')) {
-      navMenu?.classList.remove('active');
-      menuToggle?.classList.remove('active');
-      // Close all dropdowns and submenus
-      document.querySelectorAll('.has-dropdown').forEach(item => {
-        item.classList.remove('active');
-      });
-      document.querySelectorAll('.has-submenu').forEach(item => {
-        item.classList.remove('active');
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
       });
     }
-  });
 
-  // Dropdown toggle (mobile)
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const parent = toggle.closest('.has-dropdown');
-        parent?.classList.toggle('active');
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!target.closest('.nav')) {
+        if (navMenu) navMenu.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
+        // Close all dropdowns and submenus
+        document.querySelectorAll('.has-dropdown').forEach(item => {
+          item.classList.remove('active');
+        });
+        document.querySelectorAll('.has-submenu').forEach(item => {
+          item.classList.remove('active');
+        });
       }
     });
-  });
 
-  // Submenu toggle (mobile)
-  const dropdownLinks = document.querySelectorAll('.has-submenu > .dropdown-link');
-  dropdownLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const parent = link.closest('.has-submenu');
-        parent?.classList.toggle('active');
-      }
-    });
-  });
-
-  // Close menu when clicking on a submenu link
-  const submenuLinks = document.querySelectorAll('.submenu-link');
-  submenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu?.classList.remove('active');
-      document.querySelectorAll('.has-dropdown').forEach(item => {
-        item.classList.remove('active');
-      });
-      document.querySelectorAll('.has-submenu').forEach(item => {
-        item.classList.remove('active');
+    // Dropdown toggle (mobile)
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const parent = toggle.closest('.has-dropdown');
+          if (parent) parent.classList.toggle('active');
+        }
       });
     });
-  });
 
-  // Close menu when clicking on a regular link
-  const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu?.classList.remove('active');
-      menuToggle?.classList.remove('active');
+    // Submenu toggle (mobile)
+    const dropdownLinks = document.querySelectorAll('.has-submenu > .dropdown-link');
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const parent = link.closest('.has-submenu');
+          if (parent) parent.classList.toggle('active');
+        }
+      });
     });
-  });
+
+    // Close menu when clicking on a submenu link
+    const submenuLinks = document.querySelectorAll('.submenu-link');
+    submenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu) navMenu.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
+        document.querySelectorAll('.has-dropdown').forEach(item => {
+          item.classList.remove('active');
+        });
+        document.querySelectorAll('.has-submenu').forEach(item => {
+          item.classList.remove('active');
+        });
+      });
+    });
+
+    // Close menu when clicking on a regular link
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu) navMenu.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
+      });
+    });
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeader);
+  } else {
+    initHeader();
+  }
+
+  // Re-initialize on page navigation (for Astro view transitions)
+  document.addEventListener('astro:page-load', initHeader);
 </script>
 

@@ -1,0 +1,85 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Hero from '../../../components/Hero.astro';
+import Section from '../../../components/Section.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+
+const productos = [
+  {
+    title: "Espejo de Pared Minimalista",
+    description: "Espejo redondo con marco de madera natural, diseño atemporal y elegante.",
+    image: "/images/products/decoracion/espejo-1.jpg",
+    price: "€64.99",
+    amazonLink: "#",
+    category: "Espejos",
+    featured: true,
+  },
+  {
+    title: "Maceta de Cerámica",
+    description: "Maceta artesanal de cerámica con acabado mate, perfecta para plantas de interior.",
+    image: "/images/products/decoracion/maceta-1.jpg",
+    price: "€29.99",
+    amazonLink: "#",
+    category: "Plantas",
+  },
+];
+---
+
+<Layout
+  title="Colección Decoración - ELEMATT"
+  description="Estilo minimalista para cada rincón. Descubre piezas decorativas atemporales."
+>
+  <Header />
+
+  <Hero
+    title="Colección Decoración"
+    subtitle="Estilo atemporal"
+    description="Piezas decorativas que embellecen cada rincón de tu hogar"
+  />
+
+  <Section background="blanco" centered={true}>
+    <div class="intro-content">
+      <p class="intro-text">
+        La decoración es el arte de crear espacios que reflejan tu esencia.
+        Nuestra colección reúne piezas atemporales con diseño minimalista y elegante.
+      </p>
+    </div>
+  </Section>
+
+  <Section id="productos" title="Productos" subtitle="Nuestra Selección" background="lino">
+    <div class="productos-grid">
+      {productos.map((producto) => (
+        <ProductCard {...producto} />
+      ))}
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .intro-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--color-gris-oscuro);
+    text-align: center;
+  }
+
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  @media (max-width: 768px) {
+    .productos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
