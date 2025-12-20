@@ -154,6 +154,55 @@
     "size": "Size",
     "color": "Color",
     "quantity": "Quantity"
+  },
+  "product": {
+    "safety": {
+      "title": "⚠️ Safety Information",
+      "bagWarning": "This PU bag is not a toy. Keep out of reach of babies and children. For adult use only."
+    },
+    "babyMat": {
+      "name": "Padded Foldable Baby Mat",
+      "variant150": "Compact 150×180×1.5 cm",
+      "variant180": "XL 180×200×1.5 cm",
+      "seoTitle150": "Padded Foldable Baby Mat Compact 150×180×1.5 cm | ELEMATT",
+      "seoTitle180": "Padded Foldable Baby Mat XL 180×200×1.5 cm | ELEMATT",
+      "seoDescription150": "Padded foldable baby mat 150×180×1.5 cm. Exclusive watercolor illustrations, reversible, waterproof. Includes 20 sensory cards. 0+ certification.",
+      "seoDescription180": "Padded foldable baby mat 180×200×1.5 cm. Exclusive watercolor illustrations, reversible, waterproof. Includes 20 sensory cards. 0+ certification.",
+      "seoKeywords150": "baby mat 150x180, foldable baby mat, padded mat, reversible baby mat, waterproof mat, sensory cards, ELEMATT",
+      "seoKeywords180": "baby mat 180x200, XL foldable baby mat, large padded mat, reversible baby mat, waterproof mat, sensory cards, ELEMATT",
+      "heroDescription": "Where every story begins on a mat",
+      "viewOnAmazon": "View on Amazon",
+      "amazonPrime": "Fast shipping with Amazon Prime",
+      "storyTitle": "The Story Behind This Mat",
+      "storyText1": "This mat was born from a mother's love for her daughter Elena and her three best friends from daycare: <strong>Laia, Isabela, and Olivia</strong>, known as \"the fantastic 4\".",
+      "storyText2": "Every day, these four little ones explored the world together, accompanied by <strong>Pep</strong>, Elena's stuffed elephant. Their imaginary adventures inspired the two sides of this mat:",
+      "sideATitle": "Side A: Coastal Village",
+      "sideADescription": "Inspired by calm days by the sea. Sand, beige, and blue tones that convey serenity and joy. Perfect for moments of tranquility and relaxed play.",
+      "sideBTitle": "Side B: Tropical Jungle",
+      "sideBDescription": "A vibrant world full of adventures. Vivid colors that awaken curiosity and turn the floor into a space for exploration and learning.",
+      "specsTitle": "Technical Specifications",
+      "specDimensionsTitle": "📏 Dimensions",
+      "specDimensionsText150": "Compact size ideal for bedrooms or small spaces",
+      "specDimensionsText180": "XL size perfect for creating a spacious family play area",
+      "specProtectionTitle": "🛡️ Superior Protection",
+      "specProtectionText": "Real thickness of <strong>1.5 cm</strong> high-density XPE foam. Cushions falls and protects with every crawl, roll, and first step.",
+      "specCertificationTitle": "✅ 0+ Certification",
+      "specCertificationText": "Meets <strong>EN71</strong> standards. 100% BPA and heavy metal free. Safe from birth.",
+      "specWaterproofTitle": "💧 Waterproof and Easy to Clean",
+      "specWaterproofText": "Waterproof surface. Cleans with a damp cloth in seconds. Always ready for the next adventure.",
+      "specReversibleTitle": "🎨 Reversible Design",
+      "specReversibleText": "Exclusive watercolor illustrations on both sides. Two play worlds in one mat.",
+      "specPortableTitle": "🧳 Foldable and Portable",
+      "specPortableText": "Includes premium PU bag with invisible zipper. Easy to store, transport, and gift.",
+      "cardsTitle": "Includes 20 Sensory Cards",
+      "cardsDescription": "Designed in the same artistic style as the mat, these cards stimulate imagination and become your baby's first Montessori toys.",
+      "cardsCoastalTitle": "Coastal Village Set",
+      "cardsCoastalText": "10 double-sided cards (14×14 cm) with coastal world illustrations",
+      "cardsJungleTitle": "Tropical Jungle Set",
+      "cardsJungleText": "10 double-sided cards (14×14 cm) with jungle illustrations",
+      "ctaTitle": "Give your baby the best from day one",
+      "ctaDescription": "Fill your home with color, safety, and unforgettable memories."
+    }
   }
 }
 

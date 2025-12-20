@@ -154,7 +154,62 @@
     "notifyMe": "Benachrichtigen Sie mich",
     "loading": "Laden...",
     "error": "Fehler",
-    "success": "Erfolg"
+    "success": "Erfolg",
+    "viewMore": "Mehr sehen",
+    "close": "Schließen",
+    "price": "Preis",
+    "size": "Größe",
+    "color": "Farbe",
+    "quantity": "Menge"
+  },
+  "product": {
+    "safety": {
+      "title": "⚠️ Sicherheitsinformationen",
+      "bagWarning": "Diese PU-Tasche ist kein Spielzeug. Außerhalb der Reichweite von Babys und Kindern aufbewahren. Nur für Erwachsene."
+    },
+    "babyMat": {
+      "name": "Gepolsterte Faltbare Babymatte",
+      "variant150": "Kompakt 150×180×1,5 cm",
+      "variant180": "XL 180×200×1,5 cm",
+      "seoTitle150": "Gepolsterte Faltbare Babymatte Kompakt 150×180×1,5 cm | ELEMATT",
+      "seoTitle180": "Gepolsterte Faltbare Babymatte XL 180×200×1,5 cm | ELEMATT",
+      "seoDescription150": "Gepolsterte faltbare Babymatte 150×180×1,5 cm. Exklusive Aquarellillustrationen, wendbar, wasserdicht. Enthält 20 sensorische Karten. 0+ Zertifizierung.",
+      "seoDescription180": "Gepolsterte faltbare Babymatte 180×200×1,5 cm. Exklusive Aquarellillustrationen, wendbar, wasserdicht. Enthält 20 sensorische Karten. 0+ Zertifizierung.",
+      "seoKeywords150": "Babymatte 150x180, faltbare Babymatte, gepolsterte Matte, wendbare Babymatte, wasserdichte Matte, sensorische Karten, ELEMATT",
+      "seoKeywords180": "Babymatte 180x200, faltbare Babymatte XL, große gepolsterte Matte, wendbare Babymatte, wasserdichte Matte, sensorische Karten, ELEMATT",
+      "heroDescription": "Wo jede Geschichte auf einer Matte beginnt",
+      "viewOnAmazon": "Auf Amazon ansehen",
+      "amazonPrime": "Schneller Versand mit Amazon Prime",
+      "storyTitle": "Die Geschichte Hinter Dieser Matte",
+      "storyText1": "Diese Matte entstand aus der Liebe einer Mutter zu ihrer Tochter Elena und ihren drei besten Freundinnen aus der Kita: <strong>Laia, Isabela und Olivia</strong>, bekannt als \"die fantastischen 4\".",
+      "storyText2": "Jeden Tag erkundeten diese vier Kleinen die Welt zusammen, begleitet von <strong>Pep</strong>, Elenas Stoffelefant. Ihre imaginären Abenteuer inspirierten die beiden Seiten dieser Matte:",
+      "sideATitle": "Seite A: Küstendorf",
+      "sideADescription": "Inspiriert von ruhigen Tagen am Meer. Sand-, Beige- und Blautöne, die Gelassenheit und Freude vermitteln. Perfekt für Momente der Ruhe und entspanntes Spielen.",
+      "sideBTitle": "Seite B: Tropischer Dschungel",
+      "sideBDescription": "Eine lebendige Welt voller Abenteuer. Lebhafte Farben, die die Neugier wecken und den Boden in einen Raum für Erkundung und Lernen verwandeln.",
+      "specsTitle": "Technische Spezifikationen",
+      "specDimensionsTitle": "📏 Abmessungen",
+      "specDimensionsText150": "Kompakte Größe ideal für Schlafzimmer oder kleine Räume",
+      "specDimensionsText180": "XL-Größe perfekt für einen großzügigen Familien-Spielbereich",
+      "specProtectionTitle": "🛡️ Überlegener Schutz",
+      "specProtectionText": "Echte Dicke von <strong>1,5 cm</strong> hochdichtem XPE-Schaum. Dämpft Stürze und schützt bei jedem Krabbeln, Rollen und ersten Schritt.",
+      "specCertificationTitle": "✅ 0+ Zertifizierung",
+      "specCertificationText": "Entspricht der Norm <strong>EN71</strong>. 100% frei von BPA und Schwermetallen. Sicher ab Geburt.",
+      "specWaterproofTitle": "💧 Wasserdicht und Leicht zu Reinigen",
+      "specWaterproofText": "Wasserdichte Oberfläche. Reinigt sich in Sekunden mit einem feuchten Tuch. Immer bereit für das nächste Abenteuer.",
+      "specReversibleTitle": "🎨 Wendbares Design",
+      "specReversibleText": "Exklusive Aquarellillustrationen auf beiden Seiten. Zwei Spielwelten in einer Matte.",
+      "specPortableTitle": "🧳 Faltbar und Tragbar",
+      "specPortableText": "Enthält Premium-PU-Tasche mit unsichtbarem Reißverschluss. Einfach zu verstauen, transportieren und verschenken.",
+      "cardsTitle": "Enthält 20 Sensorische Karten",
+      "cardsDescription": "Im gleichen künstlerischen Stil wie die Matte gestaltet, regen diese Karten die Fantasie an und werden zu den ersten Montessori-Spielzeugen Ihres Babys.",
+      "cardsCoastalTitle": "Set Küstendorf",
+      "cardsCoastalText": "10 doppelseitige Karten (14×14 cm) mit Illustrationen der Küstenwelt",
+      "cardsJungleTitle": "Set Tropischer Dschungel",
+      "cardsJungleText": "10 doppelseitige Karten (14×14 cm) mit Dschungelillustrationen",
+      "ctaTitle": "Geben Sie Ihrem Baby vom ersten Tag an das Beste",
+      "ctaDescription": "Füllen Sie Ihr Zuhause mit Farbe, Sicherheit und unvergesslichen Erinnerungen."
+    }
   }
 }
 

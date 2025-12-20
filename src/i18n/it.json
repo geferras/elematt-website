@@ -154,6 +154,55 @@
     "size": "Dimensione",
     "color": "Colore",
     "quantity": "Quantità"
+  },
+  "product": {
+    "safety": {
+      "title": "⚠️ Informazioni di Sicurezza",
+      "bagWarning": "Questa borsa in PU non è un giocattolo. Tenere fuori dalla portata di neonati e bambini. Solo per uso adulto."
+    },
+    "babyMat": {
+      "name": "Tappeto Imbottito Pieghevole per Bambini",
+      "variant150": "Compatto 150×180×1,5 cm",
+      "variant180": "XL 180×200×1,5 cm",
+      "seoTitle150": "Tappeto Imbottito Pieghevole per Bambini Compatto 150×180×1,5 cm | ELEMATT",
+      "seoTitle180": "Tappeto Imbottito Pieghevole per Bambini XL 180×200×1,5 cm | ELEMATT",
+      "seoDescription150": "Tappeto imbottito pieghevole per bambini 150×180×1,5 cm. Illustrazioni esclusive ad acquerello, reversibile, impermeabile. Include 20 carte sensoriali. Certificazione 0+.",
+      "seoDescription180": "Tappeto imbottito pieghevole per bambini 180×200×1,5 cm. Illustrazioni esclusive ad acquerello, reversibile, impermeabile. Include 20 carte sensoriali. Certificazione 0+.",
+      "seoKeywords150": "tappeto bambini 150x180, tappeto pieghevole bambini, tappeto imbottito, tappeto reversibile bambini, tappeto impermeabile, carte sensoriali, ELEMATT",
+      "seoKeywords180": "tappeto bambini 180x200, tappeto pieghevole bambini XL, tappeto imbottito grande, tappeto reversibile bambini, tappeto impermeabile, carte sensoriali, ELEMATT",
+      "heroDescription": "Dove ogni storia inizia su un tappeto",
+      "viewOnAmazon": "Vedi su Amazon",
+      "amazonPrime": "Spedizione veloce con Amazon Prime",
+      "storyTitle": "La Storia Dietro Questo Tappeto",
+      "storyText1": "Questo tappeto è nato dall'amore di una madre per sua figlia Elena e le sue tre migliori amiche dell'asilo: <strong>Laia, Isabela e Olivia</strong>, conosciute come \"le 4 fantastiche\".",
+      "storyText2": "Ogni giorno, queste quattro piccole esploravano il mondo insieme, accompagnate da <strong>Pep</strong>, l'elefante di peluche di Elena. Le loro avventure immaginarie hanno ispirato i due lati di questo tappeto:",
+      "sideATitle": "Lato A: Villaggio Costiero",
+      "sideADescription": "Ispirato a giorni tranquilli in riva al mare. Toni sabbia, beige e blu che trasmettono serenità e gioia. Perfetto per momenti di tranquillità e gioco rilassato.",
+      "sideBTitle": "Lato B: Giungla Tropicale",
+      "sideBDescription": "Un mondo vibrante pieno di avventure. Colori vivaci che risvegliano la curiosità e trasformano il pavimento in uno spazio di esplorazione e apprendimento.",
+      "specsTitle": "Specifiche Tecniche",
+      "specDimensionsTitle": "📏 Dimensioni",
+      "specDimensionsText150": "Dimensione compatta ideale per camere o spazi ridotti",
+      "specDimensionsText180": "Dimensione XL perfetta per creare un'ampia area giochi familiare",
+      "specProtectionTitle": "🛡️ Protezione Superiore",
+      "specProtectionText": "Spessore reale di <strong>1,5 cm</strong> di schiuma XPE ad alta densità. Ammortizza le cadute e protegge ad ogni gattonamento, rotolamento e primo passo.",
+      "specCertificationTitle": "✅ Certificazione 0+",
+      "specCertificationText": "Conforme alla normativa <strong>EN71</strong>. 100% privo di BPA e metalli pesanti. Sicuro dalla nascita.",
+      "specWaterproofTitle": "💧 Impermeabile e Facile da Pulire",
+      "specWaterproofText": "Superficie impermeabile. Si pulisce con un panno umido in pochi secondi. Sempre pronto per la prossima avventura.",
+      "specReversibleTitle": "🎨 Design Reversibile",
+      "specReversibleText": "Illustrazioni esclusive ad acquerello su entrambi i lati. Due mondi di gioco in un unico tappeto.",
+      "specPortableTitle": "🧳 Pieghevole e Portatile",
+      "specPortableText": "Include borsa premium in PU con cerniera invisibile. Facile da riporre, trasportare e regalare.",
+      "cardsTitle": "Include 20 Carte Sensoriali",
+      "cardsDescription": "Progettate nello stesso stile artistico del tappeto, queste carte stimolano l'immaginazione e diventano i primi giocattoli Montessori del tuo bambino.",
+      "cardsCoastalTitle": "Set Villaggio Costiero",
+      "cardsCoastalText": "10 carte fronte-retro (14×14 cm) con illustrazioni del mondo costiero",
+      "cardsJungleTitle": "Set Giungla Tropicale",
+      "cardsJungleText": "10 carte fronte-retro (14×14 cm) con illustrazioni della giungla",
+      "ctaTitle": "Dai al tuo bambino il meglio fin dal primo giorno",
+      "ctaDescription": "Riempi la tua casa di colore, sicurezza e ricordi indimenticabili."
+    }
   }
 }
 

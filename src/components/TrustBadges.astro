@@ -1,0 +1,173 @@
+---
+/**
+ * TrustBadges - Indicadores de confianza y seguridad
+ * 
+ * Refuerza la confianza post-compra mostrando certificaciones y garantías.
+ * Diseño suave y no agresivo, acorde a la marca.
+ */
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="trust-badges">
+  <div class="trust-badges__container">
+    <div class="trust-badge">
+      <div class="trust-badge__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <path d="M9 12l2 2 4-4"></path>
+        </svg>
+      </div>
+      <div class="trust-badge__content">
+        <h3 class="trust-badge__title">Certificación 0+</h3>
+        <p class="trust-badge__text">Cumple normativa EN71</p>
+      </div>
+    </div>
+
+    <div class="trust-badge">
+      <div class="trust-badge__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 6v6l4 2"></path>
+        </svg>
+      </div>
+      <div class="trust-badge__content">
+        <h3 class="trust-badge__title">Envío Rápido</h3>
+        <p class="trust-badge__text">Con Amazon Prime</p>
+      </div>
+    </div>
+
+    <div class="trust-badge">
+      <div class="trust-badge__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          <path d="M8 10h.01"></path>
+          <path d="M12 10h.01"></path>
+          <path d="M16 10h.01"></path>
+        </svg>
+      </div>
+      <div class="trust-badge__content">
+        <h3 class="trust-badge__title">Soporte Directo</h3>
+        <p class="trust-badge__text">Estamos aquí para ayudarte</p>
+      </div>
+    </div>
+
+    <div class="trust-badge">
+      <div class="trust-badge__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </div>
+      <div class="trust-badge__content">
+        <h3 class="trust-badge__title">Diseñado con Amor</h3>
+        <p class="trust-badge__text">Inspirado en historias reales</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .trust-badges {
+    padding: 3rem 1.5rem;
+    background: linear-gradient(135deg, #FEFDFB 0%, #F5F1E8 100%);
+  }
+
+  .trust-badges__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(139, 157, 131, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .trust-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 157, 131, 0.12);
+  }
+
+  .trust-badge__icon {
+    flex-shrink: 0;
+    color: #8B9D83;
+  }
+
+  .trust-badge__content {
+    flex: 1;
+  }
+
+  .trust-badge__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.3;
+  }
+
+  .trust-badge__text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #6B6B6B;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Tablet */
+  @media (min-width: 640px) {
+    .trust-badges__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .trust-badges {
+      padding: 4rem 2rem;
+    }
+
+    .trust-badges__container {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .trust-badge {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .trust-badge__title {
+      font-size: 1.0625rem;
+    }
+
+    .trust-badge__text {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Accesibilidad */
+  @media (prefers-reduced-motion: reduce) {
+    .trust-badge {
+      transition: none;
+    }
+
+    .trust-badge:hover {
+      transform: none;
+    }
+  }
+</style>
+

@@ -1,0 +1,81 @@
+---
+/**
+ * BrandSignature - Cierre emocional de marca
+ * 
+ * Agradecimiento y refuerzo de valores de marca.
+ * Tono cálido, humano y cercano.
+ */
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="brand-signature">
+  <div class="brand-signature__container">
+    <div class="brand-signature__content">
+      <p class="brand-signature__text">
+        Gracias por confiar en ELEMATT. Cada producto está diseñado con amor y pensado para acompañar los momentos más especiales de tu familia.
+      </p>
+      <p class="brand-signature__signature">
+        — El equipo ELEMATT
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .brand-signature {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, #F5F1E8 0%, #FEFDFB 100%);
+    border-top: 1px solid rgba(139, 157, 131, 0.15);
+  }
+
+  .brand-signature__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .brand-signature__content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 157, 131, 0.1);
+  }
+
+  .brand-signature__text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #4A4A4A;
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .brand-signature__signature {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #8B9D83;
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .brand-signature {
+      padding: 5rem 2rem;
+    }
+
+    .brand-signature__text {
+      font-size: 1.375rem;
+    }
+
+    .brand-signature__signature {
+      font-size: 1.125rem;
+    }
+  }
+</style>
+

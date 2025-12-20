@@ -1,63 +1,35 @@
-# Documentación ELEMATT
-
-## 📚 Índice de Documentación
-
-### 🚀 Despliegue
-- **[DESPLIEGUE-IONOS.md](deployment/DESPLIEGUE-IONOS.md)** - Guía completa para publicar en IONOS con Vercel
-
-### 💻 Desarrollo
-- **[COMANDOS-RAPIDOS.md](development/COMANDOS-RAPIDOS.md)** - Comandos del día a día
-- **[CONFIGURACION-IDE.md](development/CONFIGURACION-IDE.md)** - Configuración del entorno de desarrollo
-
-### 🎨 Diseño
-- **[DISEÑO-PRODUCTO.md](design/DISEÑO-PRODUCTO.md)** - Decisiones de diseño UX/UI de páginas de producto
-- **[ESTRUCTURA-PROYECTO.md](ESTRUCTURA-PROYECTO.md)** - Mapa completo del proyecto
-
-### ♿ Accesibilidad
-- **[ACCESIBILIDAD-COLORES.md](accessibility/ACCESIBILIDAD-COLORES.md)** - Auditoría WCAG 2.1 de colores y contraste
-
-### 📊 SEO
-- **[SEO-CONFIG.md](seo/SEO-CONFIG.md)** - Configuración de SEO y meta tags
+# DOCUMENTACIÓN ELEMATT.COM
 
 ---
 
-## 🎯 Inicio Rápido
+## 📂 DOCUMENTACIÓN ACTUAL
 
-### Para Desarrollo
-```bash
-npm run dev
-```
-Ver: [COMANDOS-RAPIDOS.md](development/COMANDOS-RAPIDOS.md)
+Toda la documentación del proyecto está centralizada en:
 
-### Para Desplegar
-```bash
-./scripts/deploy.sh "mensaje"
-```
-Ver: [DESPLIEGUE-IONOS.md](deployment/DESPLIEGUE-IONOS.md)
+**`etapa-desarrollo-2025-12-20/`**
 
----
-
-## 📁 Estructura de Documentación
-
-```
-docs/
-├── README.md                    # Este archivo
-├── deployment/                  # Despliegue y producción
-│   └── DESPLIEGUE-IONOS.md
-├── development/                 # Desarrollo local
-│   ├── COMANDOS-RAPIDOS.md
-│   └── CONFIGURACION-IDE.md
-├── accessibility/               # Accesibilidad
-│   └── ACCESIBILIDAD-COLORES.md
-├── seo/                        # SEO y optimización
-│   └── SEO-CONFIG.md
-└── assets/                     # Recursos de documentación
-```
+Esta carpeta contiene:
+- PRODUCT_PAGE_MASTER.md (fuente única de verdad)
+- ENTREGA-FINAL.md (resumen ejecutivo)
+- CHECKLIST-FINAL.md (verificación completa)
+- INFORME-EJECUCION.md (estado detallado)
+- README-CONTENT-SEO.md (contenido futuro)
 
 ---
 
-## 🔗 Links Rápidos
+## 🎯 INICIO RÁPIDO
 
-- [Volver al README principal](../README.md)
-- [Ver tareas pendientes](../PENDIENTE.md)
+1. Lee **`etapa-desarrollo-2025-12-20/ENTREGA-FINAL.md`** para entender el estado actual
+2. Lee **`etapa-desarrollo-2025-12-20/PRODUCT_PAGE_MASTER.md`** antes de hacer cambios
+3. Consulta **`etapa-desarrollo-2025-12-20/CHECKLIST-FINAL.md`** para verificar completitud
 
+---
+
+## ⚠️ ACCIÓN PENDIENTE
+
+Añadir ID real de Google Analytics en `src/layouts/Layout.astro` (líneas 112 y 117)
+
+---
+
+**Fecha**: 2025-12-20  
+**Estado**: ✅ Documentación centralizada

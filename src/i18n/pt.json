@@ -154,6 +154,55 @@
     "size": "Tamanho",
     "color": "Cor",
     "quantity": "Quantidade"
+  },
+  "product": {
+    "safety": {
+      "title": "⚠️ Informação de Segurança",
+      "bagWarning": "Este saco de PU não é um brinquedo. Manter fora do alcance de bebés e crianças. Uso exclusivo para adultos."
+    },
+    "babyMat": {
+      "name": "Tapete Acolchoado Dobrável para Bebê",
+      "variant150": "Compacto 150×180×1,5 cm",
+      "variant180": "XL 180×200×1,5 cm",
+      "seoTitle150": "Tapete Acolchoado Dobrável para Bebê Compacto 150×180×1,5 cm | ELEMATT",
+      "seoTitle180": "Tapete Acolchoado Dobrável para Bebê XL 180×200×1,5 cm | ELEMATT",
+      "seoDescription150": "Tapete acolchoado dobrável para bebê 150×180×1,5 cm. Ilustrações exclusivas em aquarela, reversível, impermeável. Inclui 20 cartões sensoriais. Certificação 0+.",
+      "seoDescription180": "Tapete acolchoado dobrável para bebê 180×200×1,5 cm. Ilustrações exclusivas em aquarela, reversível, impermeável. Inclui 20 cartões sensoriais. Certificação 0+.",
+      "seoKeywords150": "tapete bebê 150x180, tapete dobrável bebê, tapete acolchoado, tapete reversível bebê, tapete impermeável, cartões sensoriais, ELEMATT",
+      "seoKeywords180": "tapete bebê 180x200, tapete dobrável bebê XL, tapete acolchoado grande, tapete reversível bebê, tapete impermeável, cartões sensoriais, ELEMATT",
+      "heroDescription": "Onde cada história começa sobre um tapete",
+      "viewOnAmazon": "Ver na Amazon",
+      "amazonPrime": "Envio rápido com Amazon Prime",
+      "storyTitle": "A História Por Trás Deste Tapete",
+      "storyText1": "Este tapete nasceu do amor de uma mãe por sua filha Elena e suas três melhores amigas da creche: <strong>Laia, Isabela e Olivia</strong>, conhecidas como \"as 4 fantásticas\".",
+      "storyText2": "Todos os dias, essas quatro pequenas exploravam o mundo juntas, acompanhadas por <strong>Pep</strong>, o elefante de pelúcia de Elena. Suas aventuras imaginárias inspiraram os dois lados deste tapete:",
+      "sideATitle": "Lado A: Vila Costeira",
+      "sideADescription": "Inspirado em dias calmos à beira-mar. Tons de areia, bege e azul que transmitem serenidade e alegria. Perfeito para momentos de tranquilidade e brincadeiras relaxadas.",
+      "sideBTitle": "Lado B: Selva Tropical",
+      "sideBDescription": "Um mundo vibrante cheio de aventuras. Cores vivas que despertam a curiosidade e transformam o chão em um espaço de exploração e aprendizado.",
+      "specsTitle": "Especificações Técnicas",
+      "specDimensionsTitle": "📏 Dimensões",
+      "specDimensionsText150": "Tamanho compacto ideal para quartos ou espaços pequenos",
+      "specDimensionsText180": "Tamanho XL perfeito para criar uma ampla área de brincadeiras familiar",
+      "specProtectionTitle": "🛡️ Proteção Superior",
+      "specProtectionText": "Espessura real de <strong>1,5 cm</strong> de espuma XPE de alta densidade. Amortece quedas e protege em cada engatinhar, rolar e primeiro passo.",
+      "specCertificationTitle": "✅ Certificação 0+",
+      "specCertificationText": "Atende às normas <strong>EN71</strong>. 100% livre de BPA e metais pesados. Seguro desde o nascimento.",
+      "specWaterproofTitle": "💧 Impermeável e Fácil de Limpar",
+      "specWaterproofText": "Superfície impermeável. Limpa-se com um pano úmido em segundos. Sempre pronto para a próxima aventura.",
+      "specReversibleTitle": "🎨 Design Reversível",
+      "specReversibleText": "Ilustrações exclusivas em aquarela em ambos os lados. Dois mundos de brincadeira em um único tapete.",
+      "specPortableTitle": "🧳 Dobrável e Portátil",
+      "specPortableText": "Inclui bolsa premium de PU com zíper invisível. Fácil de guardar, transportar e presentear.",
+      "cardsTitle": "Inclui 20 Cartões Sensoriais",
+      "cardsDescription": "Projetados no mesmo estilo artístico do tapete, esses cartões estimulam a imaginação e se tornam os primeiros brinquedos Montessori do seu bebê.",
+      "cardsCoastalTitle": "Conjunto Vila Costeira",
+      "cardsCoastalText": "10 cartões dupla face (14×14 cm) com ilustrações do mundo costeiro",
+      "cardsJungleTitle": "Conjunto Selva Tropical",
+      "cardsJungleText": "10 cartões dupla face (14×14 cm) com ilustrações da selva",
+      "ctaTitle": "Dê ao seu bebê o melhor desde o primeiro dia",
+      "ctaDescription": "Encha sua casa de cor, segurança e memórias inesquecíveis."
+    }
   }
 }
 

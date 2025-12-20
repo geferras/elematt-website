@@ -1,10 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/Hero.astro';
-import Section from '../../components/Section.astro';
-import { useTranslations, translatePath } from '../../i18n/utils';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import TrustBadges from '../components/TrustBadges.astro';
+import BrandSignature from '../components/product/BrandSignature.astro';
+import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
 
-const lang = 'de';
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
@@ -24,6 +26,9 @@ const t = useTranslations(lang);
     ctaLink={translatePath('/historia', lang)}
     backgroundImage="/products/baby-mat/shared/hero-alfombra.jpeg"
   />
+
+  <!-- Indicadores de Confianza -->
+  <TrustBadges />
 
   <!-- Sobre ELEMATT -->
   <Section title={t('home.aboutTitle')} background="lino" centered>
@@ -217,4 +222,7 @@ const t = useTranslations(lang);
     color: white;
   }
 </style>
+
+  <!-- Cierre Emocional de Marca -->
+  <BrandSignature />
 

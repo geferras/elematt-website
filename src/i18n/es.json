@@ -154,6 +154,55 @@
     "size": "Tamaño",
     "color": "Color",
     "quantity": "Cantidad"
+  },
+  "product": {
+    "safety": {
+      "title": "⚠️ Información de Seguridad",
+      "bagWarning": "Esta bolsa de PU no es un juguete. Mantener fuera del alcance de bebés y niños. Uso exclusivo para adultos."
+    },
+    "babyMat": {
+      "name": "Alfombra Bebé Acolchada Plegable",
+      "variant150": "Compacta 150×180×1,5 cm",
+      "variant180": "XL 180×200×1,5 cm",
+      "seoTitle150": "Alfombra Bebé Acolchada Plegable Compacta 150×180×1,5 cm | ELEMATT",
+      "seoTitle180": "Alfombra Bebé Acolchada Plegable XL 180×200×1,5 cm | ELEMATT",
+      "seoDescription150": "Alfombra bebé acolchada plegable 150×180×1,5 cm. Ilustraciones exclusivas en acuarela, reversible, impermeable. Incluye 20 tarjetas sensoriales. Certificación 0+.",
+      "seoDescription180": "Alfombra bebé acolchada plegable 180×200×1,5 cm. Ilustraciones exclusivas en acuarela, reversible, impermeable. Incluye 20 tarjetas sensoriales. Certificación 0+.",
+      "seoKeywords150": "alfombra bebé 150x180, alfombra plegable bebé, alfombra acolchada, alfombra reversible bebé, alfombra impermeable, tarjetas sensoriales, ELEMATT",
+      "seoKeywords180": "alfombra bebé 180x200, alfombra plegable bebé XL, alfombra acolchada grande, alfombra reversible bebé, alfombra impermeable, tarjetas sensoriales, ELEMATT",
+      "heroDescription": "Donde cada historia empieza sobre una alfombra",
+      "viewOnAmazon": "Ver en Amazon",
+      "amazonPrime": "Envío rápido con Amazon Prime",
+      "storyTitle": "La Historia Detrás de Esta Alfombra",
+      "storyText1": "Esta alfombra nació del amor de una madre por su hija Elena y sus tres mejores amigas de la guardería: <strong>Laia, Isabela y Olivia</strong>, conocidas como \"las 4 fantásticas\".",
+      "storyText2": "Cada día, estas cuatro pequeñas exploraban el mundo juntas, acompañadas por <strong>Pep</strong>, el elefante de peluche de Elena. Sus aventuras imaginarias inspiraron las dos caras de esta alfombra:",
+      "sideATitle": "Cara A: Pueblo Costero",
+      "sideADescription": "Inspirada en los días de calma junto al mar. Tonos arena, beige y azul que transmiten serenidad y alegría. Perfecta para momentos de tranquilidad y juego relajado.",
+      "sideBTitle": "Cara B: Selva Tropical",
+      "sideBDescription": "Un mundo vibrante lleno de aventuras. Colores vivos que despiertan la curiosidad y convierten el suelo en un espacio de exploración y aprendizaje.",
+      "specsTitle": "Especificaciones Técnicas",
+      "specDimensionsTitle": "📏 Dimensiones",
+      "specDimensionsText150": "Tamaño compacto ideal para habitaciones o espacios reducidos",
+      "specDimensionsText180": "Tamaño XL perfecto para crear un amplio espacio de juegos familiares",
+      "specProtectionTitle": "🛡️ Protección Superior",
+      "specProtectionText": "Grosor real de <strong>1,5 cm</strong> de espuma XPE de alta densidad. Amortigua caídas y protege en cada gateo, rodar y primer paso.",
+      "specCertificationTitle": "✅ Certificación 0+",
+      "specCertificationText": "Cumple normativa <strong>EN71</strong>. 100% libre de BPA y metales pesados. Segura desde el nacimiento.",
+      "specWaterproofTitle": "💧 Impermeable y Fácil de Limpiar",
+      "specWaterproofText": "Superficie impermeable. Se limpia con un paño húmedo en segundos. Siempre lista para la siguiente aventura.",
+      "specReversibleTitle": "🎨 Diseño Reversible",
+      "specReversibleText": "Ilustraciones exclusivas en acuarela por ambas caras. Dos mundos de juego en una sola alfombra.",
+      "specPortableTitle": "🧳 Plegable y Portátil",
+      "specPortableText": "Incluye bolsa premium de PU con cremallera invisible. Fácil de guardar, transportar y regalar.",
+      "cardsTitle": "Incluye 20 Tarjetas Sensoriales",
+      "cardsDescription": "Diseñadas en el mismo estilo artístico de la alfombra, estas tarjetas estimulan la imaginación y se convierten en los primeros juguetes Montessori de tu bebé.",
+      "cardsCoastalTitle": "Set Pueblo Costero",
+      "cardsCoastalText": "10 tarjetas doble cara (14×14 cm) con ilustraciones del mundo costero",
+      "cardsJungleTitle": "Set Selva Tropical",
+      "cardsJungleText": "10 tarjetas doble cara (14×14 cm) con ilustraciones de la selva",
+      "ctaTitle": "Dale a tu bebé lo mejor desde el primer día",
+      "ctaDescription": "Haz que tu hogar se llene de color, seguridad y recuerdos inolvidables."
+    }
   }
 }
 

@@ -1,54 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Página Principal -->
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Español (default) -->
   <url>
     <loc>https://elematt.com/</loc>
-    <lastmod>2025-11-01</lastmod>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elematt.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elematt.com/en/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://elematt.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://elematt.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elematt.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://elematt.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elematt.com/" />
+  </url>
+
+  <url>
+    <loc>https://elematt.com/historia</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elematt.com/historia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elematt.com/en/historia" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://elematt.com/pt/historia" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://elematt.com/it/historia" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elematt.com/fr/historia" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://elematt.com/de/historia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elematt.com/historia" />
+  </url>
+
+  <url>
+    <loc>https://elematt.com/contacto</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elematt.com/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elematt.com/en/contacto" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://elematt.com/pt/contacto" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://elematt.com/it/contacto" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elematt.com/fr/contacto" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://elematt.com/de/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elematt.com/contacto" />
+  </url>
+
+  <url>
+    <loc>https://elematt.com/productos/alfombra-bebe/150x180</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elematt.com/productos/alfombra-bebe/150x180" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elematt.com/en/productos/alfombra-bebe/150x180" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://elematt.com/pt/productos/alfombra-bebe/150x180" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://elematt.com/it/productos/alfombra-bebe/150x180" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elematt.com/fr/productos/alfombra-bebe/150x180" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://elematt.com/de/productos/alfombra-bebe/150x180" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elematt.com/productos/alfombra-bebe/150x180" />
+  </url>
+
+  <url>
+    <loc>https://elematt.com/productos/alfombra-bebe/180x200</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elematt.com/productos/alfombra-bebe/180x200" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elematt.com/en/productos/alfombra-bebe/180x200" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://elematt.com/pt/productos/alfombra-bebe/180x200" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://elematt.com/it/productos/alfombra-bebe/180x200" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elematt.com/fr/productos/alfombra-bebe/180x200" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://elematt.com/de/productos/alfombra-bebe/180x200" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elematt.com/productos/alfombra-bebe/180x200" />
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://elematt.com/en/</loc>
+    <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Historia -->
+
   <url>
-    <loc>https://elematt.com/historia</loc>
-    <lastmod>2025-11-01</lastmod>
+    <loc>https://elematt.com/en/historia</loc>
+    <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Contacto -->
+
   <url>
-    <loc>https://elematt.com/contacto</loc>
-    <lastmod>2025-11-01</lastmod>
+    <loc>https://elematt.com/en/contacto</loc>
+    <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Producto: Alfombra 150x180 -->
-  <url>
-    <loc>https://elematt.com/productos/alfombra-bebe/150x180</loc>
-    <lastmod>2025-11-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://elematt.com/products/baby-mat/shared/hero-alfombra.jpeg</image:loc>
-      <image:title>Alfombra Bebé 150×180 ELEMATT</image:title>
-    </image:image>
-  </url>
-  
-  <!-- Producto: Alfombra 180x200 -->
-  <url>
-    <loc>https://elematt.com/productos/alfombra-bebe/180x200</loc>
-    <lastmod>2025-11-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://elematt.com/products/baby-mat/shared/hero-alfombra.jpeg</image:loc>
-      <image:title>Alfombra Bebé 180×200 ELEMATT</image:title>
-    </image:image>
-  </url>
-  
-</urlset>
 
+  <url>
+    <loc>https://elematt.com/en/productos/alfombra-bebe/150x180</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/en/productos/alfombra-bebe/180x200</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Portuguese -->
+  <url>
+    <loc>https://elematt.com/pt/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/pt/historia</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/pt/contacto</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/pt/productos/alfombra-bebe/150x180</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/pt/productos/alfombra-bebe/180x200</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+
+
+
+  <!-- Italian -->
+  <url>
+    <loc>https://elematt.com/it/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/it/historia</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/it/contacto</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/it/productos/alfombra-bebe/150x180</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/it/productos/alfombra-bebe/180x200</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- French -->
+  <url>
+    <loc>https://elematt.com/fr/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/fr/historia</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/fr/contacto</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/fr/productos/alfombra-bebe/150x180</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/fr/productos/alfombra-bebe/180x200</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://elematt.com/de/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/de/historia</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/de/contacto</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/de/productos/alfombra-bebe/150x180</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://elematt.com/de/productos/alfombra-bebe/180x200</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

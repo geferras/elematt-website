@@ -154,7 +154,62 @@
     "notifyMe": "Me notifier",
     "loading": "Chargement...",
     "error": "Erreur",
-    "success": "Succès"
+    "success": "Succès",
+    "viewMore": "Voir plus",
+    "close": "Fermer",
+    "price": "Prix",
+    "size": "Taille",
+    "color": "Couleur",
+    "quantity": "Quantité"
+  },
+  "product": {
+    "safety": {
+      "title": "⚠️ Information de Sécurité",
+      "bagWarning": "Ce sac en PU n'est pas un jouet. Tenir hors de portée des bébés et des enfants. Usage exclusif pour adultes."
+    },
+    "babyMat": {
+      "name": "Tapis Bébé Rembourré Pliable",
+      "variant150": "Compact 150×180×1,5 cm",
+      "variant180": "XL 180×200×1,5 cm",
+      "seoTitle150": "Tapis Bébé Rembourré Pliable Compact 150×180×1,5 cm | ELEMATT",
+      "seoTitle180": "Tapis Bébé Rembourré Pliable XL 180×200×1,5 cm | ELEMATT",
+      "seoDescription150": "Tapis bébé rembourré pliable 150×180×1,5 cm. Illustrations exclusives à l'aquarelle, réversible, imperméable. Comprend 20 cartes sensorielles. Certification 0+.",
+      "seoDescription180": "Tapis bébé rembourré pliable 180×200×1,5 cm. Illustrations exclusives à l'aquarelle, réversible, imperméable. Comprend 20 cartes sensorielles. Certification 0+.",
+      "seoKeywords150": "tapis bébé 150x180, tapis pliable bébé, tapis rembourré, tapis réversible bébé, tapis imperméable, cartes sensorielles, ELEMATT",
+      "seoKeywords180": "tapis bébé 180x200, tapis pliable bébé XL, tapis rembourré grand, tapis réversible bébé, tapis imperméable, cartes sensorielles, ELEMATT",
+      "heroDescription": "Où chaque histoire commence sur un tapis",
+      "viewOnAmazon": "Voir sur Amazon",
+      "amazonPrime": "Livraison rapide avec Amazon Prime",
+      "storyTitle": "L'Histoire Derrière Ce Tapis",
+      "storyText1": "Ce tapis est né de l'amour d'une mère pour sa fille Elena et ses trois meilleures amies de la crèche : <strong>Laia, Isabela et Olivia</strong>, connues comme \"les 4 fantastiques\".",
+      "storyText2": "Chaque jour, ces quatre petites exploraient le monde ensemble, accompagnées de <strong>Pep</strong>, l'éléphant en peluche d'Elena. Leurs aventures imaginaires ont inspiré les deux faces de ce tapis :",
+      "sideATitle": "Face A : Village Côtier",
+      "sideADescription": "Inspiré par des journées calmes au bord de la mer. Tons sable, beige et bleu qui transmettent sérénité et joie. Parfait pour des moments de tranquillité et de jeu détendu.",
+      "sideBTitle": "Face B : Jungle Tropicale",
+      "sideBDescription": "Un monde vibrant plein d'aventures. Couleurs vives qui éveillent la curiosité et transforment le sol en espace d'exploration et d'apprentissage.",
+      "specsTitle": "Spécifications Techniques",
+      "specDimensionsTitle": "📏 Dimensions",
+      "specDimensionsText150": "Taille compacte idéale pour chambres ou petits espaces",
+      "specDimensionsText180": "Taille XL parfaite pour créer un grand espace de jeu familial",
+      "specProtectionTitle": "🛡️ Protection Supérieure",
+      "specProtectionText": "Épaisseur réelle de <strong>1,5 cm</strong> de mousse XPE haute densité. Amortit les chutes et protège à chaque rampement, roulement et premier pas.",
+      "specCertificationTitle": "✅ Certification 0+",
+      "specCertificationText": "Conforme à la norme <strong>EN71</strong>. 100% sans BPA et métaux lourds. Sûr dès la naissance.",
+      "specWaterproofTitle": "💧 Imperméable et Facile à Nettoyer",
+      "specWaterproofText": "Surface imperméable. Se nettoie avec un chiffon humide en quelques secondes. Toujours prêt pour la prochaine aventure.",
+      "specReversibleTitle": "🎨 Design Réversible",
+      "specReversibleText": "Illustrations exclusives à l'aquarelle des deux côtés. Deux mondes de jeu en un seul tapis.",
+      "specPortableTitle": "🧳 Pliable et Portable",
+      "specPortableText": "Comprend un sac premium en PU avec fermeture éclair invisible. Facile à ranger, transporter et offrir.",
+      "cardsTitle": "Comprend 20 Cartes Sensorielles",
+      "cardsDescription": "Conçues dans le même style artistique que le tapis, ces cartes stimulent l'imagination et deviennent les premiers jouets Montessori de votre bébé.",
+      "cardsCoastalTitle": "Set Village Côtier",
+      "cardsCoastalText": "10 cartes recto-verso (14×14 cm) avec illustrations du monde côtier",
+      "cardsJungleTitle": "Set Jungle Tropicale",
+      "cardsJungleText": "10 cartes recto-verso (14×14 cm) avec illustrations de la jungle",
+      "ctaTitle": "Offrez le meilleur à votre bébé dès le premier jour",
+      "ctaDescription": "Remplissez votre maison de couleur, de sécurité et de souvenirs inoubliables."
+    }
   }
 }
 
