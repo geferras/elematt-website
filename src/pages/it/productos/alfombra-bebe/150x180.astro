@@ -54,6 +54,9 @@ const producto = {
     }
   })} />
 
+  <!-- ⚠️ BLOQUE DE SEGURIDAD CRÍTICO - PRIMER ELEMENTO VISIBLE -->
+  <ProductSafetyNotice />
+
   <!-- Hero con imagen del producto -->
   <Hero
     title={t('product.babyMat.name')}
@@ -63,9 +66,6 @@ const producto = {
     ctaLink={producto.amazonLink}
     backgroundImage="/products/baby-mat/shared/hero-alfombra.jpeg"
   />
-
-  <!-- ⚠️ BLOQUE DE SEGURIDAD CRÍTICO - NO MOVER NI ELIMINAR -->
-  <ProductSafetyNotice />
 
   <!-- Historia del Producto -->
   <Section title={t('product.babyMat.storyTitle')} background="lino" centered>
