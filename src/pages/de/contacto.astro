@@ -82,7 +82,12 @@ const t = useTranslations(lang);
 
       <!-- Formulario -->
       <div class="contacto-form-wrapper">
-        <form class="contacto-form" id="contactForm">
+        <form
+          class="contacto-form"
+          id="contactForm"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
           <div class="form-group">
             <label for="nombre">{t('contact.nameLabel')}</label>
             <input
@@ -99,7 +104,7 @@ const t = useTranslations(lang);
             <input
               type="email"
               id="email"
-              name="email"
+              name="_replyto"
               required
               placeholder={t('contact.emailPlaceholder')}
             />
@@ -126,6 +131,9 @@ const t = useTranslations(lang);
               placeholder={t('contact.messagePlaceholder')}
             ></textarea>
           </div>
+
+          <input type="hidden" name="_subject" value="Neue Nachricht von ELEMATT (DE)" />
+          <input type="text" name="_gotcha" style="display:none" />
 
           <div class="form-group checkbox-group">
             <label class="checkbox-label">

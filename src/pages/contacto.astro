@@ -29,7 +29,12 @@ const t = useTranslations(lang);
 
       <!-- Formulario -->
       <div class="contacto-form-wrapper">
-        <form class="contacto-form" id="contactForm">
+        <form
+          class="contacto-form"
+          id="contactForm"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
           <div class="form-group">
             <label for="nombre">{t('contact.nameLabel')}</label>
             <input
@@ -46,7 +51,7 @@ const t = useTranslations(lang);
             <input
               type="email"
               id="email"
-              name="email"
+              name="_replyto"
               required
               placeholder={t('contact.emailPlaceholder')}
             />
@@ -73,6 +78,12 @@ const t = useTranslations(lang);
               placeholder={t('contact.messagePlaceholder')}
             ></textarea>
           </div>
+
+          <!-- Hidden field for subject -->
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde ELEMATT" />
+
+          <!-- Honeypot for spam protection -->
+          <input type="text" name="_gotcha" style="display:none" />
 
           <div class="form-group checkbox-group">
             <label class="checkbox-label">
@@ -320,32 +331,42 @@ const t = useTranslations(lang);
 </style>
 
 <script>
-  // Form submission handler
-  const contactForm = document.getElementById('contactForm');
+  // Formspree handles the submission automatically
+  // This script adds visual feedback and validation
+  const contactForm = document.getElementById('contactForm') as HTMLFormElement;
 
-  contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      const submitBtn = contactForm.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = submitBtn.textContent;
 
-    const formData = new FormData(contactForm as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = '...';
 
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Form data:', data);
+      // Formspree will handle the actual submission
+      // We just provide visual feedback
+    });
 
-    // Mostrar mensaje de éxito (usar traducción del DOM)
-    const lang = document.documentElement.lang || 'es';
-    const messages: Record<string, string> = {
-      es: '¡Gracias por tu mensaje! Te responderemos pronto.',
-      en: 'Thank you for your message! We will respond soon.',
-      pt: 'Obrigado pela sua mensagem! Responderemos em breve.',
-      it: 'Grazie per il tuo messaggio! Risponderemo presto.',
-      fr: 'Merci pour votre message ! Nous vous répondrons bientôt.',
-      de: 'Vielen Dank für Ihre Nachricht! Wir werden bald antworten.'
-    };
-    alert(messages[lang] || messages.es);
+    // Handle Formspree response
+    window.addEventListener('load', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        const lang = document.documentElement.lang || 'es';
+        const messages: Record<string, string> = {
+          es: '¡Gracias por tu mensaje! Te responderemos pronto.',
+          en: 'Thank you for your message! We will respond soon.',
+          pt: 'Obrigado pela sua mensagem! Responderemos em breve.',
+          it: 'Grazie per il tuo messaggio! Risponderemo presto.',
+          fr: 'Merci pour votre message ! Nous vous répondrons bientôt.',
+          de: 'Vielen Dank für Ihre Nachricht! Wir werden bald antworten.'
+        };
+        alert(messages[lang] || messages.es);
 
-    // Resetear formulario
-    (contactForm as HTMLFormElement).reset();
-  });
+        // Clean URL
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    });
+  }
 </script>
 
