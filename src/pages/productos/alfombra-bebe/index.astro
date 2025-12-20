@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import NotificationButtons from '@components/NotificationButtons.astro';
+import ProductSafetyNotice from '@components/product/ProductSafetyNotice.astro';
 
 const producto = {
   nombre: 'Alfombra Bebé Acolchada Plegable',
@@ -69,6 +70,11 @@ const producto = {
   keywords="alfombra bebé, alfombra plegable, alfombra acolchada, alfombra reversible, ELEMATT"
   type="product"
 >
+  <!-- Safety Warning - CRITICAL: Must be first visible element -->
+  <div style="padding: 0.5rem 0.5rem 0 0.5rem; background: white;">
+    <ProductSafetyNotice />
+  </div>
+
   <!-- Hero Minimalista -->
   <section class="hero-producto">
     <div class="container-hero">

@@ -35,11 +35,13 @@ const t = useTranslations(lang);
 
 <style>
   .safety-notice {
-    background: #FFF9F5;
-    border-left: 4px solid #D4A574;
+    background: linear-gradient(135deg, #FFF9F5 0%, #FFF5EE 100%);
+    border-left: 4px solid #FF8C42;
+    border-radius: 8px;
     padding: 1rem 1.25rem;
     margin: 0 auto 2rem auto;
     max-width: 1200px;
+    box-shadow: 0 2px 8px rgba(255, 140, 66, 0.1);
   }
 
   .safety-notice__container {
@@ -50,13 +52,19 @@ const t = useTranslations(lang);
 
   .safety-notice__icon {
     flex-shrink: 0;
-    color: #D4A574;
-    margin-top: 0.125rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF8C42;
+    border-radius: 50%;
+    color: white;
   }
 
   .safety-notice__icon svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .safety-notice__content {
@@ -67,35 +75,57 @@ const t = useTranslations(lang);
     font-family: 'Nunito', sans-serif;
     font-size: 0.9375rem;
     font-weight: 400;
-    color: #4A4A4A;
+    color: #6B4423;
     margin: 0;
     line-height: 1.6;
   }
 
   .safety-notice__title {
-    font-weight: 600;
-    color: #2C2C2C;
+    font-weight: 700;
+    color: #C85A28;
   }
 
-  /* Mobile */
-  @media (max-width: 640px) {
+  /* Mobile - Optimized for visibility */
+  @media (max-width: 768px) {
+    .safety-notice {
+      padding: 1rem 1.25rem;
+      margin: 0 0.875rem 1.5rem 0.875rem;
+      border-radius: 10px;
+    }
+
+    .safety-notice__container {
+      gap: 0.875rem;
+    }
+
+    .safety-notice__icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .safety-notice__icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .safety-notice__text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+
+  /* Extra small devices */
+  @media (max-width: 430px) {
     .safety-notice {
       padding: 0.875rem 1rem;
-      margin: 0 0.75rem 1.5rem 0.75rem;
+      margin: 0 0.75rem 1.25rem 0.75rem;
     }
 
     .safety-notice__container {
       gap: 0.75rem;
     }
 
-    .safety-notice__icon svg {
-      width: 20px;
-      height: 20px;
-    }
-
     .safety-notice__text {
-      font-size: 0.875rem;
-      line-height: 1.5;
+      font-size: 0.8125rem;
     }
   }
 

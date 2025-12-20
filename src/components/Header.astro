@@ -585,15 +585,22 @@ const currentPath = Astro.url.pathname;
       });
     });
 
-    // Submenu toggle (mobile)
+    // Submenu toggle (mobile) - Allow navigation on second click
     const dropdownLinks = document.querySelectorAll('.has-submenu > .dropdown-link');
     dropdownLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
-          e.preventDefault();
-          e.stopPropagation();
           const parent = link.closest('.has-submenu');
-          if (parent) parent.classList.toggle('active');
+          const isActive = parent?.classList.contains('active');
+
+          // If submenu is already open, allow navigation
+          // If submenu is closed, open it and prevent navigation
+          if (!isActive) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (parent) parent.classList.add('active');
+          }
+          // If already active, let the link navigate normally
         }
       });
     });
