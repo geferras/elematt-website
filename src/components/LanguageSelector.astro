@@ -131,58 +131,145 @@ const languageFlags: Record<Language, string> = {
   }
 
   @media (max-width: 768px) {
+    .language-selector {
+      width: 100%;
+    }
+
     .lang-button {
-      padding: 0.625rem 1rem;
-      font-size: 0.9375rem;
-      min-height: 44px;
+      width: 100%;
+      padding: 0.875rem 1.25rem;
+      font-size: 1rem;
+      min-height: 48px;
       border-radius: 10px;
+      justify-content: center;
+      border: 2px solid var(--color-salvia);
+      background: linear-gradient(135deg, var(--color-lino), var(--color-perla));
+    }
+
+    .lang-button:active {
+      transform: scale(0.98);
     }
 
     .lang-flag {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     .lang-name {
       display: inline;
+      font-weight: 600;
     }
 
     .lang-menu {
-      right: 0;
-      left: auto;
-      min-width: 180px;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      width: 100%;
+      min-width: auto;
       border-radius: 10px;
+      margin-top: 0.75rem;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      background-color: var(--color-perla);
+      border: none;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .language-selector.active .lang-menu {
+      max-height: 400px;
+      padding: 0.5rem 0;
+    }
+
+    .lang-option {
+      padding: 1rem 1.5rem;
+      font-size: 1.0625rem;
+      min-height: 52px;
+      border-radius: 8px;
+      margin: 0.25rem 0.5rem;
+    }
+
+    .lang-option:active {
+      transform: scale(0.98);
+    }
+
+    .lang-option.active {
+      background: var(--color-salvia);
+      color: var(--color-blanco);
+      font-weight: 700;
+    }
+  }
+
+  /* Extra small devices (360px - 430px) */
+  @media (max-width: 430px) {
+    .lang-button {
+      padding: 0.75rem 1rem;
+      font-size: 0.9375rem;
+      min-height: 46px;
+    }
+
+    .lang-flag {
+      font-size: 1.3rem;
     }
 
     .lang-option {
       padding: 0.875rem 1.25rem;
       font-size: 1rem;
-      min-height: 48px;
+      min-height: 50px;
     }
   }
 </style>
 
 <script>
-  const langToggle = document.getElementById('langToggle');
-  const langMenu = document.getElementById('langMenu');
-  const langSelector = langToggle?.closest('.language-selector');
+  function initLanguageSelector() {
+    const langToggle = document.getElementById('langToggle');
+    const langMenu = document.getElementById('langMenu');
+    const langSelector = langToggle?.closest('.language-selector');
 
-  langToggle?.addEventListener('click', () => {
-    langSelector?.classList.toggle('active');
-  });
+    if (!langToggle || !langSelector) return;
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-    if (!target.closest('.language-selector')) {
-      langSelector?.classList.remove('active');
-    }
-  });
+    // Toggle language menu
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langSelector.classList.toggle('active');
+    });
 
-  // Close menu when pressing Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      langSelector?.classList.remove('active');
-    }
-  });
+    // Close menu when clicking outside (desktop only)
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.language-selector')) {
+        langSelector.classList.remove('active');
+      }
+    });
+
+    // Close menu when pressing Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        langSelector.classList.remove('active');
+      }
+    });
+
+    // Close language menu when clicking on a language option (mobile)
+    const langOptions = langSelector.querySelectorAll('.lang-option');
+    langOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        // Small delay to allow navigation
+        setTimeout(() => {
+          langSelector.classList.remove('active');
+        }, 100);
+      });
+    });
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguageSelector);
+  } else {
+    initLanguageSelector();
+  }
+
+  // Re-initialize on page navigation (for Astro view transitions)
+  document.addEventListener('astro:page-load', initLanguageSelector);
 </script>
 
