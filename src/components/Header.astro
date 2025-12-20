@@ -128,7 +128,7 @@ const currentPath = Astro.url.pathname;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 
   .logo {
@@ -136,10 +136,11 @@ const currentPath = Astro.url.pathname;
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
+    z-index: 1001;
   }
 
   .logo-img {
-    height: 50px;
+    height: 48px;
     width: auto;
     transition: opacity var(--transition-fast);
   }
@@ -157,10 +158,12 @@ const currentPath = Astro.url.pathname;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
-    width: 40px;
-    height: 40px;
+    padding: 0.75rem;
+    min-width: 48px;
+    min-height: 48px;
     position: relative;
+    z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .hamburger,
@@ -375,44 +378,65 @@ const currentPath = Astro.url.pathname;
     padding-left: 2rem;
   }
 
-  /* Responsive */
+  /* Responsive - Mobile First */
   @media (max-width: 768px) {
+    .nav {
+      padding: 0.875rem 0;
+    }
+
+    .logo-img {
+      height: 42px;
+    }
+
     .menu-toggle {
       display: flex;
     }
 
     .nav-menu {
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      top: 0;
       left: 0;
       right: 0;
+      bottom: 0;
       background-color: var(--color-blanco);
       flex-direction: column;
       gap: 0;
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height var(--transition-normal);
+      padding: 5rem 1.5rem 2rem 1.5rem;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(100%);
+      transition: all var(--transition-normal);
+      overflow-y: auto;
+      z-index: 1000;
     }
 
     .nav-menu.active {
-      max-height: 600px;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
 
     .nav-item {
       width: 100%;
       text-align: center;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--color-perla);
-    }
-
-    .nav-item:last-child {
+      padding: 0;
+      margin-bottom: 0.5rem;
       border-bottom: none;
     }
 
     .nav-link {
       justify-content: center;
+      padding: 1rem;
+      font-size: 1.125rem;
+      min-height: 48px;
+      border-radius: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background-color: var(--color-perla);
     }
 
     .nav-link::after {
@@ -422,7 +446,9 @@ const currentPath = Astro.url.pathname;
     /* Language selector mobile */
     .nav-lang {
       justify-content: center;
-      padding: 1rem 0;
+      padding: 1.5rem 0 0 0;
+      margin-top: 1rem;
+      border-top: 1px solid var(--color-perla);
     }
 
     /* Dropdown mobile */
@@ -432,22 +458,30 @@ const currentPath = Astro.url.pathname;
       visibility: visible;
       transform: none;
       box-shadow: none;
-      border-radius: 0;
-      margin-top: 0;
+      border-radius: 8px;
+      margin-top: 0.5rem;
       padding: 0;
       max-height: 0;
       overflow: hidden;
       transition: max-height var(--transition-normal);
+      background-color: var(--color-perla);
     }
 
     .has-dropdown.active .dropdown-menu {
       max-height: 400px;
+      padding: 0.5rem 0;
     }
 
     .dropdown-link {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      background-color: var(--color-perla);
+      padding: 0.875rem 1.25rem;
+      font-size: 1rem;
+      min-height: 48px;
+      border-radius: 6px;
+      margin: 0 0.5rem;
+    }
+
+    .dropdown-link:hover {
+      background-color: var(--color-lino);
     }
 
     .dropdown-toggle {
@@ -461,22 +495,30 @@ const currentPath = Astro.url.pathname;
       visibility: visible;
       transform: none;
       box-shadow: none;
-      border-radius: 0;
-      margin: 0;
+      border-radius: 6px;
+      margin: 0.5rem 0.5rem 0 0.5rem;
       padding: 0;
       max-height: 0;
       overflow: hidden;
       transition: max-height var(--transition-normal);
+      background-color: var(--color-lino);
     }
 
     .has-submenu.active .submenu {
       max-height: 200px;
+      padding: 0.5rem 0;
     }
 
     .submenu-link {
-      padding: 0.5rem 1.5rem;
-      font-size: 0.85rem;
-      background-color: var(--color-lino);
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9375rem;
+      min-height: 44px;
+      border-radius: 4px;
+      margin: 0 0.5rem;
+    }
+
+    .submenu-link:hover {
+      background-color: var(--color-blanco);
     }
 
     .submenu-icon {

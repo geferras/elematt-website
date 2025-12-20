@@ -321,17 +321,41 @@ const {
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
     .hero {
-      min-height: 500px;
-      background-attachment: scroll; /* Desactivar parallax en móvil */
+      min-height: 420px;
+      background-attachment: scroll;
+      background-position: center center;
     }
 
     .hero-content {
-      padding: var(--spacing-md) var(--spacing-sm);
+      padding: 2rem 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.875rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
 
     .particle {
       width: 6px;
       height: 6px;
+    }
+
+    .btn {
+      padding: 0.875rem 1.75rem;
+      font-size: 0.9375rem;
     }
 
     .btn-arrow {
@@ -342,11 +366,23 @@ const {
 
   @media (max-width: 480px) {
     .hero {
-      min-height: 400px;
+      min-height: 380px;
+    }
+
+    .hero-content {
+      padding: 1.5rem 0.875rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .hero-description {
+      font-size: 0.9375rem;
     }
 
     .particle {
-      display: none; /* Ocultar partículas en móviles pequeños */
+      display: none;
     }
   }
 </style>
