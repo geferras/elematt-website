@@ -12,14 +12,14 @@ El formulario de contacto está configurado para usar **Formspree** - un servici
 
 1. Ve a: **https://formspree.io/**
 2. Click en **"Get Started"** o **"Sign Up"**
-3. Regístrate con tu email (recomiendo usar `hola@elematt.com`)
+3. Regístrate con tu email (usa `soporte@elematt.com`)
 4. Verifica tu email
 
 ### 2. Crear un Nuevo Formulario
 
 1. Una vez dentro, click en **"+ New Form"**
 2. Nombre del formulario: **"ELEMATT Contact Form"**
-3. Email donde recibirás los mensajes: **`hola@elematt.com`** (o el que prefieras)
+3. Email donde recibirás los mensajes: **`soporte@elematt.com`**
 4. Click en **"Create Form"**
 
 ### 3. Obtener el Form ID
@@ -82,7 +82,7 @@ Si necesitas más de 50 envíos/mes, el plan Gold cuesta $10/mes (1000 envíos).
 
 1. **Usuario llena el formulario** en elematt.com/contacto
 2. **Formspree recibe los datos** y los procesa
-3. **Tú recibes un email** en `hola@elematt.com` con:
+3. **Tú recibes un email** en `soporte@elematt.com` con:
    - Nombre del usuario
    - Email del usuario (puedes responder directamente)
    - Asunto seleccionado
@@ -129,7 +129,7 @@ Cada idioma tiene un asunto diferente para que sepas de dónde viene:
 1. Ve a tu sitio en producción: `https://elematt.com/contacto`
 2. Llena el formulario con datos de prueba
 3. Envía
-4. Deberías recibir un email en `hola@elematt.com`
+4. Deberías recibir un email en `soporte@elematt.com`
 5. Verifica también en el dashboard de Formspree
 
 ---
