@@ -20,106 +20,42 @@ const t = useTranslations(lang);
 ---
 
 <div class="safety-notice">
-  <div class="safety-notice__container">
-    <div class="safety-notice__icon" aria-hidden="true">
-      <Icon name="alert-triangle" size={32} />
-    </div>
-    
-    <div class="safety-notice__content">
-      <h2 class="safety-notice__title">
-        {t('product.safety.title')}
-      </h2>
-      <p class="safety-notice__text">
-        {t('product.safety.bagWarning')}
-      </p>
-    </div>
-  </div>
+  <p class="safety-notice__text">
+    <strong>{t('product.safety.title')}</strong> {t('product.safety.bagWarning')}
+  </p>
 </div>
 
 <style>
   .safety-notice {
-    background: linear-gradient(135deg, #FEF9F3 0%, #FEFDFB 100%);
-    border: 2px solid #E8DCC8;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin: 0 auto 2rem auto;
     max-width: 1200px;
-    box-shadow: 0 4px 12px rgba(139, 157, 131, 0.15);
-    position: relative;
-    z-index: 100;
-  }
-
-  .safety-notice__container {
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-  }
-
-  .safety-notice__icon {
-    flex-shrink: 0;
-    color: #D4A574;
-    margin-top: 0.25rem;
-  }
-
-  .safety-notice__icon svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .safety-notice__content {
-    flex: 1;
-  }
-
-  .safety-notice__title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #4A4A4A;
-    margin: 0 0 0.75rem 0;
-    line-height: 1.3;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
   }
 
   .safety-notice__text {
     font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
-    color: #4A4A4A;
+    color: #666;
     margin: 0;
-    line-height: 1.7;
+    line-height: 1.6;
+    text-align: center;
   }
 
-  /* Mobile - CRÍTICO: Above the fold */
+  .safety-notice__text strong {
+    font-weight: 600;
+    color: #4A4A4A;
+  }
+
+  /* Mobile */
   @media (max-width: 640px) {
     .safety-notice {
-      padding: 1rem 0.875rem;
-      margin: 0.75rem 0.75rem 1.25rem 0.75rem;
-      border-radius: 10px;
-      border-width: 2px;
-    }
-
-    .safety-notice__container {
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .safety-notice__icon {
-      margin-top: 0;
-    }
-
-    .safety-notice__icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .safety-notice__title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      line-height: 1.25;
+      padding: 0 0.75rem;
+      margin-bottom: 1rem;
     }
 
     .safety-notice__text {
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
       line-height: 1.5;
     }
   }
@@ -127,31 +63,11 @@ const t = useTranslations(lang);
   /* Desktop */
   @media (min-width: 1024px) {
     .safety-notice {
-      padding: 2rem 2.5rem;
-      margin: 2.5rem auto;
-    }
-
-    .safety-notice__title {
-      font-size: 1.375rem;
+      margin-bottom: 2rem;
     }
 
     .safety-notice__text {
-      font-size: 1.0625rem;
-    }
-  }
-
-  /* Accesibilidad */
-  @media (prefers-reduced-motion: reduce) {
-    .safety-notice {
-      transition: none;
-    }
-  }
-
-  /* Alto contraste */
-  @media (prefers-contrast: high) {
-    .safety-notice {
-      border-width: 3px;
-      border-color: #4A4A4A;
+      font-size: 0.9375rem;
     }
   }
 </style>
