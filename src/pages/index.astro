@@ -92,12 +92,14 @@ const t = useTranslations(lang);
             </div>
           </div>
 
-          <a href={translatePath('/productos/alfombra-bebe/150x180', lang)} class="btn btn-primary mr-4">
-            {t('home.viewCompact')}
-          </a>
-          <a href={translatePath('/productos/alfombra-bebe/180x200', lang)} class="btn btn-secondary">
-            {t('home.viewXL')}
-          </a>
+          <div class="flex flex-wrap gap-4">
+            <a href={translatePath('/productos/alfombra-bebe/150x180', lang)} class="btn btn-primary">
+              {t('home.viewCompact')}
+            </a>
+            <a href={translatePath('/productos/alfombra-bebe/180x200', lang)} class="btn btn-secondary">
+              {t('home.viewXL')}
+            </a>
+          </div>
         </div>
       </div>
 

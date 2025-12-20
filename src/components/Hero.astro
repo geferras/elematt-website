@@ -15,7 +15,7 @@ const {
   subtitle,
   description,
   ctaText = "Explorar",
-  ctaLink = "/colecciones",
+  ctaLink = "/historia",
   backgroundImage,
   overlay = true,
   particles = true,
@@ -69,7 +69,7 @@ const {
     justify-content: center;
     background-color: var(--color-perla);
     background-size: cover;
-    background-position: center;
+    background-position: center top -15px; /* Recortar 15px superior */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Parallax effect */
     overflow: hidden;
@@ -210,7 +210,7 @@ const {
     color: var(--color-blanco);
     line-height: 1.2;
     margin-bottom: var(--spacing-md);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7), 1px 1px 4px rgba(0, 0, 0, 0.9);
     animation-delay: 0.4s;
   }
 
