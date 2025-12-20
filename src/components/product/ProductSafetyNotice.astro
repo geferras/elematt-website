@@ -20,42 +20,81 @@ const t = useTranslations(lang);
 ---
 
 <div class="safety-notice">
-  <p class="safety-notice__text">
-    <strong>{t('product.safety.title')}</strong> {t('product.safety.bagWarning')}
-  </p>
+  <div class="safety-notice__container">
+    <div class="safety-notice__icon" aria-hidden="true">
+      <Icon name="alert-triangle" size={24} />
+    </div>
+
+    <div class="safety-notice__content">
+      <p class="safety-notice__text">
+        <strong class="safety-notice__title">{t('product.safety.title')}</strong> {t('product.safety.bagWarning')}
+      </p>
+    </div>
+  </div>
 </div>
 
 <style>
   .safety-notice {
+    background: #FFF9F5;
+    border-left: 4px solid #D4A574;
+    padding: 1rem 1.25rem;
+    margin: 0 auto 2rem auto;
     max-width: 1200px;
-    margin: 0 auto 1.5rem auto;
-    padding: 0 1rem;
+  }
+
+  .safety-notice__container {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .safety-notice__icon {
+    flex-shrink: 0;
+    color: #D4A574;
+    margin-top: 0.125rem;
+  }
+
+  .safety-notice__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .safety-notice__content {
+    flex: 1;
   }
 
   .safety-notice__text {
     font-family: 'Nunito', sans-serif;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 400;
-    color: #666;
+    color: #4A4A4A;
     margin: 0;
     line-height: 1.6;
-    text-align: center;
   }
 
-  .safety-notice__text strong {
+  .safety-notice__title {
     font-weight: 600;
-    color: #4A4A4A;
+    color: #2C2C2C;
   }
 
   /* Mobile */
   @media (max-width: 640px) {
     .safety-notice {
-      padding: 0 0.75rem;
-      margin-bottom: 1rem;
+      padding: 0.875rem 1rem;
+      margin: 0 0.75rem 1.5rem 0.75rem;
+    }
+
+    .safety-notice__container {
+      gap: 0.75rem;
+    }
+
+    .safety-notice__icon svg {
+      width: 20px;
+      height: 20px;
     }
 
     .safety-notice__text {
-      font-size: 0.8125rem;
+      font-size: 0.875rem;
       line-height: 1.5;
     }
   }
@@ -63,11 +102,12 @@ const t = useTranslations(lang);
   /* Desktop */
   @media (min-width: 1024px) {
     .safety-notice {
-      margin-bottom: 2rem;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
     }
 
     .safety-notice__text {
-      font-size: 0.9375rem;
+      font-size: 1rem;
     }
   }
 </style>

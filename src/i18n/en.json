@@ -172,6 +172,20 @@
     "color": "Color",
     "quantity": "Quantity"
   },
+  "products": {
+    "title": "Our Products - ELEMATT",
+    "description": "Discover products designed with love, safety, and a unique story for your baby",
+    "heroTitle": "Our Products",
+    "heroSubtitle": "Discover",
+    "heroDescription": "Each ELEMATT product tells a unique story and is designed to accompany your baby's special moments",
+    "introText": "At ELEMATT, each product is born from a real story and is designed with love, safety, and attention to detail. Discover our collection designed to make every moment special.",
+    "available": "Available",
+    "variants": "Variants",
+    "viewProduct": "View product",
+    "ctaTitle": "Have any questions?",
+    "ctaText": "We're here to help you find the perfect product for your baby",
+    "ctaButton": "Contact Us"
+  },
   "product": {
     "safety": {
       "title": "Safety Information:",
@@ -179,6 +193,7 @@
     },
     "babyMat": {
       "name": "Padded Foldable Baby Mat",
+      "shortDescription": "Reversible mat with exclusive watercolor illustrations. Includes 20 sensory cards. 0+ certification.",
       "variant150": "Compact 150×180×1.5 cm",
       "variant180": "XL 180×200×1.5 cm",
       "seoTitle150": "Padded Foldable Baby Mat Compact 150×180×1.5 cm | ELEMATT",

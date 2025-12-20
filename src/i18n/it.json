@@ -172,6 +172,20 @@
     "color": "Colore",
     "quantity": "Quantità"
   },
+  "products": {
+    "title": "I Nostri Prodotti - ELEMATT",
+    "description": "Scopri prodotti progettati con amore, sicurezza e una storia unica per il tuo bambino",
+    "heroTitle": "I Nostri Prodotti",
+    "heroSubtitle": "Scopri",
+    "heroDescription": "Ogni prodotto ELEMATT racconta una storia unica ed è progettato per accompagnare i momenti speciali del tuo bambino",
+    "introText": "In ELEMATT, ogni prodotto nasce da una storia reale ed è progettato con amore, sicurezza e attenzione ai dettagli. Scopri la nostra collezione pensata per rendere speciale ogni momento.",
+    "available": "Disponibile",
+    "variants": "Varianti",
+    "viewProduct": "Vedi prodotto",
+    "ctaTitle": "Hai domande?",
+    "ctaText": "Siamo qui per aiutarti a trovare il prodotto perfetto per il tuo bambino",
+    "ctaButton": "Contattaci"
+  },
   "product": {
     "safety": {
       "title": "Informazioni di Sicurezza:",
@@ -179,6 +193,7 @@
     },
     "babyMat": {
       "name": "Tappeto Imbottito Pieghevole per Bambini",
+      "shortDescription": "Tappeto reversibile con illustrazioni esclusive ad acquerello. Include 20 carte sensoriali. Certificazione 0+.",
       "variant150": "Compatto 150×180×1,5 cm",
       "variant180": "XL 180×200×1,5 cm",
       "seoTitle150": "Tappeto Imbottito Pieghevole per Bambini Compatto 150×180×1,5 cm | ELEMATT",

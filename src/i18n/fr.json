@@ -165,6 +165,20 @@
     "color": "Couleur",
     "quantity": "Quantité"
   },
+  "products": {
+    "title": "Nos Produits - ELEMATT",
+    "description": "Découvrez des produits conçus avec amour, sécurité et une histoire unique pour votre bébé",
+    "heroTitle": "Nos Produits",
+    "heroSubtitle": "Découvrez",
+    "heroDescription": "Chaque produit ELEMATT raconte une histoire unique et est conçu pour accompagner les moments spéciaux de votre bébé",
+    "introText": "Chez ELEMATT, chaque produit naît d'une histoire réelle et est conçu avec amour, sécurité et attention aux détails. Découvrez notre collection pensée pour rendre chaque moment spécial.",
+    "available": "Disponible",
+    "variants": "Variantes",
+    "viewProduct": "Voir le produit",
+    "ctaTitle": "Des questions ?",
+    "ctaText": "Nous sommes là pour vous aider à trouver le produit parfait pour votre bébé",
+    "ctaButton": "Contactez-nous"
+  },
   "product": {
     "safety": {
       "title": "Information de Sécurité:",
@@ -172,6 +186,7 @@
     },
     "babyMat": {
       "name": "Tapis Bébé Rembourré Pliable",
+      "shortDescription": "Tapis réversible avec illustrations exclusives à l'aquarelle. Comprend 20 cartes sensorielles. Certification 0+.",
       "variant150": "Compact 150×180×1,5 cm",
       "variant180": "XL 180×200×1,5 cm",
       "seoTitle150": "Tapis Bébé Rembourré Pliable Compact 150×180×1,5 cm | ELEMATT",

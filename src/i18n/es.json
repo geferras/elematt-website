@@ -181,6 +181,20 @@
     "color": "Color",
     "quantity": "Cantidad"
   },
+  "products": {
+    "title": "Nuestros Productos - ELEMATT",
+    "description": "Descubre productos diseñados con amor, seguridad y una historia única para tu bebé",
+    "heroTitle": "Nuestros Productos",
+    "heroSubtitle": "Descubre",
+    "heroDescription": "Cada producto ELEMATT cuenta una historia única y está diseñado para acompañar los momentos especiales de tu bebé",
+    "introText": "En ELEMATT, cada producto nace de una historia real y está diseñado con amor, seguridad y atención al detalle. Descubre nuestra colección pensada para hacer de cada momento algo especial.",
+    "available": "Disponible",
+    "variants": "Variantes",
+    "viewProduct": "Ver producto",
+    "ctaTitle": "¿Tienes alguna pregunta?",
+    "ctaText": "Estamos aquí para ayudarte a encontrar el producto perfecto para tu bebé",
+    "ctaButton": "Contáctanos"
+  },
   "product": {
     "safety": {
       "title": "Información de Seguridad:",
@@ -188,6 +202,7 @@
     },
     "babyMat": {
       "name": "Alfombra Bebé Acolchada Plegable",
+      "shortDescription": "Alfombra reversible con ilustraciones exclusivas en acuarela. Incluye 20 tarjetas sensoriales. Certificación 0+.",
       "variant150": "Compacta 150×180×1,5 cm",
       "variant180": "XL 180×200×1,5 cm",
       "seoTitle150": "Alfombra Bebé Acolchada Plegable Compacta 150×180×1,5 cm | ELEMATT",

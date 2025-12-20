@@ -165,6 +165,20 @@
     "color": "Farbe",
     "quantity": "Menge"
   },
+  "products": {
+    "title": "Unsere Produkte - ELEMATT",
+    "description": "Entdecken Sie Produkte, die mit Liebe, Sicherheit und einer einzigartigen Geschichte für Ihr Baby entwickelt wurden",
+    "heroTitle": "Unsere Produkte",
+    "heroSubtitle": "Entdecken",
+    "heroDescription": "Jedes ELEMATT-Produkt erzählt eine einzigartige Geschichte und ist darauf ausgelegt, die besonderen Momente Ihres Babys zu begleiten",
+    "introText": "Bei ELEMATT entsteht jedes Produkt aus einer echten Geschichte und wird mit Liebe, Sicherheit und Liebe zum Detail entworfen. Entdecken Sie unsere Kollektion, die jeden Moment besonders macht.",
+    "available": "Verfügbar",
+    "variants": "Varianten",
+    "viewProduct": "Produkt ansehen",
+    "ctaTitle": "Haben Sie Fragen?",
+    "ctaText": "Wir helfen Ihnen gerne, das perfekte Produkt für Ihr Baby zu finden",
+    "ctaButton": "Kontaktieren Sie uns"
+  },
   "product": {
     "safety": {
       "title": "Sicherheitsinformationen:",
@@ -172,6 +186,7 @@
     },
     "babyMat": {
       "name": "Gepolsterte Faltbare Babymatte",
+      "shortDescription": "Wendbare Matte mit exklusiven Aquarellillustrationen. Enthält 20 Sensorkarten. 0+ Zertifizierung.",
       "variant150": "Kompakt 150×180×1,5 cm",
       "variant180": "XL 180×200×1,5 cm",
       "seoTitle150": "Gepolsterte Faltbare Babymatte Kompakt 150×180×1,5 cm | ELEMATT",

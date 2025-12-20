@@ -1,0 +1,274 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import { getLangFromUrl, useTranslations, translatePath } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const productos = [
+  {
+    id: 'alfombra-bebe',
+    name: t('product.babyMat.name'),
+    slug: 'alfombra-bebe',
+    description: t('product.babyMat.shortDescription'),
+    image: '/products/baby-mat/shared/hero-alfombra.jpeg',
+    variants: [
+      { size: '150×180×1.5 cm', name: t('nav.compact') },
+      { size: '180×200×1.5 cm', name: t('nav.xl') }
+    ],
+    available: true
+  }
+];
+---
+
+<Layout
+  title={t('products.title')}
+  description={t('products.description')}
+>
+  <Hero
+    title={t('products.heroTitle')}
+    subtitle={t('products.heroSubtitle')}
+    description={t('products.heroDescription')}
+  />
+
+  <Section background="blanco">
+    <div class="products-intro">
+      <p class="intro-text">{t('products.introText')}</p>
+    </div>
+  </Section>
+
+  <Section background="lino">
+    <div class="products-grid">
+      {productos.map((producto) => (
+        <article class="product-card">
+          <a href={translatePath(`/productos/${producto.slug}`, lang)} class="product-link">
+            <div class="product-image">
+              <img src={producto.image} alt={producto.name} loading="lazy" />
+              {producto.available && (
+                <span class="product-badge">{t('products.available')}</span>
+              )}
+            </div>
+            <div class="product-content">
+              <h3 class="product-name">{producto.name}</h3>
+              <p class="product-description">{producto.description}</p>
+
+              <div class="product-variants">
+                <span class="variants-label">{t('products.variants')}:</span>
+                <ul class="variants-list">
+                  {producto.variants.map((variant) => (
+                    <li>{variant.name} ({variant.size})</li>
+                  ))}
+                </ul>
+              </div>
+
+              <span class="product-cta">{t('products.viewProduct')} →</span>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </Section>
+
+  <Section background="perla">
+    <div class="cta-section">
+      <h2>{t('products.ctaTitle')}</h2>
+      <p>{t('products.ctaText')}</p>
+      <a href={translatePath('/contacto', lang)} class="btn btn-primary">
+        {t('products.ctaButton')}
+      </a>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .products-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-family: var(--font-secondary);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-gris-oscuro);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    background: var(--color-blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+
+  .product-card:hover .product-image img {
+    transform: scale(1.05);
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-melon);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .product-content {
+    padding: 1.5rem;
+  }
+
+  .product-name {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-salvia);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .product-description {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-gris-oscuro);
+    margin: 0 0 1rem 0;
+  }
+
+  .product-variants {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--color-perla);
+    border-radius: 8px;
+  }
+
+  .variants-label {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-salvia);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .variants-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .variants-list li {
+    font-family: var(--font-secondary);
+    font-size: 0.9375rem;
+    color: var(--color-gris-oscuro);
+    padding: 0.25rem 0;
+  }
+
+  .variants-list li::before {
+    content: "• ";
+    color: var(--color-melon);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  .product-cta {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-melon);
+    margin-top: 1rem;
+    transition: all var(--transition-fast);
+  }
+
+  .product-card:hover .product-cta {
+    color: var(--color-salvia);
+    transform: translateX(5px);
+  }
+
+  .cta-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-salvia);
+    margin: 0 0 1rem 0;
+  }
+
+  .cta-section p {
+    font-family: var(--font-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-gris-oscuro);
+    margin: 0 0 2rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+    }
+
+    .product-name {
+      font-size: 1.25rem;
+    }
+
+    .cta-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .cta-section p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+

@@ -1,0 +1,97 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout 
+  title="Política de Privacidad - ELEMATT"
+  description="Política de privacidad de ELEMATT"
+>
+  <Hero
+    title="Política de Privacidad"
+    subtitle="ELEMATT"
+    description="Información sobre el tratamiento de datos personales"
+  />
+
+  <Section background="blanco">
+    <div class="legal-content">
+      <p class="legal-intro">
+        En ELEMATT, respetamos tu privacidad y nos comprometemos a proteger tus datos personales.
+      </p>
+
+      <h2>1. Responsable del tratamiento</h2>
+      <p>ELEMATT es responsable del tratamiento de los datos personales que nos proporciones.</p>
+
+      <h2>2. Datos que recopilamos</h2>
+      <p>Recopilamos únicamente los datos necesarios para gestionar tu solicitud de información o notificación de disponibilidad de productos.</p>
+
+      <h2>3. Finalidad del tratamiento</h2>
+      <p>Utilizamos tus datos para:</p>
+      <ul>
+        <li>Responder a tus consultas</li>
+        <li>Notificarte sobre la disponibilidad de productos</li>
+        <li>Mejorar nuestros servicios</li>
+      </ul>
+
+      <h2>4. Tus derechos</h2>
+      <p>Tienes derecho a acceder, rectificar, suprimir y oponerte al tratamiento de tus datos personales.</p>
+
+      <h2>5. Contacto</h2>
+      <p>Para cualquier consulta sobre privacidad, puedes contactarnos a través de nuestro formulario de contacto.</p>
+
+      <p class="legal-update">Última actualización: Diciembre 2024</p>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal-intro {
+    font-size: 1.125rem;
+    color: var(--color-salvia-dark);
+    margin-bottom: 2rem;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    color: var(--color-salvia);
+    margin: 2rem 0 1rem 0;
+  }
+
+  .legal-content p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 1rem;
+  }
+
+  .legal-content ul {
+    margin: 1rem 0 1rem 2rem;
+  }
+
+  .legal-content li {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+  }
+
+  .legal-update {
+    margin-top: 3rem;
+    font-style: italic;
+    color: var(--color-salvia-dark);
+  }
+</style>
+

@@ -172,6 +172,20 @@
     "color": "Cor",
     "quantity": "Quantidade"
   },
+  "products": {
+    "title": "Nossos Produtos - ELEMATT",
+    "description": "Descubra produtos projetados com amor, segurança e uma história única para seu bebê",
+    "heroTitle": "Nossos Produtos",
+    "heroSubtitle": "Descubra",
+    "heroDescription": "Cada produto ELEMATT conta uma história única e é projetado para acompanhar os momentos especiais do seu bebê",
+    "introText": "Na ELEMATT, cada produto nasce de uma história real e é projetado com amor, segurança e atenção aos detalhes. Descubra nossa coleção pensada para tornar cada momento especial.",
+    "available": "Disponível",
+    "variants": "Variantes",
+    "viewProduct": "Ver produto",
+    "ctaTitle": "Tem alguma pergunta?",
+    "ctaText": "Estamos aqui para ajudá-lo a encontrar o produto perfeito para seu bebê",
+    "ctaButton": "Contate-nos"
+  },
   "product": {
     "safety": {
       "title": "Informação de Segurança:",
@@ -179,6 +193,7 @@
     },
     "babyMat": {
       "name": "Tapete Acolchoado Dobrável para Bebê",
+      "shortDescription": "Tapete reversível com ilustrações exclusivas em aquarela. Inclui 20 cartões sensoriais. Certificação 0+.",
       "variant150": "Compacto 150×180×1,5 cm",
       "variant180": "XL 180×200×1,5 cm",
       "seoTitle150": "Tapete Acolchoado Dobrável para Bebê Compacto 150×180×1,5 cm | ELEMATT",
