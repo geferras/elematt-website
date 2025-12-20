@@ -1,10 +1,10 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import Hero from '../../../components/Hero.astro';
-import Section from '../../../components/Section.astro';
-import NotificationButtons from '../../../components/NotificationButtons.astro';
-import ProductSafetyNotice from '../../../components/product/ProductSafetyNotice.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import NotificationButtons from '@components/NotificationButtons.astro';
+import ProductSafetyNotice from '@components/product/ProductSafetyNotice.astro';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

@@ -5,11 +5,11 @@
  * Basado en el documento "Proyecto WEB ELEMATT 01.11.2025.docx"
  */
 
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Section from '../components/Section.astro';
-import PepDots from '../components/PepDots.astro';
-import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import PepDots from '@components/PepDots.astro';
+import { getLangFromUrl, useTranslations, translatePath } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

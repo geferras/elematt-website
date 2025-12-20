@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Section from '../components/Section.astro';
-import TrustBadges from '../components/TrustBadges.astro';
-import BrandSignature from '../components/product/BrandSignature.astro';
-import Icon from '../components/Icon.astro';
-import { getLangFromUrl, useTranslations, translatePath } from '../i18n/utils';
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import TrustBadges from '@components/TrustBadges.astro';
+import BrandSignature from '@components/product/BrandSignature.astro';
+import Icon from '@components/Icon.astro';
+import { getLangFromUrl, useTranslations, translatePath } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
