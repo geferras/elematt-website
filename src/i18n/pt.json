@@ -142,18 +142,37 @@
     "faq4Answer": "O tapete pode ser limpo com um pano úmido e sabão suave. Não usar máquina de lavar nem produtos químicos agressivos."
   },
   "notification": {
-    "title": "Receber Notificações",
-    "description": "Avisaremos quando houver novidades",
-    "newProductsSubtitle": "Avisaremos quando lançarmos novos produtos",
-    "stockSubtitle": "Avisaremos quando {variant} estiver disponível",
-    "emailLabel": "E-mail",
-    "emailPlaceholder": "seu@email.com",
-    "nameLabel": "Nome (opcional)",
-    "namePlaceholder": "Seu nome",
-    "consent": "Concordo em receber notificações da ELEMATT e entendo que posso cancelar a inscrição a qualquer momento.",
-    "subscribe": "Inscrever-se",
-    "successTitle": "Inscrição Bem-sucedida!",
-    "successMessage": "Avisaremos quando houver novidades",
+    "newProducts": {
+      "buttonLabel": "Receba novidades da ELEMATT",
+      "buttonLabelShort": "Novidades",
+      "modalTitle": "Receba novidades da ELEMATT",
+      "modalSubtitle": "Deixe-nos o seu e-mail e informaremos quando lançarmos novos produtos ou houver novidades importantes.",
+      "submitButton": "Inscrever-me"
+    },
+    "stockAlert": {
+      "buttonLabel": "Aviso de disponibilidade",
+      "buttonLabelShort": "Aviso de Stock",
+      "modalTitle": "Aviso de disponibilidade",
+      "modalSubtitle": "Deixe-nos o seu e-mail e avisaremos quando esta variante voltar a estar disponível.",
+      "modalSubtitleVariant": "Deixe-nos o seu e-mail e avisaremos quando {variant} voltar a estar disponível.",
+      "submitButton": "Avisar-me quando estiver disponível"
+    },
+    "form": {
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "nameLabel": "Nome (opcional)",
+      "namePlaceholder": "Seu nome",
+      "consent": "Concordo em receber comunicações relacionadas com produtos e novidades da ELEMATT. Poderei cancelar a inscrição a qualquer momento.",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "Obrigado, recebemos o seu pedido.",
+      "message": "Entraremos em contacto quando houver novidades relacionadas."
+    },
+    "error": {
+      "title": "Erro ao enviar",
+      "message": "Ocorreu um erro. Por favor, tente novamente."
+    },
     "close": "Fechar"
   },
   "common": {

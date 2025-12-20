@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
 interface Props {
   productId?: string;
   productName?: string;
@@ -9,11 +11,14 @@ interface Props {
 
 const {
   productId = 'general',
-  productName = 'Nuevos Productos',
+  productName,
   variantId,
   variantName,
   position = 'fixed',
 } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class={`notification-buttons ${position}`}>
@@ -22,13 +27,13 @@ const {
     class="notify-btn notify-new-products"
     data-type="new-products"
     data-product-id={productId}
-    data-product-name={productName}
-    aria-label="Notificarme de nuevos productos"
+    data-product-name={productName || t('notification.newProducts.buttonLabel')}
+    aria-label={t('notification.newProducts.buttonLabel')}
   >
     <svg class="notify-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
     </svg>
-    <span class="notify-text">Nuevos Productos</span>
+    <span class="notify-text">{t('notification.newProducts.buttonLabelShort')}</span>
   </button>
 
   <!-- Botón Aviso de Stock -->
@@ -40,12 +45,12 @@ const {
       data-product-name={productName}
       data-variant-id={variantId}
       data-variant-name={variantName}
-      aria-label={`Notificarme cuando ${variantName} esté disponible`}
+      aria-label={t('notification.stockAlert.buttonLabel')}
     >
       <svg class="notify-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
       </svg>
-      <span class="notify-text">Aviso de Stock</span>
+      <span class="notify-text">{t('notification.stockAlert.buttonLabelShort')}</span>
     </button>
   )}
 </div>
@@ -66,8 +71,8 @@ const {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
         </svg>
       </div>
-      <h3 class="modal-title">Recibe Notificaciones</h3>
-      <p class="modal-subtitle" id="modalSubtitle">Te avisaremos cuando haya novedades</p>
+      <h3 class="modal-title" id="modalTitle">{t('notification.newProducts.modalTitle')}</h3>
+      <p class="modal-subtitle" id="modalSubtitle">{t('notification.newProducts.modalSubtitle')}</p>
     </div>
 
     <form class="notification-form" id="notificationForm">
@@ -78,24 +83,24 @@ const {
       <input type="hidden" id="notificationVariantName" name="variantName">
 
       <div class="form-group">
-        <label for="notificationEmail">Email</label>
+        <label for="notificationEmail">{t('notification.form.emailLabel')}</label>
         <input
           type="email"
           id="notificationEmail"
           name="email"
-          placeholder="tu@email.com"
+          placeholder={t('notification.form.emailPlaceholder')}
           required
           autocomplete="email"
         />
       </div>
 
       <div class="form-group">
-        <label for="notificationName">Nombre (opcional)</label>
+        <label for="notificationName">{t('notification.form.nameLabel')}</label>
         <input
           type="text"
           id="notificationName"
           name="name"
-          placeholder="Tu nombre"
+          placeholder={t('notification.form.namePlaceholder')}
           autocomplete="name"
         />
       </div>
@@ -108,15 +113,15 @@ const {
           required
         />
         <label for="notificationConsent">
-          Acepto recibir notificaciones de ELEMATT y entiendo que puedo darme de baja en cualquier momento.
+          {t('notification.form.consent')}
         </label>
       </div>
 
-      <button type="submit" class="btn-submit">
+      <button type="submit" class="btn-submit" id="submitButton">
         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
         </svg>
-        <span>Suscribirme</span>
+        <span id="submitButtonText">{t('notification.newProducts.submitButton')}</span>
       </button>
     </form>
 
@@ -126,8 +131,8 @@ const {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
       </div>
-      <h4>¡Suscripción Exitosa!</h4>
-      <p>Te avisaremos cuando haya novedades</p>
+      <h4>{t('notification.success.title')}</h4>
+      <p>{t('notification.success.message')}</p>
     </div>
   </div>
 </div>
@@ -491,22 +496,44 @@ const {
   }
 </style>
 
-<script>
+<script define:vars={{
+  translations: {
+    newProducts: {
+      modalTitle: t('notification.newProducts.modalTitle'),
+      modalSubtitle: t('notification.newProducts.modalSubtitle'),
+      submitButton: t('notification.newProducts.submitButton')
+    },
+    stockAlert: {
+      modalTitle: t('notification.stockAlert.modalTitle'),
+      modalSubtitle: t('notification.stockAlert.modalSubtitle'),
+      modalSubtitleVariant: t('notification.stockAlert.modalSubtitleVariant'),
+      submitButton: t('notification.stockAlert.submitButton')
+    },
+    form: {
+      sending: t('notification.form.sending')
+    },
+    error: {
+      message: t('notification.error.message')
+    }
+  }
+}}>
   // Elementos del DOM
   const modal = document.getElementById('notificationModal');
-  const modalForm = document.getElementById('notificationForm') as HTMLFormElement;
+  const modalForm = document.getElementById('notificationForm');
   const modalSuccess = document.getElementById('modalSuccess');
+  const modalTitle = document.getElementById('modalTitle');
   const modalSubtitle = document.getElementById('modalSubtitle');
   const modalClose = document.querySelector('.modal-close');
   const modalOverlay = document.querySelector('.modal-overlay');
   const notifyButtons = document.querySelectorAll('.notify-btn');
+  const submitButtonText = document.getElementById('submitButtonText');
 
   // Campos ocultos del formulario
-  const typeInput = document.getElementById('notificationType') as HTMLInputElement;
-  const productIdInput = document.getElementById('notificationProductId') as HTMLInputElement;
-  const productNameInput = document.getElementById('notificationProductName') as HTMLInputElement;
-  const variantIdInput = document.getElementById('notificationVariantId') as HTMLInputElement;
-  const variantNameInput = document.getElementById('notificationVariantName') as HTMLInputElement;
+  const typeInput = document.getElementById('notificationType');
+  const productIdInput = document.getElementById('notificationProductId');
+  const productNameInput = document.getElementById('notificationProductName');
+  const variantIdInput = document.getElementById('notificationVariantId');
+  const variantNameInput = document.getElementById('notificationVariantName');
 
   // Abrir modal
   notifyButtons.forEach(button => {
@@ -524,13 +551,19 @@ const {
       if (variantIdInput) variantIdInput.value = variantId || '';
       if (variantNameInput) variantNameInput.value = variantName || '';
 
-      // Actualizar subtítulo del modal
-      if (modalSubtitle) {
-        if (type === 'new-products') {
-          modalSubtitle.textContent = 'Te avisaremos cuando lancemos nuevos productos';
-        } else if (type === 'stock') {
-          modalSubtitle.textContent = `Te avisaremos cuando ${variantName} esté disponible`;
+      // Actualizar título, subtítulo y botón del modal según el tipo
+      if (type === 'new-products') {
+        if (modalTitle) modalTitle.textContent = translations.newProducts.modalTitle;
+        if (modalSubtitle) modalSubtitle.textContent = translations.newProducts.modalSubtitle;
+        if (submitButtonText) submitButtonText.textContent = translations.newProducts.submitButton;
+      } else if (type === 'stock') {
+        if (modalTitle) modalTitle.textContent = translations.stockAlert.modalTitle;
+        if (modalSubtitle) {
+          modalSubtitle.textContent = variantName
+            ? translations.stockAlert.modalSubtitleVariant.replace('{variant}', variantName)
+            : translations.stockAlert.modalSubtitle;
         }
+        if (submitButtonText) submitButtonText.textContent = translations.stockAlert.submitButton;
       }
 
       // Mostrar modal
@@ -568,14 +601,15 @@ const {
   modalForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const submitBtn = modalForm.querySelector('button[type="submit"]') as HTMLButtonElement;
-    const originalText = submitBtn?.innerHTML;
+    const submitBtn = modalForm.querySelector('button[type="submit"]');
+    const submitBtnText = submitBtn?.querySelector('span');
+    const originalText = submitBtnText?.textContent;
 
     try {
       // Show loading state
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span>Enviando...</span>';
+        if (submitBtnText) submitBtnText.textContent = translations.form.sending;
       }
 
       const formData = new FormData(modalForm);
@@ -594,22 +628,24 @@ const {
         if (modalForm) modalForm.style.display = 'none';
         if (modalSuccess) modalSuccess.style.display = 'block';
 
-        // Close modal after 2.5 seconds
+        // Close modal after 3 seconds
         setTimeout(() => {
           closeModal();
-        }, 2500);
+        }, 3000);
       } else {
         throw new Error('Error en el envío');
       }
 
     } catch (error) {
       console.error('Error al suscribirse:', error);
-      alert('Hubo un error. Por favor, inténtalo de nuevo.');
+      alert(translations.error.message);
 
       // Restore button
-      if (submitBtn && originalText) {
+      if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
+        if (submitBtnText && originalText) {
+          submitBtnText.textContent = originalText;
+        }
       }
     }
   });

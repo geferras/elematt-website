@@ -142,18 +142,37 @@
     "faq4Answer": "The mat can be cleaned with a damp cloth and mild soap. Do not use washing machine or harsh chemicals."
   },
   "notification": {
-    "title": "Receive Notifications",
-    "description": "We'll notify you when there's news",
-    "newProductsSubtitle": "We'll notify you when we launch new products",
-    "stockSubtitle": "We'll notify you when {variant} is available",
-    "emailLabel": "Email",
-    "emailPlaceholder": "your@email.com",
-    "nameLabel": "Name (optional)",
-    "namePlaceholder": "Your name",
-    "consent": "I agree to receive notifications from ELEMATT and understand I can unsubscribe at any time.",
-    "subscribe": "Subscribe",
-    "successTitle": "Subscription Successful!",
-    "successMessage": "We'll notify you when there's news",
+    "newProducts": {
+      "buttonLabel": "Get ELEMATT updates",
+      "buttonLabelShort": "Updates",
+      "modalTitle": "Get ELEMATT updates",
+      "modalSubtitle": "Leave us your email and we'll inform you when we launch new products or have important news.",
+      "submitButton": "Subscribe"
+    },
+    "stockAlert": {
+      "buttonLabel": "Availability alert",
+      "buttonLabelShort": "Stock Alert",
+      "modalTitle": "Availability alert",
+      "modalSubtitle": "Leave us your email and we'll let you know when this variant is back in stock.",
+      "modalSubtitleVariant": "Leave us your email and we'll let you know when {variant} is back in stock.",
+      "submitButton": "Notify me when available"
+    },
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "nameLabel": "Name (optional)",
+      "namePlaceholder": "Your name",
+      "consent": "I agree to receive communications about ELEMATT products and news. I can unsubscribe at any time.",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Thank you, we've received your request.",
+      "message": "We'll contact you when there's related news."
+    },
+    "error": {
+      "title": "Error sending",
+      "message": "There was an error. Please try again."
+    },
     "close": "Close"
   },
   "common": {

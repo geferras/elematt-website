@@ -145,8 +145,37 @@
     "faq4Answer": "Die Matte kann mit einem feuchten Tuch und milder Seife gereinigt werden. Keine Waschmaschine oder aggressive Chemikalien verwenden."
   },
   "notification": {
-    "newProduct": "Neues Produkt verfügbar!",
-    "viewProduct": "Produkt ansehen",
+    "newProducts": {
+      "buttonLabel": "ELEMATT Neuigkeiten erhalten",
+      "buttonLabelShort": "Neuigkeiten",
+      "modalTitle": "ELEMATT Neuigkeiten erhalten",
+      "modalSubtitle": "Hinterlassen Sie uns Ihre E-Mail und wir informieren Sie, wenn wir neue Produkte auf den Markt bringen oder wichtige Neuigkeiten haben.",
+      "submitButton": "Abonnieren"
+    },
+    "stockAlert": {
+      "buttonLabel": "Verfügbarkeitsbenachrichtigung",
+      "buttonLabelShort": "Lagerbenachrichtigung",
+      "modalTitle": "Verfügbarkeitsbenachrichtigung",
+      "modalSubtitle": "Hinterlassen Sie uns Ihre E-Mail und wir benachrichtigen Sie, wenn diese Variante wieder verfügbar ist.",
+      "modalSubtitleVariant": "Hinterlassen Sie uns Ihre E-Mail und wir benachrichtigen Sie, wenn {variant} wieder verfügbar ist.",
+      "submitButton": "Benachrichtigen Sie mich, wenn verfügbar"
+    },
+    "form": {
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "ihre@email.com",
+      "nameLabel": "Name (optional)",
+      "namePlaceholder": "Ihr Name",
+      "consent": "Ich stimme zu, Mitteilungen über Produkte und Neuigkeiten von ELEMATT zu erhalten. Ich kann mich jederzeit abmelden.",
+      "sending": "Wird gesendet..."
+    },
+    "success": {
+      "title": "Vielen Dank, wir haben Ihre Anfrage erhalten.",
+      "message": "Wir werden Sie kontaktieren, wenn es entsprechende Neuigkeiten gibt."
+    },
+    "error": {
+      "title": "Fehler beim Senden",
+      "message": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    },
     "close": "Schließen"
   },
   "common": {

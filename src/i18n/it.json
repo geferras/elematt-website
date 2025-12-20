@@ -142,18 +142,37 @@
     "faq4Answer": "Il tappeto può essere pulito con un panno umido e sapone delicato. Non usare lavatrice o prodotti chimici aggressivi."
   },
   "notification": {
-    "title": "Ricevi Notifiche",
-    "description": "Ti avviseremo quando ci saranno novità",
-    "newProductsSubtitle": "Ti avviseremo quando lanceremo nuovi prodotti",
-    "stockSubtitle": "Ti avviseremo quando {variant} sarà disponibile",
-    "emailLabel": "Email",
-    "emailPlaceholder": "tua@email.com",
-    "nameLabel": "Nome (opzionale)",
-    "namePlaceholder": "Il tuo nome",
-    "consent": "Accetto di ricevere notifiche da ELEMATT e capisco che posso annullare l'iscrizione in qualsiasi momento.",
-    "subscribe": "Iscriviti",
-    "successTitle": "Iscrizione Riuscita!",
-    "successMessage": "Ti avviseremo quando ci saranno novità",
+    "newProducts": {
+      "buttonLabel": "Ricevi novità da ELEMATT",
+      "buttonLabelShort": "Novità",
+      "modalTitle": "Ricevi novità da ELEMATT",
+      "modalSubtitle": "Lasciaci la tua email e ti informeremo quando lanceremo nuovi prodotti o ci saranno novità importanti.",
+      "submitButton": "Iscriviti"
+    },
+    "stockAlert": {
+      "buttonLabel": "Avviso di disponibilità",
+      "buttonLabelShort": "Avviso Stock",
+      "modalTitle": "Avviso di disponibilità",
+      "modalSubtitle": "Lasciaci la tua email e ti avviseremo quando questa variante tornerà disponibile.",
+      "modalSubtitleVariant": "Lasciaci la tua email e ti avviseremo quando {variant} tornerà disponibile.",
+      "submitButton": "Avvisami quando sarà disponibile"
+    },
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "tua@email.com",
+      "nameLabel": "Nome (opzionale)",
+      "namePlaceholder": "Il tuo nome",
+      "consent": "Accetto di ricevere comunicazioni relative a prodotti e novità di ELEMATT. Potrò annullare l'iscrizione in qualsiasi momento.",
+      "sending": "Invio in corso..."
+    },
+    "success": {
+      "title": "Grazie, abbiamo ricevuto la tua richiesta.",
+      "message": "Ti contatteremo quando ci saranno novità correlate."
+    },
+    "error": {
+      "title": "Errore nell'invio",
+      "message": "Si è verificato un errore. Per favore, riprova."
+    },
     "close": "Chiudi"
   },
   "common": {

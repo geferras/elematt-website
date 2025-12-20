@@ -151,18 +151,37 @@
     "faq4Answer": "La alfombra se puede limpiar con un paño húmedo y jabón suave. No usar lavadora ni productos químicos agresivos."
   },
   "notification": {
-    "title": "Recibe Notificaciones",
-    "description": "Te avisaremos cuando haya novedades",
-    "newProductsSubtitle": "Te avisaremos cuando lancemos nuevos productos",
-    "stockSubtitle": "Te avisaremos cuando {variant} esté disponible",
-    "emailLabel": "Email",
-    "emailPlaceholder": "tu@email.com",
-    "nameLabel": "Nombre (opcional)",
-    "namePlaceholder": "Tu nombre",
-    "consent": "Acepto recibir notificaciones de ELEMATT y entiendo que puedo darme de baja en cualquier momento.",
-    "subscribe": "Suscribirme",
-    "successTitle": "¡Suscripción Exitosa!",
-    "successMessage": "Te avisaremos cuando haya novedades",
+    "newProducts": {
+      "buttonLabel": "Recibe novedades de ELEMATT",
+      "buttonLabelShort": "Novedades",
+      "modalTitle": "Recibe novedades de ELEMATT",
+      "modalSubtitle": "Déjanos tu email y te informaremos cuando lancemos nuevos productos o haya novedades importantes.",
+      "submitButton": "Suscribirme"
+    },
+    "stockAlert": {
+      "buttonLabel": "Aviso de disponibilidad",
+      "buttonLabelShort": "Aviso de Stock",
+      "modalTitle": "Aviso de disponibilidad",
+      "modalSubtitle": "Déjanos tu email y te avisaremos cuando esta variante vuelva a estar disponible.",
+      "modalSubtitleVariant": "Déjanos tu email y te avisaremos cuando {variant} vuelva a estar disponible.",
+      "submitButton": "Avisarme cuando esté disponible"
+    },
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "nameLabel": "Nombre (opcional)",
+      "namePlaceholder": "Tu nombre",
+      "consent": "Acepto recibir comunicaciones relacionadas con productos y novedades de ELEMATT. Podré darme de baja en cualquier momento.",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "Gracias, hemos recibido tu solicitud.",
+      "message": "Te contactaremos cuando haya novedades relacionadas."
+    },
+    "error": {
+      "title": "Error al enviar",
+      "message": "Hubo un error. Por favor, inténtalo de nuevo."
+    },
     "close": "Cerrar"
   },
   "common": {

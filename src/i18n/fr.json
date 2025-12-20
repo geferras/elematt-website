@@ -145,8 +145,37 @@
     "faq4Answer": "Le tapis peut être nettoyé avec un chiffon humide et du savon doux. Ne pas utiliser de machine à laver ni de produits chimiques agressifs."
   },
   "notification": {
-    "newProduct": "Nouveau produit disponible !",
-    "viewProduct": "Voir le produit",
+    "newProducts": {
+      "buttonLabel": "Recevez les nouveautés ELEMATT",
+      "buttonLabelShort": "Nouveautés",
+      "modalTitle": "Recevez les nouveautés ELEMATT",
+      "modalSubtitle": "Laissez-nous votre email et nous vous informerons lors du lancement de nouveaux produits ou de nouvelles importantes.",
+      "submitButton": "S'inscrire"
+    },
+    "stockAlert": {
+      "buttonLabel": "Alerte de disponibilité",
+      "buttonLabelShort": "Alerte Stock",
+      "modalTitle": "Alerte de disponibilité",
+      "modalSubtitle": "Laissez-nous votre email et nous vous préviendrons lorsque cette variante sera à nouveau disponible.",
+      "modalSubtitleVariant": "Laissez-nous votre email et nous vous préviendrons lorsque {variant} sera à nouveau disponible.",
+      "submitButton": "Me prévenir quand disponible"
+    },
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "nameLabel": "Nom (optionnel)",
+      "namePlaceholder": "Votre nom",
+      "consent": "J'accepte de recevoir des communications relatives aux produits et nouveautés d'ELEMATT. Je pourrai me désinscrire à tout moment.",
+      "sending": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Merci, nous avons reçu votre demande.",
+      "message": "Nous vous contacterons lorsqu'il y aura des nouvelles liées."
+    },
+    "error": {
+      "title": "Erreur d'envoi",
+      "message": "Une erreur s'est produite. Veuillez réessayer."
+    },
     "close": "Fermer"
   },
   "common": {
