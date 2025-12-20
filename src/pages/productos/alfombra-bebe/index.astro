@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import NotificationButtons from '@components/NotificationButtons.astro';
 import ProductSafetyNotice from '@components/product/ProductSafetyNotice.astro';
+import ProductSafetyInfo from '@components/product/ProductSafetyInfo.astro';
 
 const producto = {
   nombre: 'Alfombra Bebé Acolchada Plegable',
@@ -103,6 +104,9 @@ const producto = {
       </div>
     </div>
   </section>
+
+  <!-- Información de Seguridad del Producto (OBLIGATORIO - Cumplimiento UE) -->
+  <ProductSafetyInfo />
 
   <!-- Selector de Variantes -->
   <section class="variantes-selector" id="variantes">

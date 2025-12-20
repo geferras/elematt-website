@@ -1,0 +1,608 @@
+---
+/**
+ * ProductSafetyInfo - INFORMACIÓN DE SEGURIDAD COMPLETA
+ * 
+ * Componente obligatorio para cumplimiento normativo UE
+ * Información de seguridad del producto en formato acordeón
+ * 
+ * Requisitos:
+ * - Visible en /productos/alfombra-bebe
+ * - Contenido exacto del documento oficial
+ * - Formato acordeón/desplegable
+ * - Mobile-first (usuarios desde QR)
+ * - NO modificar el contenido sin autorización
+ */
+
+import Icon from '../Icon.astro';
+---
+
+<section class="product-safety-info">
+  <div class="safety-container">
+    <div class="safety-header">
+      <div class="safety-header-icon">
+        <Icon name="shield-check" size={32} />
+      </div>
+      <div class="safety-header-content">
+        <h2 class="safety-title">Información de Seguridad del Producto</h2>
+        <p class="safety-subtitle">Seguridad del producto en la UE & Cumplimiento Amazon FBA</p>
+      </div>
+    </div>
+
+    <div class="safety-intro">
+      <p>La presente información forma parte de las obligaciones de información al consumidor exigidas por la normativa europea de seguridad de productos infantiles y por las plataformas de venta online, incluida Amazon.</p>
+      <p><strong>Debe leerse atentamente antes de utilizar el producto.</strong></p>
+    </div>
+
+    <div class="safety-accordion">
+      <!-- Sección 1: PRODUCTO PRINCIPAL -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-number">01</span>
+          <span class="accordion-title">PRODUCTO PRINCIPAL<br><small>Alfombra plegable para bebé ELEMATT®</small></span>
+          <Icon name="chevron-down" size={24} />
+        </button>
+        <div class="accordion-content">
+          <div class="content-section">
+            <h4>Uso previsto:</h4>
+            <p>La alfombra plegable ELEMATT está diseñada como superficie de juego, descanso y exploración sensorial para bebés y niños pequeños, en entornos domésticos.</p>
+          </div>
+
+          <div class="content-section">
+            <h4>Edad recomendada:</h4>
+            <p>✔️ Apta desde 0 meses (0+), siempre bajo la supervisión de un adulto.</p>
+          </div>
+
+          <div class="content-section">
+            <h4>Cumplimiento normativo:</h4>
+            <p>El producto ha sido diseñado para cumplir con la normativa europea aplicable a productos infantiles, incluyendo:</p>
+            <ul>
+              <li>Directiva 2009/48/CE sobre la seguridad de los juguetes.</li>
+              <li>EN 71-1: Propiedades mecánicas y físicas.</li>
+              <li>EN 71-2: Inflamabilidad.</li>
+              <li>EN 71-3: Migración de determinados elementos.</li>
+            </ul>
+          </div>
+
+          <div class="content-section">
+            <h4>Materiales:</h4>
+            <ul>
+              <li>Espuma XPE (polietileno reticulado) de alta calidad.</li>
+              <li>Material no tóxico, libre de BPA, ftalatos, PVC y metales pesados.</li>
+              <li>Superficie con recubrimiento protector integrado, resistente y fácil de limpiar.</li>
+            </ul>
+          </div>
+
+          <div class="content-section">
+            <h4>Acabados y confección:</h4>
+            <ul>
+              <li>Bordes sellados y cosidos, sin riesgo de deshilachado.</li>
+              <li>Superficie continua, sin piezas pequeñas ni elementos desmontables.</li>
+              <li>Diseño plegable que facilita el uso y almacenamiento seguro.</li>
+            </ul>
+          </div>
+
+          <div class="content-section warning-section">
+            <h4>Advertencias de uso:</h4>
+            <ul>
+              <li>Utilizar únicamente sobre superficies planas y estables.</li>
+              <li>No colocar cerca de fuentes de calor, fuego o llamas.</li>
+              <li>No dejar al bebé sin supervisión prolongada.</li>
+              <li>Revisar periódicamente el estado del producto y suspender su uso si presenta daños.</li>
+              <li>No utilizar como elemento de escalada ni como protección frente a caídas desde altura.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección 2: BOLSA DE PU -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-number">02</span>
+          <span class="accordion-title">BOLSA DE PU (EMBALAJE Y TRANSPORTE)<br><small>⚠️ NO ES UN JUGUETE</small></span>
+          <Icon name="chevron-down" size={24} />
+        </button>
+        <div class="accordion-content">
+          <div class="alert-box">
+            <p><strong>⚠️ NO ES UN JUGUETE</strong></p>
+            <p>La bolsa de PU incluida con el producto está destinada exclusivamente al transporte y almacenamiento por parte de adultos.</p>
+          </div>
+
+          <div class="content-section">
+            <h4>Uso previsto:</h4>
+            <ul>
+              <li>Transporte de la alfombra.</li>
+              <li>Almacenamiento del producto cuando no esté en uso.</li>
+            </ul>
+          </div>
+
+          <div class="content-section warning-section">
+            <h4>Advertencia importante:</h4>
+            <p><strong>⚠️ Mantener fuera del alcance de bebés y niños.</strong></p>
+          </div>
+
+          <div class="content-section">
+            <h4>Restricciones de uso:</h4>
+            <ul>
+              <li>No permitir que bebés o niños manipulen la bolsa.</li>
+              <li>No utilizar como elemento de juego.</li>
+              <li>No colocar sobre la cabeza ni permitir su uso sin supervisión.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección 3: TARJETAS SENSORIALES -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-number">03</span>
+          <span class="accordion-title">TARJETAS SENSORIALES<br><small>Accesorio educativo complementario</small></span>
+          <Icon name="chevron-down" size={24} />
+        </button>
+        <div class="accordion-content">
+          <div class="content-section">
+            <h4>Accesorio educativo complementario:</h4>
+            <p>Las tarjetas sensoriales incluidas constituyen un accesorio educativo complementario, no el producto principal.</p>
+          </div>
+
+          <div class="content-section">
+            <h4>Edad recomendada:</h4>
+            <p>✔️ Uso recomendado a partir de 3 meses.</p>
+          </div>
+
+          <div class="content-section">
+            <h4>Condiciones de uso:</h4>
+            <ul>
+              <li>Uso exclusivamente bajo supervisión de un adulto.</li>
+              <li>Diseñadas para ser mostradas al bebé, no para manipulación libre.</li>
+            </ul>
+          </div>
+
+          <div class="content-section warning-section">
+            <h4>Advertencias:</h4>
+            <ul>
+              <li>⚠️ No introducir en la boca.</li>
+              <li>⚠️ No morder, chupar ni doblar.</li>
+              <li>⚠️ No dejar al bebé solo con las tarjetas.</li>
+              <li>⚠️ Retirar tras su uso.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección 4: USO RESPONSABLE Y SUPERVISIÓN -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-number">04</span>
+          <span class="accordion-title">USO RESPONSABLE Y SUPERVISIÓN</span>
+          <Icon name="chevron-down" size={24} />
+        </button>
+        <div class="accordion-content">
+          <div class="content-section">
+            <p>El uso correcto del producto y de sus accesorios conforme a estas instrucciones es responsabilidad del adulto.</p>
+            <p><strong>El incumplimiento de las advertencias y recomendaciones de seguridad puede comprometer la seguridad del menor.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección 5: INFORMACIÓN ADICIONAL DE CUMPLIMIENTO -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="accordion-number">05</span>
+          <span class="accordion-title">INFORMACIÓN ADICIONAL DE CUMPLIMIENTO</span>
+          <Icon name="chevron-down" size={24} />
+        </button>
+        <div class="accordion-content">
+          <div class="content-section">
+            <p>Este aviso digital forma parte de las medidas de información preventiva exigidas por la normativa europea y por las plataformas de comercio electrónico, incluida Amazon.</p>
+            <p>La documentación técnica, informes de ensayo y certificados de conformidad están disponibles para las autoridades competentes cuando así se requiera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="safety-footer">
+      <p class="brand-signature"><strong>Marca: ELEMATT®</strong></p>
+      <p class="brand-tagline">Diseñado con amor. Fabricado con responsabilidad.<br>Para bebés, con criterio adulto</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .product-safety-info {
+    background: linear-gradient(135deg, #FFF9F5 0%, #FFFFFF 100%);
+    padding: 4rem 0;
+    margin: 3rem 0;
+  }
+
+  .safety-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Header */
+  .safety-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--color-salvia);
+  }
+
+  .safety-header-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(168, 181, 160, 0.3);
+  }
+
+  .safety-title {
+    font-family: var(--font-primary);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--color-gris-oscuro);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  .safety-subtitle {
+    font-family: var(--font-secondary);
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: #666;
+    margin: 0;
+  }
+
+  /* Intro */
+  .safety-intro {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-melon);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .safety-intro p {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .safety-intro p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Accordion */
+  .safety-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .accordion-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .accordion-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1.75rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .accordion-header:hover {
+    background: var(--color-lino);
+  }
+
+  .accordion-header[aria-expanded="true"] {
+    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    color: white;
+  }
+
+  .accordion-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--color-lino);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-salvia-dark);
+    transition: all 0.3s ease;
+  }
+
+  .accordion-header[aria-expanded="true"] .accordion-number {
+    background: white;
+    color: var(--color-salvia-dark);
+  }
+
+  .accordion-title {
+    flex: 1;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-gris-oscuro);
+    line-height: 1.4;
+    transition: color 0.3s ease;
+  }
+
+  .accordion-header[aria-expanded="true"] .accordion-title {
+    color: white;
+  }
+
+  .accordion-title small {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    opacity: 0.8;
+  }
+
+  .accordion-header :global(svg) {
+    flex-shrink: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--color-salvia-dark);
+  }
+
+  .accordion-header[aria-expanded="true"] :global(svg) {
+    transform: rotate(180deg);
+    color: white;
+  }
+
+  /* Accordion Content */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 3000px;
+  }
+
+  .content-section {
+    padding: 1.5rem 1.75rem;
+    border-top: 1px solid var(--color-lino);
+  }
+
+  .content-section:first-child {
+    padding-top: 2rem;
+  }
+
+  .content-section:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .content-section h4 {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-salvia-dark);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .content-section p {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .content-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .content-section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: none;
+  }
+
+  .content-section ul li {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+
+  .content-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: -1rem;
+    color: var(--color-salvia);
+    font-weight: 700;
+  }
+
+  .content-section ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Warning Section */
+  .warning-section {
+    background: linear-gradient(135deg, #FFF9F5 0%, #FFF5EE 100%);
+    border-left: 4px solid var(--color-melon);
+  }
+
+  .warning-section h4 {
+    color: var(--color-melon-dark);
+  }
+
+  .warning-section ul li::before {
+    color: var(--color-melon);
+  }
+
+  /* Alert Box */
+  .alert-box {
+    background: linear-gradient(135deg, #FFF9F5 0%, #FFF5EE 100%);
+    border: 2px solid var(--color-melon);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .alert-box p {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #6B4423;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .alert-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .alert-box strong {
+    color: var(--color-melon-dark);
+  }
+
+  /* Footer */
+  .safety-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-lino);
+    text-align: center;
+  }
+
+  .brand-signature {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    color: var(--color-gris-oscuro);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .brand-tagline {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .product-safety-info {
+      padding: 3rem 0;
+      margin: 2rem 0;
+    }
+
+    .safety-container {
+      padding: 0 1rem;
+    }
+
+    .safety-header {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .safety-header-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .safety-intro {
+      padding: 1.25rem 1.5rem;
+    }
+
+    .accordion-header {
+      padding: 1.25rem 1.25rem;
+      gap: 1rem;
+    }
+
+    .accordion-number {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+    }
+
+    .accordion-title {
+      font-size: 1rem;
+    }
+
+    .accordion-title small {
+      font-size: 0.8rem;
+    }
+
+    .content-section {
+      padding: 1.25rem 1.25rem;
+    }
+
+    .content-section:first-child {
+      padding-top: 1.5rem;
+    }
+
+    .content-section:last-child {
+      padding-bottom: 1.5rem;
+    }
+
+    .alert-box {
+      padding: 1rem 1.25rem;
+    }
+
+    .safety-footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Accordion functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        const isActive = accordionItem?.classList.contains('active');
+
+        // Close all accordion items
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          item.classList.remove('active');
+          const btn = item.querySelector('.accordion-header');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked item if it wasn't active
+        if (!isActive && accordionItem) {
+          accordionItem.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+</script>
