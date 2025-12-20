@@ -15,10 +15,6 @@ const navItems = [
       {
         name: t('nav.babyMat'),
         href: translatePath('/productos/alfombra-bebe', lang),
-        submenu: [
-          { name: t('nav.compact'), href: translatePath('/productos/alfombra-bebe/150x180', lang) },
-          { name: t('nav.xl'), href: translatePath('/productos/alfombra-bebe/180x200', lang) },
-        ]
       },
     ]
   },
@@ -57,39 +53,13 @@ const currentPath = Astro.url.pathname;
                 </button>
                 <ul class="dropdown-menu">
                   {item.dropdown.map((subItem) => (
-                    <li class={subItem.submenu ? 'has-submenu' : ''}>
-                      {subItem.submenu ? (
-                        <>
-                          <a
-                            href={subItem.href}
-                            class={`dropdown-link ${currentPath === subItem.href ? 'active' : ''}`}
-                          >
-                            {subItem.name}
-                            <svg class="submenu-icon" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-                          </a>
-                          <ul class="submenu">
-                            {subItem.submenu.map((subSubItem) => (
-                              <li>
-                                <a
-                                  href={subSubItem.href}
-                                  class={`submenu-link ${currentPath === subSubItem.href ? 'active' : ''}`}
-                                >
-                                  {subSubItem.name}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      ) : (
-                        <a
-                          href={subItem.href}
-                          class={`dropdown-link ${currentPath === subItem.href ? 'active' : ''}`}
-                        >
-                          {subItem.name}
-                        </a>
-                      )}
+                    <li>
+                      <a
+                        href={subItem.href}
+                        class={`dropdown-link ${currentPath === subItem.href ? 'active' : ''}`}
+                      >
+                        {subItem.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -324,60 +294,6 @@ const currentPath = Astro.url.pathname;
     color: var(--color-salvia);
   }
 
-  /* Submenu (segundo nivel) */
-  .has-submenu {
-    position: relative;
-  }
-
-  .submenu-icon {
-    transition: transform var(--transition-fast);
-    margin-left: 0.5rem;
-  }
-
-  .has-submenu:hover .submenu-icon {
-    transform: rotate(180deg);
-  }
-
-  .submenu {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: var(--color-blanco);
-    box-shadow: var(--shadow-md);
-    border-radius: 8px;
-    padding: 0.5rem 0;
-    min-width: 200px;
-    list-style: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(-10px);
-    transition: all var(--transition-fast);
-    z-index: 1001;
-    margin-left: 0.5rem;
-  }
-
-  .has-submenu:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .submenu-link {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: var(--color-gris-oscuro);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all var(--transition-fast);
-  }
-
-  .submenu-link:hover,
-  .submenu-link.active {
-    background-color: var(--color-lino);
-    color: var(--color-melon-dark);
-    padding-left: 2rem;
-  }
-
   /* Responsive - Mobile First */
   @media (max-width: 768px) {
     .nav {
@@ -491,42 +407,6 @@ const currentPath = Astro.url.pathname;
       width: 100%;
     }
 
-    /* Submenu mobile */
-    .submenu {
-      position: static;
-      opacity: 1;
-      visibility: visible;
-      transform: none;
-      box-shadow: none;
-      border-radius: 6px;
-      margin: 0.5rem 0.5rem 0 0.5rem;
-      padding: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height var(--transition-normal);
-      background-color: var(--color-lino);
-    }
-
-    .has-submenu.active .submenu {
-      max-height: 200px;
-      padding: 0.5rem 0;
-    }
-
-    .submenu-link {
-      padding: 0.75rem 1.25rem;
-      font-size: 0.9375rem;
-      min-height: 44px;
-      border-radius: 4px;
-      margin: 0 0.5rem;
-    }
-
-    .submenu-link:hover {
-      background-color: var(--color-blanco);
-    }
-
-    .submenu-icon {
-      display: inline-block;
-    }
   }
 
   /* Extra small devices (360px - 430px) */
@@ -562,11 +442,8 @@ const currentPath = Astro.url.pathname;
       if (!target.closest('.nav')) {
         if (navMenu) navMenu.classList.remove('active');
         if (menuToggle) menuToggle.classList.remove('active');
-        // Close all dropdowns and submenus
+        // Close all dropdowns
         document.querySelectorAll('.has-dropdown').forEach(item => {
-          item.classList.remove('active');
-        });
-        document.querySelectorAll('.has-submenu').forEach(item => {
           item.classList.remove('active');
         });
       }
@@ -585,42 +462,19 @@ const currentPath = Astro.url.pathname;
       });
     });
 
-    // Submenu toggle (mobile) - Allow navigation on second click
-    const dropdownLinks = document.querySelectorAll('.has-submenu > .dropdown-link');
+    // Close menu when clicking on dropdown links
+    const dropdownLinks = document.querySelectorAll('.dropdown-link');
     dropdownLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          const parent = link.closest('.has-submenu');
-          const isActive = parent?.classList.contains('active');
-
-          // If submenu is already open, allow navigation
-          // If submenu is closed, open it and prevent navigation
-          if (!isActive) {
-            e.preventDefault();
-            e.stopPropagation();
-            if (parent) parent.classList.add('active');
-          }
-          // If already active, let the link navigate normally
-        }
-      });
-    });
-
-    // Close menu when clicking on a submenu link
-    const submenuLinks = document.querySelectorAll('.submenu-link');
-    submenuLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (navMenu) navMenu.classList.remove('active');
         if (menuToggle) menuToggle.classList.remove('active');
         document.querySelectorAll('.has-dropdown').forEach(item => {
           item.classList.remove('active');
         });
-        document.querySelectorAll('.has-submenu').forEach(item => {
-          item.classList.remove('active');
-        });
       });
     });
 
-    // Close menu when clicking on a regular link
+    // Close menu when clicking on regular nav links
     const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
