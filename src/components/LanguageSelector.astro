@@ -4,6 +4,15 @@ import { languages, getLangFromUrl, translatePath, type Language } from '../i18n
 const currentLang = getLangFromUrl(Astro.url);
 const currentPath = Astro.url.pathname;
 
+const languageFlags: Record<Language, string> = {
+  es: '🇪🇸',
+  en: '🇬🇧',
+  pt: '🇵🇹',
+  it: '🇮🇹',
+  fr: '🇫🇷',
+  de: '🇩🇪',
+};
+
 const languageCodes: Record<Language, string> = {
   es: 'ES',
   en: 'EN',
@@ -16,7 +25,7 @@ const languageCodes: Record<Language, string> = {
 
 <div class="language-selector">
   <button class="lang-button" aria-label="Select language" id="langToggle">
-    <span class="lang-code">{languageCodes[currentLang]}</span>
+    <span class="lang-flag" data-flag={languageFlags[currentLang]} data-code={languageCodes[currentLang]}>{languageFlags[currentLang]}</span>
     <span class="lang-name">{languages[currentLang]}</span>
     <svg class="lang-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
       <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -31,7 +40,7 @@ const languageCodes: Record<Language, string> = {
           class={`lang-option ${lang === currentLang ? 'active' : ''}`}
           hreflang={lang}
         >
-          <span class="lang-code">{languageCodes[lang as Language]}</span>
+          <span class="lang-flag" data-flag={languageFlags[lang as Language]} data-code={languageCodes[lang as Language]}>{languageFlags[lang as Language]}</span>
           <span class="lang-name">{name}</span>
         </a>
       </li>
@@ -65,14 +74,18 @@ const languageCodes: Record<Language, string> = {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .lang-code {
+  .lang-flag {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .lang-flag.fallback {
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--color-salvia-dark);
     background: var(--color-lino);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
-    line-height: 1;
     letter-spacing: 0.5px;
   }
 
@@ -233,6 +246,28 @@ const languageCodes: Record<Language, string> = {
     const langSelector = langToggle?.closest('.language-selector');
 
     if (!langToggle || !langSelector) return;
+
+    // Check emoji flag support
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.fillText('🇪🇸', 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const hasEmojiSupport = imageData.data.some(channel => channel !== 0);
+
+      if (!hasEmojiSupport) {
+        // Fallback to text codes
+        const flags = langSelector.querySelectorAll('.lang-flag');
+        flags.forEach((flag: Element) => {
+          const htmlFlag = flag as HTMLElement;
+          const code = htmlFlag.dataset.code;
+          if (code) {
+            htmlFlag.textContent = code;
+            htmlFlag.classList.add('fallback');
+          }
+        });
+      }
+    }
 
     // Toggle language menu
     langToggle.addEventListener('click', (e) => {
