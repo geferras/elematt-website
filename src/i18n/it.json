@@ -103,7 +103,12 @@
     "tropicalJungleDesc": "L'altro lato rappresenta la giungla tropicale: avventura, curiosità e natura, dove Pep ed Elena esplorano insieme.",
     "ctaTitle": "Scopri i Nostri Prodotti",
     "ctaDescription": "Ogni prodotto ELEMATT è progettato con amore, ispirato a storie vere e creato per accompagnare la crescita del tuo bambino.",
-    "ctaButton": "Vedi Collezioni"
+    "ctaButton": "Vedi Collezioni",
+    "fantastic4Text": "Elena, Laia, Isabela e Olivia hanno formato un legame speciale all'asilo. Le loro avventure insieme hanno ispirato le illustrazioni dei nostri prodotti.",
+    "coastalTitle": "Villaggio Costiero",
+    "coastalText": "Un lato del nostro tappeto è ispirato alle avventure delle 4 fantastiche in un villaggio costiero: calma, tenerezza ed estate.",
+    "jungleTitle": "Giungla Tropicale",
+    "jungleText": "L'altro lato rappresenta la giungla tropicale: avventura, curiosità e natura, dove Pep ed Elena esplorano insieme."
   },
   "contact": {
     "title": "Contatto - ELEMATT",
@@ -290,6 +295,9 @@
       "viewDetails": "Vedi Dettagli",
       "foamPU": "Schiuma EPE + Copertura PU"
     }
+  },
+  "brandSignature": {
+    "text": "Grazie per aver scelto ELEMATT. Ogni prodotto è progettato con amore e pensato per accompagnare i momenti più speciali della tua famiglia.",
+    "signature": "— Il team ELEMATT"
   }
 }
-

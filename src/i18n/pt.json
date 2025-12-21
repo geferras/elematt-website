@@ -103,7 +103,12 @@
     "tropicalJungleDesc": "O outro lado representa a selva tropical: aventura, curiosidade e natureza, onde Pep e Elena exploram juntos.",
     "ctaTitle": "Descubra Nossos Produtos",
     "ctaDescription": "Cada produto ELEMATT é projetado com amor, inspirado em histórias reais e criado para acompanhar o crescimento do seu bebê.",
-    "ctaButton": "Ver Coleções"
+    "ctaButton": "Ver Coleções",
+    "fantastic4Text": "Elena, Laia, Isabela e Olivia formaram um vínculo especial na creche. Suas aventuras juntas inspiraram as ilustrações dos nossos produtos.",
+    "coastalTitle": "Aldeia Costeira",
+    "coastalText": "Um dos lados do nosso tapete é inspirado nas aventuras das 4 fantásticas numa aldeia costeira: calma, ternura e verão.",
+    "jungleTitle": "Selva Tropical",
+    "jungleText": "O outro lado representa a selva tropical: aventura, curiosidade e natureza, onde Pep e Elena exploram juntos."
   },
   "contact": {
     "title": "Contato - ELEMATT",
@@ -290,6 +295,9 @@
       "ctaTitle": "Dê ao seu bebê o melhor desde o primeiro dia",
       "ctaDescription": "Encha sua casa de cor, segurança e memórias inesquecíveis."
     }
+  },
+  "brandSignature": {
+    "text": "Obrigado por confiar na ELEMATT. Cada produto é desenhado com amor e pensado para acompanhar os momentos mais especiais da sua família.",
+    "signature": "— A equipe ELEMATT"
   }
 }
-

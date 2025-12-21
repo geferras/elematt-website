@@ -1,25 +1,25 @@
 ---
 /**
  * BrandSignature - Cierre emocional de marca
- * 
+ *
  * Agradecimiento y refuerzo de valores de marca.
  * Tono cálido, humano y cercano.
  */
 
-// import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
-// const lang = getLangFromUrl(Astro.url);
-// const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="brand-signature">
   <div class="brand-signature__container">
     <div class="brand-signature__content">
       <p class="brand-signature__text">
-        Gracias por confiar en ELEMATT. Cada producto está diseñado con amor y pensado para acompañar los momentos más especiales de tu familia.
+        {t('brandSignature.text')}
       </p>
       <p class="brand-signature__signature">
-        — El equipo ELEMATT
+        {t('brandSignature.signature')}
       </p>
     </div>
   </div>

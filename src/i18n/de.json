@@ -98,13 +98,13 @@
     "pepText1": "Seine Präsenz in jedem ELEMATT-Produkt symbolisiert die <strong>Zärtlichkeit</strong>, <strong>Neugier</strong> und <strong>emotionale Verbindung</strong>, die wir jeder Familie vermitteln möchten.",
     "pepText2": "Jedes Produkt erzählt ein Fragment dieser Geschichte: eine Matte zum Spielen, Karten zum Entdecken und eine Welt voller Liebe und Freundschaft.",
     "fantastic4Title": "Die 4 Fantastischen",
-    "fantastic4Text": "Elena, Laia, Isabela und Olivia bildeten eine besondere Bindung in der Kita. Ihre gemeinsamen Abenteuer inspirierten die Illustrationen unserer Produkte.",
+    "fantastic4Text": "Elena, Laia, Isabela und Olivia bildeten in der Kita eine besondere Bindung. Ihre gemeinsamen Abenteuer inspirierten die Illustrationen unserer Produkte.",
     "dedication": "\"Für meine Freundinnen Laia, Isabela und Olivia\"",
     "dedicationAuthor": "— Elenas Widmung am Ende der Kita-Zeit",
     "coastalTitle": "Küstendorf",
     "coastalText": "Eine Seite unserer Matte ist von den Abenteuern der 4 Fantastischen in einem Küstendorf inspiriert: Ruhe, Zärtlichkeit und Sommer.",
     "jungleTitle": "Tropischer Dschungel",
-    "jungleText": "Die andere Seite stellt den tropischen Dschungel dar: Abenteuer, Neugier und Natur, wo Pep und Elena zusammen erkunden.",
+    "jungleText": "Die andere Seite stellt den tropischen Dschungel dar: Abenteuer, Neugier und Natur, wo Pep und Elena gemeinsam erkunden.",
     "philosophyTitle": "Unsere Philosophie",
     "philosophyQuote": "\"Jede Geschichte beginnt auf einer Matte\"",
     "philosophyText1": "ELEMATT ist nicht nur eine Matte, sondern eine Welt, in der Kinder spielend wachsen und Mütter Schönheit im Alltäglichen finden.",
@@ -293,6 +293,9 @@
       "viewDetails": "Details Ansehen",
       "foamPU": "EPE-Schaum + PU-Bezug"
     }
+  },
+  "brandSignature": {
+    "text": "Danke, dass Sie ELEMATT vertrauen. Jedes Produkt ist mit Liebe gestaltet und dafür gedacht, die besonderen Momente Ihrer Familie zu begleiten.",
+    "signature": "— Das ELEMATT-Team"
   }
 }
-

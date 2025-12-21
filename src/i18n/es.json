@@ -26,6 +26,10 @@
     "copyright": "Todos los derechos reservados.",
     "amazonDisclaimer": "Como Asociado de Amazon, ganamos por compras calificadas."
   },
+  "brandSignature": {
+    "text": "Gracias por confiar en ELEMATT. Cada producto está diseñado con amor y pensado para acompañar los momentos más especiales de tu familia.",
+    "signature": "— El equipo ELEMATT"
+  },
   "hero": {
     "explore": "Explorar"
   },
@@ -103,11 +107,16 @@
     "pepText1": "Su presencia en cada producto ELEMATT simboliza la <strong>ternura</strong>, la <strong>curiosidad</strong> y la <strong>conexión emocional</strong> que queremos transmitir a cada familia.",
     "pepText2": "Cada producto cuenta un fragmento de esa historia: una alfombra para jugar, unas tarjetas para descubrir, y un mundo lleno de amor y amistad.",
     "fantastic4Title": "Las 4 fantásticas",
+    "fantastic4Text": "Elena, Laia, Isabela y Olivia formaron un vínculo especial en la guardería. Sus aventuras juntas inspiraron las ilustraciones de nuestros productos.",
     "fantastic4Intro": "Elena, Laia, Isabela y Olivia formaron un vínculo especial en la guardería. Sus aventuras juntas inspiraron las ilustraciones de nuestros productos.",
     "dedication": "\"Para mis amigas Laia, Isabela y Olivia\"",
     "dedicationAuthor": "— Dedicatoria de Elena al terminar la etapa de guardería",
+    "coastalTitle": "Pueblo Costero",
+    "coastalText": "Una de las caras de nuestra alfombra está inspirada en las aventuras de las 4 fantásticas en un pueblo costero: calma, ternura y verano.",
     "coastalVillageTitle": "Pueblo Costero",
     "coastalVillageDesc": "Una de las caras de nuestra alfombra está inspirada en las aventuras de las 4 fantásticas en un pueblo costero: calma, ternura y verano.",
+    "jungleTitle": "Selva Tropical",
+    "jungleText": "La otra cara representa la selva tropical: aventura, curiosidad y naturaleza, donde Pep y Elena exploran juntos.",
     "tropicalJungleTitle": "Selva Tropical",
     "tropicalJungleDesc": "La otra cara representa la selva tropical: aventura, curiosidad y naturaleza, donde Pep y Elena exploran juntos.",
     "ctaTitle": "Descubre nuestros productos",
@@ -229,6 +238,23 @@
     "safety": {
       "title": "Información de Seguridad:",
       "bagWarning": "Esta bolsa de PU no es un juguete. Mantener fuera del alcance de bebés y niños. Uso exclusivo para adultos."
+    },
+    "safetyInfo": {
+      "mainTitle": "Información de Seguridad del Producto",
+      "mainSubtitle": "Seguridad del producto en la UE & Cumplimiento Amazon FBA",
+      "intro1": "La presente información forma parte de las obligaciones de información al consumidor exigidas por la normativa europea de seguridad de productos infantiles y por las plataformas de venta online, incluida Amazon.",
+      "intro2": "Debe leerse atentamente antes de utilizar el producto.",
+      "section1Title": "PRODUCTO PRINCIPAL",
+      "section1Subtitle": "Alfombra plegable para bebé ELEMATT®",
+      "section2Title": "BOLSA DE PU (EMBALAJE Y TRANSPORTE)",
+      "section2Subtitle": "⚠️ NO ES UN JUGUETE",
+      "section3Title": "TARJETAS SENSORIALES",
+      "section3Subtitle": "Accesorio educativo complementario",
+      "section4Title": "USO RESPONSABLE Y SUPERVISIÓN",
+      "section5Title": "INFORMACIÓN ADICIONAL DE CUMPLIMIENTO",
+      "brandFooter": "Marca: ELEMATT®",
+      "brandTagline1": "Diseñado con amor. Fabricado con responsabilidad.",
+      "brandTagline2": "Para bebés, con criterio adulto"
     },
     "babyMat": {
       "name": "Alfombra Bebé Acolchada Plegable",

@@ -103,7 +103,12 @@
     "tropicalJungleDesc": "The other side represents the tropical jungle: adventure, curiosity, and nature, where Pep and Elena explore together.",
     "ctaTitle": "Discover Our Products",
     "ctaDescription": "Every ELEMATT product is designed with love, inspired by real stories, and created to accompany your baby's growth.",
-    "ctaButton": "View Collections"
+    "ctaButton": "View Collections",
+    "fantastic4Text": "Elena, Laia, Isabela, and Olivia formed a special bond at daycare. Their adventures together inspired the illustrations on our products.",
+    "coastalTitle": "Coastal Village",
+    "coastalText": "One side of our mat is inspired by the adventures of the fantastic 4 in a coastal village: calm, tenderness, and summer.",
+    "jungleTitle": "Tropical Jungle",
+    "jungleText": "The other side represents the tropical jungle: adventure, curiosity, and nature, where Pep and Elena explore together."
   },
   "contact": {
     "title": "Contact - ELEMATT",
@@ -221,6 +226,23 @@
       "title": "Safety Information:",
       "bagWarning": "This PU bag is not a toy. Keep out of reach of babies and children. For adult use only."
     },
+    "safetyInfo": {
+      "mainTitle": "Product Safety Information",
+      "mainSubtitle": "EU Product Safety & Amazon FBA Compliance",
+      "intro1": "This information is part of the consumer information obligations required by European child product safety regulations and online sales platforms, including Amazon.",
+      "intro2": "Must be read carefully before using the product.",
+      "section1Title": "MAIN PRODUCT",
+      "section1Subtitle": "ELEMATT® Foldable Baby Mat",
+      "section2Title": "PU BAG (PACKAGING AND TRANSPORT)",
+      "section2Subtitle": "⚠️ NOT A TOY",
+      "section3Title": "SENSORY CARDS",
+      "section3Subtitle": "Complementary educational accessory",
+      "section4Title": "RESPONSIBLE USE AND SUPERVISION",
+      "section5Title": "ADDITIONAL COMPLIANCE INFORMATION",
+      "brandFooter": "Brand: ELEMATT®",
+      "brandTagline1": "Designed with love. Made with responsibility.",
+      "brandTagline2": "For babies, with adult judgment"
+    },
     "babyMat": {
       "name": "Padded Foldable Baby Mat",
       "shortDescription": "Reversible mat with exclusive watercolor illustrations. Includes 20 sensory cards. 0+ certification.",
@@ -290,6 +312,9 @@
       "ctaTitle": "Give your baby the best from day one",
       "ctaDescription": "Fill your home with color, safety, and unforgettable memories."
     }
+  },
+  "brandSignature": {
+    "text": "Thank you for trusting ELEMATT. Each product is designed with love and created to accompany your family's most special moments.",
+    "signature": "— The ELEMATT team"
   }
 }
-

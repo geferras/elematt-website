@@ -102,9 +102,9 @@
     "dedication": "\"Pour mes amies Laia, Isabela et Olivia\"",
     "dedicationAuthor": "— Dédicace d'Elena à la fin de la crèche",
     "coastalTitle": "Village Côtier",
-    "coastalText": "Une des faces de notre tapis est inspirée des aventures des 4 fantastiques dans un village côtier : calme, tendresse et été.",
+    "coastalText": "Un côté de notre tapis est inspiré des aventures des 4 fantastiques dans un village côtier : calme, tendresse et été.",
     "jungleTitle": "Jungle Tropicale",
-    "jungleText": "L'autre face représente la jungle tropicale : aventure, curiosité et nature, où Pep et Elena explorent ensemble.",
+    "jungleText": "L'autre côté représente la jungle tropicale : aventure, curiosité et nature, où Pep et Elena explorent ensemble.",
     "philosophyTitle": "Notre Philosophie",
     "philosophyQuote": "\"Chaque histoire commence sur un tapis\"",
     "philosophyText1": "ELEMATT n'est pas seulement un tapis, mais un monde où les enfants grandissent en jouant et les mères trouvent la beauté dans le quotidien.",
@@ -293,6 +293,9 @@
       "viewDetails": "Voir Détails",
       "foamPU": "Mousse EPE + Housse PU"
     }
+  },
+  "brandSignature": {
+    "text": "Merci de faire confiance à ELEMATT. Chaque produit est conçu avec amour et pensé pour accompagner les moments les plus spéciaux de votre famille.",
+    "signature": "— L'équipe ELEMATT"
   }
 }
-
