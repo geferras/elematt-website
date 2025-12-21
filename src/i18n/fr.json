@@ -29,6 +29,16 @@
   "hero": {
     "explore": "Explorer"
   },
+  "trustBadges": {
+    "certificationTitle": "Certification 0+",
+    "certificationText": "Conforme à la norme EN71",
+    "shippingTitle": "Livraison Rapide",
+    "shippingText": "Avec Amazon Prime",
+    "supportTitle": "Support Direct",
+    "supportText": "Nous sommes là pour vous aider",
+    "designTitle": "Conçu avec Amour",
+    "designText": "Inspiré d'histoires réelles"
+  },
   "home": {
     "title": "ELEMATT | Produits pour bébés conçus avec amour",
     "description": "ELEMATT crée des produits pour bébés qui combinent sécurité, design et émotion. Chaque produit raconte une histoire unique inspirée de l'enfance d'Elena et de ses amies.",
@@ -256,7 +266,32 @@
       "cardsJungleTitle": "Set Jungle Tropicale",
       "cardsJungleText": "10 cartes recto-verso (14×14 cm) avec illustrations de la jungle",
       "ctaTitle": "Offrez le meilleur à votre bébé dès le premier jour",
-      "ctaDescription": "Remplissez votre maison de couleur, de sécurité et de souvenirs inoubliables."
+      "ctaDescription": "Remplissez votre maison de couleur, de sécurité et de souvenirs inoubliables.",
+      "variantsPageTitle": "Tapis Bébé Rembourré Pliable | ELEMATT",
+      "variantsPageSubtitle": "Deux mondes d'aventure en un seul tapis",
+      "variantsPageDescription": "Tapis bébé rembourré pliable. Disponible en 2 tailles : Compact 150×180 cm et XL 180×200 cm. Illustrations exclusives à l'aquarelle, réversible, imperméable. Comprend 20 cartes sensorielles.",
+      "coastalVillageTitle": "Village Côtier",
+      "coastalVillageDescription": "Un village paisible au bord de la mer où les maisons colorées se reflètent dans l'eau cristalline. Bateaux de pêche, mouettes joueuses et un phare guidant les marins. Un endroit où le temps s'arrête et chaque vague raconte une histoire.",
+      "tropicalJungleTitle": "Jungle Tropicale",
+      "tropicalJungleDescription": "Une jungle luxuriante pleine de vie et de couleurs. Toucans au bec brillant, singes espiègles se balançant sur des lianes, papillons iridescents et fleurs exotiques parfumant l'air. Un paradis vert où chaque coin cache une nouvelle aventure.",
+      "chooseSize": "Choisissez Votre Taille",
+      "chooseSizeSubtitle": "Deux options conçues pour s'adapter à votre espace",
+      "compact": "Compact",
+      "compactDescription": "Parfait pour les petits espaces",
+      "compactFeature1": "Idéal pour les appartements",
+      "compactFeature2": "Facile à ranger et transporter",
+      "compactFeature3": "Parfait pour voyager",
+      "xlDescription": "Espace de jeu maximum",
+      "xlFeature1": "Espace supplémentaire pour jouer",
+      "xlFeature2": "Idéal pour les maisons spacieuses",
+      "xlFeature3": "Grandit avec votre bébé",
+      "mostPopular": "Le Plus Populaire",
+      "thickness": "Épaisseur",
+      "folded": "Plié",
+      "weight": "Poids",
+      "material": "Matériau",
+      "viewDetails": "Voir Détails",
+      "foamPU": "Mousse EPE + Housse PU"
     }
   }
 }

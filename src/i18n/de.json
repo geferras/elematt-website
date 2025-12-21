@@ -29,6 +29,16 @@
   "hero": {
     "explore": "Erkunden"
   },
+  "trustBadges": {
+    "certificationTitle": "0+ Zertifizierung",
+    "certificationText": "Erfüllt EN71-Norm",
+    "shippingTitle": "Schneller Versand",
+    "shippingText": "Mit Amazon Prime",
+    "supportTitle": "Direkter Support",
+    "supportText": "Wir sind für Sie da",
+    "designTitle": "Mit Liebe Gestaltet",
+    "designText": "Inspiriert von echten Geschichten"
+  },
   "home": {
     "title": "ELEMATT | Babyprodukte mit Liebe gestaltet",
     "description": "ELEMATT kreiert Babyprodukte, die Sicherheit, Design und Emotion vereinen. Jedes Produkt erzählt eine einzigartige Geschichte, inspiriert von Elenas Kindheit und ihren Freundinnen.",
@@ -256,7 +266,32 @@
       "cardsJungleTitle": "Set Tropischer Dschungel",
       "cardsJungleText": "10 doppelseitige Karten (14×14 cm) mit Dschungelillustrationen",
       "ctaTitle": "Geben Sie Ihrem Baby vom ersten Tag an das Beste",
-      "ctaDescription": "Füllen Sie Ihr Zuhause mit Farbe, Sicherheit und unvergesslichen Erinnerungen."
+      "ctaDescription": "Füllen Sie Ihr Zuhause mit Farbe, Sicherheit und unvergesslichen Erinnerungen.",
+      "variantsPageTitle": "Gepolsterte Faltbare Babymatte | ELEMATT",
+      "variantsPageSubtitle": "Zwei Abenteuerwelten in einer Matte",
+      "variantsPageDescription": "Gepolsterte faltbare Babymatte. Erhältlich in 2 Größen: Kompakt 150×180 cm und XL 180×200 cm. Exklusive Aquarellillustrationen, wendbar, wasserdicht. Enthält 20 sensorische Karten.",
+      "coastalVillageTitle": "Küstendorf",
+      "coastalVillageDescription": "Ein friedliches Küstendorf, wo bunte Häuschen sich im kristallklaren Wasser spiegeln. Fischerboote, verspielte Möwen und ein Leuchtturm, der die Seeleute führt. Ein Ort, wo die Zeit stillsteht und jede Welle eine Geschichte erzählt.",
+      "tropicalJungleTitle": "Tropischer Dschungel",
+      "tropicalJungleDescription": "Ein üppiger Dschungel voller Leben und Farbe. Tukane mit glänzenden Schnäbeln, schelmische Affen, die an Lianen schwingen, schillernde Schmetterlinge und exotische Blumen, die die Luft parfümieren. Ein grünes Paradies, wo jede Ecke ein neues Abenteuer verbirgt.",
+      "chooseSize": "Wählen Sie Ihre Größe",
+      "chooseSizeSubtitle": "Zwei Optionen, die sich Ihrem Raum anpassen",
+      "compact": "Kompakt",
+      "compactDescription": "Perfekt für kleine Räume",
+      "compactFeature1": "Ideal für Wohnungen",
+      "compactFeature2": "Einfach zu verstauen und transportieren",
+      "compactFeature3": "Perfekt zum Reisen",
+      "xlDescription": "Maximaler Spielraum",
+      "xlFeature1": "Extra Platz zum Spielen",
+      "xlFeature2": "Ideal für geräumige Häuser",
+      "xlFeature3": "Wächst mit Ihrem Baby",
+      "mostPopular": "Am Beliebtesten",
+      "thickness": "Dicke",
+      "folded": "Gefaltet",
+      "weight": "Gewicht",
+      "material": "Material",
+      "viewDetails": "Details Ansehen",
+      "foamPU": "EPE-Schaum + PU-Bezug"
     }
   }
 }

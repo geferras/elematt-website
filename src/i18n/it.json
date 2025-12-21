@@ -29,6 +29,16 @@
   "hero": {
     "explore": "Esplora"
   },
+  "trustBadges": {
+    "certificationTitle": "Certificazione 0+",
+    "certificationText": "Conforme alla norma EN71",
+    "shippingTitle": "Spedizione Rapida",
+    "shippingText": "Con Amazon Prime",
+    "supportTitle": "Supporto Diretto",
+    "supportText": "Siamo qui per aiutarti",
+    "designTitle": "Progettato con Amore",
+    "designText": "Ispirato a storie reali"
+  },
   "home": {
     "title": "ELEMATT | Prodotti per Bambini Progettati con Amore",
     "description": "ELEMATT crea prodotti per bambini che combinano sicurezza, design ed emozione. Ogni prodotto racconta una storia unica ispirata all'infanzia di Elena e delle sue amiche.",
@@ -253,7 +263,32 @@
       "cardsJungleTitle": "Set Giungla Tropicale",
       "cardsJungleText": "10 carte fronte-retro (14×14 cm) con illustrazioni della giungla",
       "ctaTitle": "Dai al tuo bambino il meglio fin dal primo giorno",
-      "ctaDescription": "Riempi la tua casa di colore, sicurezza e ricordi indimenticabili."
+      "ctaDescription": "Riempi la tua casa di colore, sicurezza e ricordi indimenticabili.",
+      "variantsPageTitle": "Tappeto Imbottito Pieghevole per Bambini | ELEMATT",
+      "variantsPageSubtitle": "Due mondi di avventura in un solo tappeto",
+      "variantsPageDescription": "Tappeto imbottito pieghevole per bambini. Disponibile in 2 dimensioni: Compatto 150×180 cm e XL 180×200 cm. Illustrazioni esclusive ad acquerello, reversibile, impermeabile. Include 20 carte sensoriali.",
+      "coastalVillageTitle": "Villaggio Costiero",
+      "coastalVillageDescription": "Un tranquillo villaggio sul mare dove le casette colorate si riflettono nell'acqua cristallina. Barche da pesca, gabbiani giocosi e un faro che guida i naviganti. Un luogo dove il tempo si ferma e ogni onda racconta una storia.",
+      "tropicalJungleTitle": "Giungla Tropicale",
+      "tropicalJungleDescription": "Una giungla rigogliosa piena di vita e colore. Tucani dal becco brillante, scimmie birichine che saltano sulle liane, farfalle iridescenti e fiori esotici che profumano l'aria. Un paradiso verde dove ogni angolo nasconde una nuova avventura.",
+      "chooseSize": "Scegli la Tua Dimensione",
+      "chooseSizeSubtitle": "Due opzioni progettate per adattarsi al tuo spazio",
+      "compact": "Compatto",
+      "compactDescription": "Perfetto per spazi piccoli",
+      "compactFeature1": "Ideale per appartamenti",
+      "compactFeature2": "Facile da riporre e trasportare",
+      "compactFeature3": "Perfetto per viaggiare",
+      "xlDescription": "Massimo spazio per giocare",
+      "xlFeature1": "Spazio extra per giocare",
+      "xlFeature2": "Ideale per case spaziose",
+      "xlFeature3": "Cresce con il tuo bambino",
+      "mostPopular": "Più Popolare",
+      "thickness": "Spessore",
+      "folded": "Piegato",
+      "weight": "Peso",
+      "material": "Materiale",
+      "viewDetails": "Vedi Dettagli",
+      "foamPU": "Schiuma EPE + Copertura PU"
     }
   }
 }
