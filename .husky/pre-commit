@@ -1,0 +1,22 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Validate all JSON files in src/i18n/
+echo "Validating i18n JSON files..."
+for file in src/i18n/*.json; do
+  if [ -f "$file" ]; then
+    python3 -c "
+import json
+import sys
+try:
+    with open('$file', 'r', encoding='utf-8') as f:
+        json.load(f)
+except json.JSONDecodeError as e:
+    print(f'❌ JSON Error in $file: {e}')
+    sys.exit(1)
+" || exit 1
+  fi
+done
+
+echo "✓ All JSON files are valid"
+
