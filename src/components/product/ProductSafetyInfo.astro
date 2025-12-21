@@ -66,7 +66,7 @@ const t = useTranslations(lang);
             <h4>{t('product.safetyInfo.section1.compliance')}</h4>
             <p>{t('product.safetyInfo.section1.complianceText')}</p>
             <ul>
-              {(t('product.safetyInfo.section1.complianceItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section1.complianceItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -75,7 +75,7 @@ const t = useTranslations(lang);
           <div class="content-section">
             <h4>{t('product.safetyInfo.section1.materials')}</h4>
             <ul>
-              {(t('product.safetyInfo.section1.materialsItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section1.materialsItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -84,7 +84,7 @@ const t = useTranslations(lang);
           <div class="content-section">
             <h4>{t('product.safetyInfo.section1.finishes')}</h4>
             <ul>
-              {(t('product.safetyInfo.section1.finishesItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section1.finishesItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -93,7 +93,7 @@ const t = useTranslations(lang);
           <div class="content-section warning-section">
             <h4>{t('product.safetyInfo.section1.warnings')}</h4>
             <ul>
-              {(t('product.safetyInfo.section1.warningsItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section1.warningsItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -117,7 +117,7 @@ const t = useTranslations(lang);
           <div class="content-section">
             <h4>{t('product.safetyInfo.section2.intendedUse')}</h4>
             <ul>
-              {(t('product.safetyInfo.section2.intendedUseItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section2.intendedUseItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -131,7 +131,7 @@ const t = useTranslations(lang);
           <div class="content-section">
             <h4>{t('product.safetyInfo.section2.restrictions')}</h4>
             <ul>
-              {(t('product.safetyInfo.section2.restrictionsItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section2.restrictionsItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -160,7 +160,7 @@ const t = useTranslations(lang);
           <div class="content-section">
             <h4>{t('product.safetyInfo.section3.conditions')}</h4>
             <ul>
-              {(t('product.safetyInfo.section3.conditionsItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section3.conditionsItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -169,7 +169,7 @@ const t = useTranslations(lang);
           <div class="content-section warning-section">
             <h4>{t('product.safetyInfo.section3.warnings')}</h4>
             <ul>
-              {(t('product.safetyInfo.section3.warningsItems') as string[]).map((item: string) => (
+              {(t('product.safetyInfo.section3.warningsItems') as unknown as string[]).map((item: string) => (
                 <li>{item}</li>
               ))}
             </ul>
