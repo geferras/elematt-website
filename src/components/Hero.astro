@@ -26,7 +26,7 @@ const {
   {/* Partículas flotantes */}
   {particles && (
     <div class="hero-particles" aria-hidden="true">
-      {Array.from({ length: 25 }).map((_, i) => (
+      {Array.from({ length: 25 }).map(() => (
         <div class="particle" style={`
           left: ${Math.random() * 100}%;
           top: ${Math.random() * 100}%;

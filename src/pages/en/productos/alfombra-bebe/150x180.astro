@@ -26,7 +26,7 @@ const producto = {
   type="product"
 >
   <!-- Schema.org Product JSON-LD -->
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+  <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": t('product.babyMat.name') + ' ' + t('product.babyMat.variant150'),
