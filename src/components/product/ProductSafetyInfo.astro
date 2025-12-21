@@ -1,10 +1,10 @@
 ---
 /**
  * ProductSafetyInfo - INFORMACIÓN DE SEGURIDAD COMPLETA
- * 
+ *
  * Componente obligatorio para cumplimiento normativo UE
  * Información de seguridad del producto en formato acordeón
- * 
+ *
  * Requisitos:
  * - Visible en /productos/alfombra-bebe
  * - Contenido exacto del documento oficial
@@ -13,7 +13,11 @@
  * - NO modificar el contenido sin autorización
  */
 
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import Icon from '../Icon.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="product-safety-info">
@@ -24,8 +28,8 @@ import Icon from '../Icon.astro';
         <Icon name="shield-check" size={32} />
       </div>
       <div class="safety-header-content">
-        <h2 class="safety-title">Información de Seguridad del Producto</h2>
-        <p class="safety-subtitle">Seguridad del producto en la UE & Cumplimiento Amazon FBA</p>
+        <h2 class="safety-title">{t('product.safetyInfo.mainTitle')}</h2>
+        <p class="safety-subtitle">{t('product.safetyInfo.mainSubtitle')}</p>
       </div>
       <div class="safety-header-chevron">
         <Icon name="chevron-down" size={28} />
@@ -35,66 +39,63 @@ import Icon from '../Icon.astro';
     <!-- All content inside collapsible container -->
     <div class="safety-main-content" id="safety-main-content">
       <div class="safety-intro">
-      <p>La presente información forma parte de las obligaciones de información al consumidor exigidas por la normativa europea de seguridad de productos infantiles y por las plataformas de venta online, incluida Amazon.</p>
-      <p><strong>Debe leerse atentamente antes de utilizar el producto.</strong></p>
+      <p>{t('product.safetyInfo.intro1')}</p>
+      <p><strong>{t('product.safetyInfo.intro2')}</strong></p>
     </div>
 
     <div class="safety-accordion">
       <!-- Sección 1: PRODUCTO PRINCIPAL -->
       <div class="accordion-item">
         <button class="accordion-header" aria-expanded="false">
-          <span class="accordion-number">01</span>
-          <span class="accordion-title">PRODUCTO PRINCIPAL<br><small>Alfombra plegable para bebé ELEMATT®</small></span>
+          <span class="accordion-number">{t('product.safetyInfo.section1.number')}</span>
+          <span class="accordion-title">{t('product.safetyInfo.section1.title')}<br><small>{t('product.safetyInfo.section1.subtitle')}</small></span>
           <Icon name="chevron-down" size={24} />
         </button>
         <div class="accordion-content">
           <div class="content-section">
-            <h4>Uso previsto:</h4>
-            <p>La alfombra plegable ELEMATT está diseñada como superficie de juego, descanso y exploración sensorial para bebés y niños pequeños, en entornos domésticos.</p>
+            <h4>{t('product.safetyInfo.section1.intendedUse')}</h4>
+            <p>{t('product.safetyInfo.section1.intendedUseText')}</p>
           </div>
 
           <div class="content-section">
-            <h4>Edad recomendada:</h4>
-            <p>✔️ Apta desde 0 meses (0+), siempre bajo la supervisión de un adulto.</p>
+            <h4>{t('product.safetyInfo.section1.recommendedAge')}</h4>
+            <p>{t('product.safetyInfo.section1.recommendedAgeText')}</p>
           </div>
 
           <div class="content-section">
-            <h4>Cumplimiento normativo:</h4>
-            <p>El producto ha sido diseñado para cumplir con la normativa europea aplicable a productos infantiles, incluyendo:</p>
+            <h4>{t('product.safetyInfo.section1.compliance')}</h4>
+            <p>{t('product.safetyInfo.section1.complianceText')}</p>
             <ul>
-              <li>Directiva 2009/48/CE sobre la seguridad de los juguetes.</li>
-              <li>EN 71-1: Propiedades mecánicas y físicas.</li>
-              <li>EN 71-2: Inflamabilidad.</li>
-              <li>EN 71-3: Migración de determinados elementos.</li>
+              {t('product.safetyInfo.section1.complianceItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div class="content-section">
-            <h4>Materiales:</h4>
+            <h4>{t('product.safetyInfo.section1.materials')}</h4>
             <ul>
-              <li>Espuma XPE (polietileno reticulado) de alta calidad.</li>
-              <li>Material no tóxico, libre de BPA, ftalatos, PVC y metales pesados.</li>
-              <li>Superficie con recubrimiento protector integrado, resistente y fácil de limpiar.</li>
+              {t('product.safetyInfo.section1.materialsItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div class="content-section">
-            <h4>Acabados y confección:</h4>
+            <h4>{t('product.safetyInfo.section1.finishes')}</h4>
             <ul>
-              <li>Bordes sellados y cosidos, sin riesgo de deshilachado.</li>
-              <li>Superficie continua, sin piezas pequeñas ni elementos desmontables.</li>
-              <li>Diseño plegable que facilita el uso y almacenamiento seguro.</li>
+              {t('product.safetyInfo.section1.finishesItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div class="content-section warning-section">
-            <h4>Advertencias de uso:</h4>
+            <h4>{t('product.safetyInfo.section1.warnings')}</h4>
             <ul>
-              <li>Utilizar únicamente sobre superficies planas y estables.</li>
-              <li>No colocar cerca de fuentes de calor, fuego o llamas.</li>
-              <li>No dejar al bebé sin supervisión prolongada.</li>
-              <li>Revisar periódicamente el estado del producto y suspender su uso si presenta daños.</li>
-              <li>No utilizar como elemento de escalada ni como protección frente a caídas desde altura.</li>
+              {t('product.safetyInfo.section1.warningsItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -103,35 +104,36 @@ import Icon from '../Icon.astro';
       <!-- Sección 2: BOLSA DE PU -->
       <div class="accordion-item">
         <button class="accordion-header" aria-expanded="false">
-          <span class="accordion-number">02</span>
-          <span class="accordion-title">BOLSA DE PU (EMBALAJE Y TRANSPORTE)<br><small>⚠️ NO ES UN JUGUETE</small></span>
+          <span class="accordion-number">{t('product.safetyInfo.section2.number')}</span>
+          <span class="accordion-title">{t('product.safetyInfo.section2.title')}<br><small>{t('product.safetyInfo.section2.subtitle')}</small></span>
           <Icon name="chevron-down" size={24} />
         </button>
         <div class="accordion-content">
           <div class="alert-box">
-            <p><strong>⚠️ NO ES UN JUGUETE</strong></p>
-            <p>La bolsa de PU incluida con el producto está destinada exclusivamente al transporte y almacenamiento por parte de adultos.</p>
+            <p><strong>{t('product.safetyInfo.section2.alert')}</strong></p>
+            <p>{t('product.safetyInfo.section2.alertText')}</p>
           </div>
 
           <div class="content-section">
-            <h4>Uso previsto:</h4>
+            <h4>{t('product.safetyInfo.section2.intendedUse')}</h4>
             <ul>
-              <li>Transporte de la alfombra.</li>
-              <li>Almacenamiento del producto cuando no esté en uso.</li>
+              {t('product.safetyInfo.section2.intendedUseItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div class="content-section warning-section">
-            <h4>Advertencia importante:</h4>
-            <p><strong>⚠️ Mantener fuera del alcance de bebés y niños.</strong></p>
+            <h4>{t('product.safetyInfo.section2.warning')}</h4>
+            <p><strong>{t('product.safetyInfo.section2.warningText')}</strong></p>
           </div>
 
           <div class="content-section">
-            <h4>Restricciones de uso:</h4>
+            <h4>{t('product.safetyInfo.section2.restrictions')}</h4>
             <ul>
-              <li>No permitir que bebés o niños manipulen la bolsa.</li>
-              <li>No utilizar como elemento de juego.</li>
-              <li>No colocar sobre la cabeza ni permitir su uso sin supervisión.</li>
+              {t('product.safetyInfo.section2.restrictionsItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -140,36 +142,36 @@ import Icon from '../Icon.astro';
       <!-- Sección 3: TARJETAS SENSORIALES -->
       <div class="accordion-item">
         <button class="accordion-header" aria-expanded="false">
-          <span class="accordion-number">03</span>
-          <span class="accordion-title">TARJETAS SENSORIALES<br><small>Accesorio educativo complementario</small></span>
+          <span class="accordion-number">{t('product.safetyInfo.section3.number')}</span>
+          <span class="accordion-title">{t('product.safetyInfo.section3.title')}<br><small>{t('product.safetyInfo.section3.subtitle')}</small></span>
           <Icon name="chevron-down" size={24} />
         </button>
         <div class="accordion-content">
           <div class="content-section">
-            <h4>Accesorio educativo complementario:</h4>
-            <p>Las tarjetas sensoriales incluidas constituyen un accesorio educativo complementario, no el producto principal.</p>
+            <h4>{t('product.safetyInfo.section3.description')}</h4>
+            <p>{t('product.safetyInfo.section3.descriptionText')}</p>
           </div>
 
           <div class="content-section">
-            <h4>Edad recomendada:</h4>
-            <p>✔️ Uso recomendado a partir de 3 meses.</p>
+            <h4>{t('product.safetyInfo.section3.recommendedAge')}</h4>
+            <p>{t('product.safetyInfo.section3.recommendedAgeText')}</p>
           </div>
 
           <div class="content-section">
-            <h4>Condiciones de uso:</h4>
+            <h4>{t('product.safetyInfo.section3.conditions')}</h4>
             <ul>
-              <li>Uso exclusivamente bajo supervisión de un adulto.</li>
-              <li>Diseñadas para ser mostradas al bebé, no para manipulación libre.</li>
+              {t('product.safetyInfo.section3.conditionsItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
 
           <div class="content-section warning-section">
-            <h4>Advertencias:</h4>
+            <h4>{t('product.safetyInfo.section3.warnings')}</h4>
             <ul>
-              <li>⚠️ No introducir en la boca.</li>
-              <li>⚠️ No morder, chupar ni doblar.</li>
-              <li>⚠️ No dejar al bebé solo con las tarjetas.</li>
-              <li>⚠️ Retirar tras su uso.</li>
+              {t('product.safetyInfo.section3.warningsItems').map((item: string) => (
+                <li>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -178,14 +180,14 @@ import Icon from '../Icon.astro';
       <!-- Sección 4: USO RESPONSABLE Y SUPERVISIÓN -->
       <div class="accordion-item">
         <button class="accordion-header" aria-expanded="false">
-          <span class="accordion-number">04</span>
-          <span class="accordion-title">USO RESPONSABLE Y SUPERVISIÓN</span>
+          <span class="accordion-number">{t('product.safetyInfo.section4.number')}</span>
+          <span class="accordion-title">{t('product.safetyInfo.section4.title')}</span>
           <Icon name="chevron-down" size={24} />
         </button>
         <div class="accordion-content">
           <div class="content-section">
-            <p>El uso correcto del producto y de sus accesorios conforme a estas instrucciones es responsabilidad del adulto.</p>
-            <p><strong>El incumplimiento de las advertencias y recomendaciones de seguridad puede comprometer la seguridad del menor.</strong></p>
+            <p>{t('product.safetyInfo.section4.text1')}</p>
+            <p><strong>{t('product.safetyInfo.section4.text2')}</strong></p>
           </div>
         </div>
       </div>
@@ -193,22 +195,22 @@ import Icon from '../Icon.astro';
       <!-- Sección 5: INFORMACIÓN ADICIONAL DE CUMPLIMIENTO -->
       <div class="accordion-item">
         <button class="accordion-header" aria-expanded="false">
-          <span class="accordion-number">05</span>
-          <span class="accordion-title">INFORMACIÓN ADICIONAL DE CUMPLIMIENTO</span>
+          <span class="accordion-number">{t('product.safetyInfo.section5.number')}</span>
+          <span class="accordion-title">{t('product.safetyInfo.section5.title')}</span>
           <Icon name="chevron-down" size={24} />
         </button>
         <div class="accordion-content">
           <div class="content-section">
-            <p>Este aviso digital forma parte de las medidas de información preventiva exigidas por la normativa europea y por las plataformas de comercio electrónico, incluida Amazon.</p>
-            <p>La documentación técnica, informes de ensayo y certificados de conformidad están disponibles para las autoridades competentes cuando así se requiera.</p>
+            <p>{t('product.safetyInfo.section5.text1')}</p>
+            <p>{t('product.safetyInfo.section5.text2')}</p>
           </div>
         </div>
       </div>
     </div>
 
       <div class="safety-footer">
-        <p class="brand-signature"><strong>Marca: ELEMATT®</strong></p>
-        <p class="brand-tagline">Diseñado con amor. Fabricado con responsabilidad.<br>Para bebés, con criterio adulto</p>
+        <p class="brand-signature"><strong>{t('product.safetyInfo.footer.brand')}</strong></p>
+        <p class="brand-tagline" set:html={t('product.safetyInfo.footer.tagline')}></p>
       </div>
     </div>
     <!-- End of safety-main-content -->

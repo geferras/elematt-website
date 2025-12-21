@@ -108,7 +108,12 @@
     "coastalTitle": "Aldeia Costeira",
     "coastalText": "Um dos lados do nosso tapete é inspirado nas aventuras das 4 fantásticas numa aldeia costeira: calma, ternura e verão.",
     "jungleTitle": "Selva Tropical",
-    "jungleText": "O outro lado representa a selva tropical: aventura, curiosidade e natureza, onde Pep e Elena exploram juntos."
+    "jungleText": "O outro lado representa a selva tropical: aventura, curiosidade e natureza, onde Pep e Elena exploram juntos.",
+    "originTitle": "A Origem da ELEMATT",
+    "pepAlt": "Pep, a mascote da ELEMATT",
+    "originText1": "A ELEMATT nasceu de uma história real: <strong>Elena</strong>, a nossa pequena inspiração, e <strong>Pep</strong>, o seu fiel companheiro de aventuras.",
+    "originText2": "Cada produto que criamos está pensado para acompanhar momentos especiais, como os que Elena viveu na creche junto às suas amigas.",
+    "originText3": "Desenhamos com amor, segurança e uma história única por trás de cada detalhe."
   },
   "contact": {
     "title": "Contato - ELEMATT",
@@ -294,6 +299,107 @@
       "cardsJungleText": "10 cartões dupla face (14×14 cm) com ilustrações da selva",
       "ctaTitle": "Dê ao seu bebê o melhor desde o primeiro dia",
       "ctaDescription": "Encha sua casa de cor, segurança e memórias inesquecíveis."
+    },
+    "safetyInfo": {
+      "mainTitle": "Informação de Segurança do Produto",
+      "mainSubtitle": "Segurança do Produto na UE & Conformidade Amazon FBA",
+      "intro1": "Esta informação faz parte das obrigações de informação ao consumidor exigidas pela regulamentação europeia de segurança de produtos infantis e pelas plataformas de venda online, incluindo a Amazon.",
+      "intro2": "Deve ser lida atentamente antes de utilizar o produto.",
+      "section1": {
+        "number": "01",
+        "title": "PRODUTO PRINCIPAL",
+        "subtitle": "Tapete dobrável para bebé ELEMATT®",
+        "intendedUse": "Uso previsto:",
+        "intendedUseText": "O tapete dobrável ELEMATT foi concebido como superfície de jogo, descanso e exploração sensorial para bebés e crianças pequenas, em ambientes domésticos.",
+        "recommendedAge": "Idade recomendada:",
+        "recommendedAgeText": "✔️ Adequado desde os 0 meses (0+), sempre sob supervisão de um adulto.",
+        "materials": "Materiais:",
+        "materialsText": "Espuma XPE (polietileno reticulado) de alta qualidade.",
+        "finishes": "Acabamentos e confeção:",
+        "finishesItems": [
+          "Bordas seladas e costuradas, sem risco de desfiar.",
+          "Superfície contínua, sem peças pequenas nem elementos desmontáveis.",
+          "Design dobrável que facilita o uso e armazenamento seguro."
+        ],
+        "warnings": "Advertências de uso:",
+        "warningsItems": [
+          "Utilizar apenas sobre superfícies planas e estáveis.",
+          "Não colocar perto de fontes de calor, fogo ou chamas.",
+          "Não deixar o bebé sem supervisão prolongada.",
+          "Verificar periodicamente o estado do produto e suspender o uso se apresentar danos.",
+          "Não utilizar como elemento de escalada nem como proteção contra quedas de altura."
+        ],
+        "compliance": "Conformidade regulamentar:",
+        "complianceText": "O produto foi concebido para cumprir a regulamentação europeia aplicável a produtos infantis, incluindo:",
+        "complianceItems": [
+          "Diretiva 2009/48/CE sobre a segurança dos brinquedos.",
+          "EN 71-1: Propriedades mecânicas e físicas.",
+          "EN 71-2: Inflamabilidade.",
+          "EN 71-3: Migração de determinados elementos."
+        ],
+        "materialsItems": [
+          "Espuma XPE (polietileno reticulado) de alta qualidade.",
+          "Material não tóxico, livre de BPA, ftalatos, PVC e metais pesados.",
+          "Superfície com revestimento protetor integrado, resistente e fácil de limpar."
+        ]
+      },
+      "section2": {
+        "number": "02",
+        "title": "SACO DE PU (EMBALAGEM E TRANSPORTE)",
+        "subtitle": "⚠️ NÃO É UM BRINQUEDO",
+        "alert": "⚠️ NÃO É UM BRINQUEDO",
+        "alertText": "O saco de PU incluído com o produto destina-se exclusivamente ao transporte e armazenamento por parte de adultos.",
+        "intendedUse": "Uso previsto:",
+        "intendedUseItems": [
+          "Transporte do tapete.",
+          "Armazenamento do produto quando não estiver em uso."
+        ],
+        "warning": "Advertência importante:",
+        "warningText": "⚠️ Manter fora do alcance de bebés e crianças.",
+        "restrictions": "Restrições de uso:",
+        "restrictionsItems": [
+          "Não permitir que bebés ou crianças manipulem o saco.",
+          "Não utilizar como elemento de jogo.",
+          "Não colocar sobre a cabeça nem permitir o uso sem supervisão."
+        ]
+      },
+      "section3": {
+        "number": "03",
+        "title": "CARTÕES SENSORIAIS",
+        "subtitle": "Acessório educativo complementar",
+        "description": "Acessório educativo complementar:",
+        "descriptionText": "Os cartões sensoriais incluídos constituem um acessório educativo complementar, não o produto principal.",
+        "recommendedAge": "Idade recomendada:",
+        "recommendedAgeText": "✔️ Uso recomendado a partir dos 3 meses.",
+        "conditions": "Condições de uso:",
+        "conditionsItems": [
+          "Uso exclusivamente sob supervisão de um adulto.",
+          "Concebidos para serem mostrados ao bebé, não para manipulação livre."
+        ],
+        "warnings": "Advertências:",
+        "warningsItems": [
+          "⚠️ Não introduzir na boca.",
+          "⚠️ Não morder, chupar nem dobrar.",
+          "⚠️ Não deixar o bebé sozinho com os cartões.",
+          "⚠️ Retirar após o uso."
+        ]
+      },
+      "section4": {
+        "number": "04",
+        "title": "USO RESPONSÁVEL E SUPERVISÃO",
+        "text1": "O uso correto do produto e dos seus acessórios conforme estas instruções é responsabilidade do adulto.",
+        "text2": "O incumprimento das advertências e recomendações de segurança pode comprometer a segurança do menor."
+      },
+      "section5": {
+        "number": "05",
+        "title": "INFORMAÇÃO ADICIONAL DE CONFORMIDADE",
+        "text1": "Este aviso digital faz parte das medidas de informação preventiva exigidas pela regulamentação europeia e pelas plataformas de comércio eletrónico, incluindo a Amazon.",
+        "text2": "A documentação técnica, relatórios de ensaio e certificados de conformidade estão disponíveis para as autoridades competentes quando assim for requerido."
+      },
+      "footer": {
+        "brand": "Marca: ELEMATT®",
+        "tagline": "Desenhado com amor. Fabricado com responsabilidade.<br>Para bebés, com critério adulto"
+      }
     }
   },
   "brandSignature": {

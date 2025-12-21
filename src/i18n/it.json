@@ -108,7 +108,12 @@
     "coastalTitle": "Villaggio Costiero",
     "coastalText": "Un lato del nostro tappeto è ispirato alle avventure delle 4 fantastiche in un villaggio costiero: calma, tenerezza ed estate.",
     "jungleTitle": "Giungla Tropicale",
-    "jungleText": "L'altro lato rappresenta la giungla tropicale: avventura, curiosità e natura, dove Pep ed Elena esplorano insieme."
+    "jungleText": "L'altro lato rappresenta la giungla tropicale: avventura, curiosità e natura, dove Pep ed Elena esplorano insieme.",
+    "originTitle": "L'Origine di ELEMATT",
+    "pepAlt": "Pep, la mascotte di ELEMATT",
+    "originText1": "ELEMATT è nato da una storia vera: <strong>Elena</strong>, la nostra piccola ispirazione, e <strong>Pep</strong>, il suo fedele compagno di avventure.",
+    "originText2": "Ogni prodotto che creiamo è pensato per accompagnare momenti speciali, come quelli che Elena ha vissuto all'asilo con le sue amiche.",
+    "originText3": "Progettiamo con amore, sicurezza e una storia unica dietro ogni dettaglio."
   },
   "contact": {
     "title": "Contatto - ELEMATT",
@@ -294,6 +299,107 @@
       "material": "Materiale",
       "viewDetails": "Vedi Dettagli",
       "foamPU": "Schiuma EPE + Copertura PU"
+    },
+    "safetyInfo": {
+      "mainTitle": "Informazioni sulla Sicurezza del Prodotto",
+      "mainSubtitle": "Sicurezza del Prodotto UE & Conformità Amazon FBA",
+      "intro1": "Queste informazioni fanno parte degli obblighi di informazione al consumatore richiesti dalla normativa europea sulla sicurezza dei prodotti per bambini e dalle piattaforme di vendita online, inclusa Amazon.",
+      "intro2": "Deve essere letto attentamente prima di utilizzare il prodotto.",
+      "section1": {
+        "number": "01",
+        "title": "PRODOTTO PRINCIPALE",
+        "subtitle": "Tappeto pieghevole per bambini ELEMATT®",
+        "intendedUse": "Uso previsto:",
+        "intendedUseText": "Il tappeto pieghevole ELEMATT è progettato come superficie di gioco, riposo ed esplorazione sensoriale per neonati e bambini piccoli, in ambienti domestici.",
+        "recommendedAge": "Età consigliata:",
+        "recommendedAgeText": "✔️ Adatto da 0 mesi (0+), sempre sotto la supervisione di un adulto.",
+        "materials": "Materiali:",
+        "materialsText": "Schiuma XPE (polietilene reticolato) di alta qualità.",
+        "finishes": "Finiture e confezione:",
+        "finishesItems": [
+          "Bordi sigillati e cuciti, senza rischio di sfilacciamento.",
+          "Superficie continua, senza parti piccole né elementi smontabili.",
+          "Design pieghevole che facilita l'uso e la conservazione sicura."
+        ],
+        "warnings": "Avvertenze d'uso:",
+        "warningsItems": [
+          "Utilizzare solo su superfici piane e stabili.",
+          "Non posizionare vicino a fonti di calore, fuoco o fiamme.",
+          "Non lasciare il bambino senza supervisione prolungata.",
+          "Controllare periodicamente lo stato del prodotto e sospendere l'uso se presenta danni.",
+          "Non utilizzare come elemento di arrampicata né come protezione contro cadute dall'alto."
+        ],
+        "compliance": "Conformità normativa:",
+        "complianceText": "Il prodotto è stato progettato per conformarsi alla normativa europea applicabile ai prodotti per bambini, tra cui:",
+        "complianceItems": [
+          "Direttiva 2009/48/CE sulla sicurezza dei giocattoli.",
+          "EN 71-1: Proprietà meccaniche e fisiche.",
+          "EN 71-2: Infiammabilità.",
+          "EN 71-3: Migrazione di determinati elementi."
+        ],
+        "materialsItems": [
+          "Schiuma XPE (polietilene reticolato) di alta qualità.",
+          "Materiale non tossico, privo di BPA, ftalati, PVC e metalli pesanti.",
+          "Superficie con rivestimento protettivo integrato, resistente e facile da pulire."
+        ]
+      },
+      "section2": {
+        "number": "02",
+        "title": "BORSA IN PU (IMBALLAGGIO E TRASPORTO)",
+        "subtitle": "⚠️ NON È UN GIOCATTOLO",
+        "alert": "⚠️ NON È UN GIOCATTOLO",
+        "alertText": "La borsa in PU inclusa con il prodotto è destinata esclusivamente al trasporto e alla conservazione da parte di adulti.",
+        "intendedUse": "Uso previsto:",
+        "intendedUseItems": [
+          "Trasporto del tappeto.",
+          "Conservazione del prodotto quando non è in uso."
+        ],
+        "warning": "Avvertenza importante:",
+        "warningText": "⚠️ Tenere fuori dalla portata di neonati e bambini.",
+        "restrictions": "Restrizioni d'uso:",
+        "restrictionsItems": [
+          "Non permettere a neonati o bambini di manipolare la borsa.",
+          "Non utilizzare come elemento di gioco.",
+          "Non posizionare sulla testa né permettere l'uso senza supervisione."
+        ]
+      },
+      "section3": {
+        "number": "03",
+        "title": "CARTE SENSORIALI",
+        "subtitle": "Accessorio educativo complementare",
+        "description": "Accessorio educativo complementare:",
+        "descriptionText": "Le carte sensoriali incluse costituiscono un accessorio educativo complementare, non il prodotto principale.",
+        "recommendedAge": "Età consigliata:",
+        "recommendedAgeText": "✔️ Uso consigliato a partire da 3 mesi.",
+        "conditions": "Condizioni d'uso:",
+        "conditionsItems": [
+          "Uso esclusivamente sotto supervisione di un adulto.",
+          "Progettate per essere mostrate al bambino, non per manipolazione libera."
+        ],
+        "warnings": "Avvertenze:",
+        "warningsItems": [
+          "⚠️ Non introdurre in bocca.",
+          "⚠️ Non mordere, succhiare né piegare.",
+          "⚠️ Non lasciare il bambino da solo con le carte.",
+          "⚠️ Rimuovere dopo l'uso."
+        ]
+      },
+      "section4": {
+        "number": "04",
+        "title": "USO RESPONSABILE E SUPERVISIONE",
+        "text1": "L'uso corretto del prodotto e dei suoi accessori secondo queste istruzioni è responsabilità dell'adulto.",
+        "text2": "Il mancato rispetto delle avvertenze e raccomandazioni di sicurezza può compromettere la sicurezza del minore."
+      },
+      "section5": {
+        "number": "05",
+        "title": "INFORMAZIONI AGGIUNTIVE DI CONFORMITÀ",
+        "text1": "Questo avviso digitale fa parte delle misure di informazione preventiva richieste dalla normativa europea e dalle piattaforme di commercio elettronico, inclusa Amazon.",
+        "text2": "La documentazione tecnica, i rapporti di prova e i certificati di conformità sono disponibili per le autorità competenti quando richiesto."
+      },
+      "footer": {
+        "brand": "Marca: ELEMATT®",
+        "tagline": "Progettato con amore. Realizzato con responsabilità.<br>Per bambini, con criterio adulto"
+      }
     }
   },
   "brandSignature": {

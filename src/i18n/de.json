@@ -89,10 +89,10 @@
     "heroSubtitle": "ELEMATT",
     "heroDescription": "Wo jede Geschichte auf einer Matte beginnt",
     "originTitle": "Der Ursprung von ELEMATT",
-    "pepAlt": "Pep, der Elefant von ELEMATT",
-    "originText1": "ELEMATT entsteht aus der Geschichte von <strong class=\"text-salvia\">Elena</strong>, einem neugierigen und verträumten Mädchen, und ihrem unzertrennlichen Begleiter <strong class=\"text-salvia\">Pep</strong>, dem Elefanten, der sie bei jedem Abenteuer in der Kita begleitete.",
-    "originText2": "Zusammen mit ihren drei Freundinnen —<strong>Laia, Isabela und Olivia</strong>, bekannt als <strong class=\"text-melon\">\"die 4 Fantastischen\"</strong>— teilten sie Lachen, Lieder, Entdeckungen und Umarmungen, die das Universum unserer Illustrationen inspirierten.",
-    "originText3": "Aus diesen Momenten entsteht ELEMATT: eine Hommage an Freundschaft, Fantasie und eine mit Liebe gelebte Kindheit.",
+    "pepAlt": "Pep, das ELEMATT-Maskottchen",
+    "originText1": "ELEMATT entstand aus einer wahren Geschichte: <strong>Elena</strong>, unsere kleine Inspiration, und <strong>Pep</strong>, ihr treuer Abenteuerbegleiter.",
+    "originText2": "Jedes Produkt, das wir kreieren, ist dafür gedacht, besondere Momente zu begleiten, wie die, die Elena in der Kita mit ihren Freundinnen erlebte.",
+    "originText3": "Wir gestalten mit Liebe, Sicherheit und einer einzigartigen Geschichte hinter jedem Detail.",
     "pepTitle": "Pep, unser Führer",
     "pepQuote": "\"Pep begleitet Elena bei jedem Abenteuer und erinnert uns daran, dass Spielen auch Lernen ist.\"",
     "pepText1": "Seine Präsenz in jedem ELEMATT-Produkt symbolisiert die <strong>Zärtlichkeit</strong>, <strong>Neugier</strong> und <strong>emotionale Verbindung</strong>, die wir jeder Familie vermitteln möchten.",
@@ -292,6 +292,107 @@
       "material": "Material",
       "viewDetails": "Details Ansehen",
       "foamPU": "EPE-Schaum + PU-Bezug"
+    },
+    "safetyInfo": {
+      "mainTitle": "Produktsicherheitsinformationen",
+      "mainSubtitle": "EU-Produktsicherheit & Amazon FBA-Konformität",
+      "intro1": "Diese Informationen sind Teil der Verbraucherinformationspflichten, die durch die europäischen Sicherheitsvorschriften für Kinderprodukte und Online-Verkaufsplattformen, einschließlich Amazon, vorgeschrieben sind.",
+      "intro2": "Muss vor der Verwendung des Produkts sorgfältig gelesen werden.",
+      "section1": {
+        "number": "01",
+        "title": "HAUPTPRODUKT",
+        "subtitle": "ELEMATT® Faltbare Babymatte",
+        "intendedUse": "Bestimmungsgemäße Verwendung:",
+        "intendedUseText": "Die faltbare ELEMATT-Matte ist als Spiel-, Ruhe- und sensorische Erkundungsfläche für Babys und Kleinkinder in häuslichen Umgebungen konzipiert.",
+        "recommendedAge": "Empfohlenes Alter:",
+        "recommendedAgeText": "✔️ Geeignet ab 0 Monaten (0+), immer unter Aufsicht eines Erwachsenen.",
+        "materials": "Materialien:",
+        "materialsText": "Hochwertiger XPE-Schaum (vernetztes Polyethylen).",
+        "finishes": "Verarbeitung und Konfektionierung:",
+        "finishesItems": [
+          "Versiegelte und genähte Kanten, kein Ausfransungsrisiko.",
+          "Durchgehende Oberfläche, keine Kleinteile oder abnehmbaren Elemente.",
+          "Faltbares Design, das sichere Verwendung und Lagerung erleichtert."
+        ],
+        "warnings": "Verwendungshinweise:",
+        "warningsItems": [
+          "Nur auf ebenen und stabilen Oberflächen verwenden.",
+          "Nicht in der Nähe von Wärmequellen, Feuer oder Flammen platzieren.",
+          "Baby nicht ohne längere Aufsicht lassen.",
+          "Zustand des Produkts regelmäßig überprüfen und Verwendung bei Beschädigung einstellen.",
+          "Nicht als Kletterelement oder Schutz vor Stürzen aus der Höhe verwenden."
+        ],
+        "compliance": "Einhaltung von Vorschriften:",
+        "complianceText": "Das Produkt wurde entwickelt, um den europäischen Vorschriften für Kinderprodukte zu entsprechen, einschließlich:",
+        "complianceItems": [
+          "Richtlinie 2009/48/EG über die Sicherheit von Spielzeug.",
+          "EN 71-1: Mechanische und physikalische Eigenschaften.",
+          "EN 71-2: Entflammbarkeit.",
+          "EN 71-3: Migration bestimmter Elemente."
+        ],
+        "materialsItems": [
+          "Hochwertiger XPE-Schaum (vernetztes Polyethylen).",
+          "Ungiftiges Material, frei von BPA, Phthalaten, PVC und Schwermetallen.",
+          "Oberfläche mit integrierter Schutzbeschichtung, widerstandsfähig und leicht zu reinigen."
+        ]
+      },
+      "section2": {
+        "number": "02",
+        "title": "PU-TASCHE (VERPACKUNG UND TRANSPORT)",
+        "subtitle": "⚠️ KEIN SPIELZEUG",
+        "alert": "⚠️ KEIN SPIELZEUG",
+        "alertText": "Die im Lieferumfang enthaltene PU-Tasche ist ausschließlich für Transport und Lagerung durch Erwachsene bestimmt.",
+        "intendedUse": "Bestimmungsgemäße Verwendung:",
+        "intendedUseItems": [
+          "Transport der Matte.",
+          "Lagerung des Produkts, wenn es nicht verwendet wird."
+        ],
+        "warning": "Wichtiger Hinweis:",
+        "warningText": "⚠️ Außerhalb der Reichweite von Babys und Kindern aufbewahren.",
+        "restrictions": "Verwendungsbeschränkungen:",
+        "restrictionsItems": [
+          "Babys oder Kindern nicht erlauben, die Tasche zu handhaben.",
+          "Nicht als Spielelement verwenden.",
+          "Nicht über den Kopf ziehen oder unbeaufsichtigte Verwendung erlauben."
+        ]
+      },
+      "section3": {
+        "number": "03",
+        "title": "SENSORISCHE KARTEN",
+        "subtitle": "Ergänzendes pädagogisches Zubehör",
+        "description": "Ergänzendes pädagogisches Zubehör:",
+        "descriptionText": "Die enthaltenen sensorischen Karten stellen ein ergänzendes pädagogisches Zubehör dar, nicht das Hauptprodukt.",
+        "recommendedAge": "Empfohlenes Alter:",
+        "recommendedAgeText": "✔️ Empfohlene Verwendung ab 3 Monaten.",
+        "conditions": "Verwendungsbedingungen:",
+        "conditionsItems": [
+          "Verwendung ausschließlich unter Aufsicht eines Erwachsenen.",
+          "Entwickelt, um dem Baby gezeigt zu werden, nicht für freie Handhabung."
+        ],
+        "warnings": "Warnhinweise:",
+        "warningsItems": [
+          "⚠️ Nicht in den Mund nehmen.",
+          "⚠️ Nicht beißen, lutschen oder biegen.",
+          "⚠️ Baby nicht allein mit den Karten lassen.",
+          "⚠️ Nach Gebrauch entfernen."
+        ]
+      },
+      "section4": {
+        "number": "04",
+        "title": "VERANTWORTUNGSVOLLE VERWENDUNG UND AUFSICHT",
+        "text1": "Die korrekte Verwendung des Produkts und seines Zubehörs gemäß diesen Anweisungen liegt in der Verantwortung des Erwachsenen.",
+        "text2": "Die Nichteinhaltung der Sicherheitshinweise und -empfehlungen kann die Sicherheit des Kindes gefährden."
+      },
+      "section5": {
+        "number": "05",
+        "title": "ZUSÄTZLICHE KONFORMITÄTSINFORMATIONEN",
+        "text1": "Dieser digitale Hinweis ist Teil der präventiven Informationsmaßnahmen, die durch europäische Vorschriften und E-Commerce-Plattformen, einschließlich Amazon, vorgeschrieben sind.",
+        "text2": "Technische Dokumentation, Prüfberichte und Konformitätszertifikate stehen den zuständigen Behörden auf Anfrage zur Verfügung."
+      },
+      "footer": {
+        "brand": "Marke: ELEMATT®",
+        "tagline": "Mit Liebe entworfen. Mit Verantwortung hergestellt.<br>Für Babys, mit Erwachsenenkriterien"
+      }
     }
   },
   "brandSignature": {

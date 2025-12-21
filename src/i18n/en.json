@@ -108,7 +108,12 @@
     "coastalTitle": "Coastal Village",
     "coastalText": "One side of our mat is inspired by the adventures of the fantastic 4 in a coastal village: calm, tenderness, and summer.",
     "jungleTitle": "Tropical Jungle",
-    "jungleText": "The other side represents the tropical jungle: adventure, curiosity, and nature, where Pep and Elena explore together."
+    "jungleText": "The other side represents the tropical jungle: adventure, curiosity, and nature, where Pep and Elena explore together.",
+    "originTitle": "The Origin of ELEMATT",
+    "pepAlt": "Pep, the ELEMATT mascot",
+    "originText1": "ELEMATT was born from a real story: <strong>Elena</strong>, our little inspiration, and <strong>Pep</strong>, her faithful adventure companion.",
+    "originText2": "Every product we create is designed to accompany special moments, like those Elena lived at daycare with her friends.",
+    "originText3": "We design with love, safety, and a unique story behind every detail."
   },
   "contact": {
     "title": "Contact - ELEMATT",
@@ -231,17 +236,101 @@
       "mainSubtitle": "EU Product Safety & Amazon FBA Compliance",
       "intro1": "This information is part of the consumer information obligations required by European child product safety regulations and online sales platforms, including Amazon.",
       "intro2": "Must be read carefully before using the product.",
-      "section1Title": "MAIN PRODUCT",
-      "section1Subtitle": "ELEMATT® Foldable Baby Mat",
-      "section2Title": "PU BAG (PACKAGING AND TRANSPORT)",
-      "section2Subtitle": "⚠️ NOT A TOY",
-      "section3Title": "SENSORY CARDS",
-      "section3Subtitle": "Complementary educational accessory",
-      "section4Title": "RESPONSIBLE USE AND SUPERVISION",
-      "section5Title": "ADDITIONAL COMPLIANCE INFORMATION",
-      "brandFooter": "Brand: ELEMATT®",
-      "brandTagline1": "Designed with love. Made with responsibility.",
-      "brandTagline2": "For babies, with adult judgment"
+      "section1": {
+        "number": "01",
+        "title": "MAIN PRODUCT",
+        "subtitle": "ELEMATT® Foldable Baby Mat",
+        "intendedUse": "Intended use:",
+        "intendedUseText": "The ELEMATT foldable mat is designed as a play, rest and sensory exploration surface for babies and toddlers in domestic environments.",
+        "recommendedAge": "Recommended age:",
+        "recommendedAgeText": "✔️ Suitable from 0 months (0+), always under adult supervision.",
+        "materials": "Materials:",
+        "materialsText": "High-quality XPE foam (cross-linked polyethylene).",
+        "finishes": "Finishes and construction:",
+        "finishesItems": [
+          "Sealed and stitched edges, no fraying risk.",
+          "Continuous surface, no small parts or removable elements.",
+          "Foldable design that facilitates safe use and storage."
+        ],
+        "warnings": "Usage warnings:",
+        "warningsItems": [
+          "Use only on flat and stable surfaces.",
+          "Do not place near heat sources, fire or flames.",
+          "Do not leave baby without prolonged supervision.",
+          "Periodically check the product condition and discontinue use if damaged.",
+          "Do not use as a climbing element or protection against falls from height."
+        ],
+        "compliance": "Regulatory compliance:",
+        "complianceText": "The product has been designed to comply with European regulations applicable to children's products, including:",
+        "complianceItems": [
+          "Directive 2009/48/EC on toy safety.",
+          "EN 71-1: Mechanical and physical properties.",
+          "EN 71-2: Flammability.",
+          "EN 71-3: Migration of certain elements."
+        ],
+        "materialsItems": [
+          "High-quality XPE foam (cross-linked polyethylene).",
+          "Non-toxic material, free of BPA, phthalates, PVC and heavy metals.",
+          "Surface with integrated protective coating, resistant and easy to clean."
+        ]
+      },
+      "section2": {
+        "number": "02",
+        "title": "PU BAG (PACKAGING AND TRANSPORT)",
+        "subtitle": "⚠️ NOT A TOY",
+        "alert": "⚠️ NOT A TOY",
+        "alertText": "The PU bag included with the product is intended exclusively for transport and storage by adults.",
+        "intendedUse": "Intended use:",
+        "intendedUseItems": [
+          "Mat transport.",
+          "Product storage when not in use."
+        ],
+        "warning": "Important warning:",
+        "warningText": "⚠️ Keep out of reach of babies and children.",
+        "restrictions": "Usage restrictions:",
+        "restrictionsItems": [
+          "Do not allow babies or children to handle the bag.",
+          "Do not use as a play element.",
+          "Do not place over the head or allow unsupervised use."
+        ]
+      },
+      "section3": {
+        "number": "03",
+        "title": "SENSORY CARDS",
+        "subtitle": "Complementary educational accessory",
+        "description": "Complementary educational accessory:",
+        "descriptionText": "The included sensory cards constitute a complementary educational accessory, not the main product.",
+        "recommendedAge": "Recommended age:",
+        "recommendedAgeText": "✔️ Recommended use from 3 months.",
+        "conditions": "Conditions of use:",
+        "conditionsItems": [
+          "Use exclusively under adult supervision.",
+          "Designed to be shown to the baby, not for free manipulation."
+        ],
+        "warnings": "Warnings:",
+        "warningsItems": [
+          "⚠️ Do not put in mouth.",
+          "⚠️ Do not bite, suck or bend.",
+          "⚠️ Do not leave baby alone with cards.",
+          "⚠️ Remove after use."
+        ]
+      },
+      "section4": {
+        "number": "04",
+        "title": "RESPONSIBLE USE AND SUPERVISION",
+        "text1": "The correct use of the product and its accessories according to these instructions is the responsibility of the adult.",
+        "text2": "Failure to comply with safety warnings and recommendations may compromise the safety of the child."
+      },
+      "section5": {
+        "number": "05",
+        "title": "ADDITIONAL COMPLIANCE INFORMATION",
+        "text1": "This digital notice is part of the preventive information measures required by European regulations and e-commerce platforms, including Amazon.",
+        "text2": "Technical documentation, test reports and certificates of conformity are available to competent authorities when required."
+      },
+      "footer": {
+        "brand": "Brand: ELEMATT®",
+        "tagline": "Designed with love. Made with responsibility.<br>For babies, with adult criteria"
+      }
     },
     "babyMat": {
       "name": "Padded Foldable Baby Mat",

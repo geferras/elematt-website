@@ -88,11 +88,11 @@
     "heroTitle": "Une histoire réelle née en jouant",
     "heroSubtitle": "ELEMATT",
     "heroDescription": "Où chaque histoire commence sur un tapis",
-    "originTitle": "L'origine d'ELEMATT",
-    "pepAlt": "Pep, l'éléphant d'ELEMATT",
-    "originText1": "ELEMATT naît de l'histoire d'<strong class=\"text-salvia\">Elena</strong>, une fille curieuse et rêveuse, et de son compagnon inséparable <strong class=\"text-salvia\">Pep</strong>, l'éléphant qui l'a accompagnée dans chaque aventure de la crèche.",
-    "originText2": "Avec ses trois amies —<strong>Laia, Isabela et Olivia</strong>, connues comme <strong class=\"text-melon\">\"les 4 fantastiques\"</strong>— elles ont partagé rires, chansons, découvertes et câlins qui ont inspiré l'univers de nos illustrations.",
-    "originText3": "De ces moments naît ELEMATT : un hommage à l'amitié, l'imagination et l'enfance vécue avec amour.",
+    "originTitle": "L'Origine d'ELEMATT",
+    "pepAlt": "Pep, la mascotte d'ELEMATT",
+    "originText1": "ELEMATT est né d'une histoire vraie : <strong>Elena</strong>, notre petite inspiration, et <strong>Pep</strong>, son fidèle compagnon d'aventures.",
+    "originText2": "Chaque produit que nous créons est pensé pour accompagner des moments spéciaux, comme ceux qu'Elena a vécus à la crèche avec ses amies.",
+    "originText3": "Nous concevons avec amour, sécurité et une histoire unique derrière chaque détail.",
     "pepTitle": "Pep, notre guide",
     "pepQuote": "\"Pep accompagne Elena dans chaque aventure, nous rappelant que jouer c'est aussi apprendre.\"",
     "pepText1": "Sa présence dans chaque produit ELEMATT symbolise la <strong>tendresse</strong>, la <strong>curiosité</strong> et la <strong>connexion émotionnelle</strong> que nous voulons transmettre à chaque famille.",
@@ -292,6 +292,107 @@
       "material": "Matériau",
       "viewDetails": "Voir Détails",
       "foamPU": "Mousse EPE + Housse PU"
+    },
+    "safetyInfo": {
+      "mainTitle": "Informations de Sécurité du Produit",
+      "mainSubtitle": "Sécurité du Produit UE & Conformité Amazon FBA",
+      "intro1": "Ces informations font partie des obligations d'information au consommateur exigées par la réglementation européenne sur la sécurité des produits pour enfants et par les plateformes de vente en ligne, y compris Amazon.",
+      "intro2": "Doit être lu attentivement avant d'utiliser le produit.",
+      "section1": {
+        "number": "01",
+        "title": "PRODUIT PRINCIPAL",
+        "subtitle": "Tapis pliable pour bébé ELEMATT®",
+        "intendedUse": "Usage prévu :",
+        "intendedUseText": "Le tapis pliable ELEMATT est conçu comme surface de jeu, de repos et d'exploration sensorielle pour bébés et jeunes enfants, dans des environnements domestiques.",
+        "recommendedAge": "Âge recommandé :",
+        "recommendedAgeText": "✔️ Convient dès 0 mois (0+), toujours sous la supervision d'un adulte.",
+        "materials": "Matériaux :",
+        "materialsText": "Mousse XPE (polyéthylène réticulé) de haute qualité.",
+        "finishes": "Finitions et confection :",
+        "finishesItems": [
+          "Bords scellés et cousus, sans risque d'effilochage.",
+          "Surface continue, sans petites pièces ni éléments démontables.",
+          "Design pliable qui facilite l'utilisation et le rangement sécurisé."
+        ],
+        "warnings": "Avertissements d'utilisation :",
+        "warningsItems": [
+          "Utiliser uniquement sur des surfaces planes et stables.",
+          "Ne pas placer près de sources de chaleur, de feu ou de flammes.",
+          "Ne pas laisser le bébé sans surveillance prolongée.",
+          "Vérifier périodiquement l'état du produit et suspendre son utilisation s'il présente des dommages.",
+          "Ne pas utiliser comme élément d'escalade ni comme protection contre les chutes de hauteur."
+        ],
+        "compliance": "Conformité réglementaire :",
+        "complianceText": "Le produit a été conçu pour se conformer à la réglementation européenne applicable aux produits pour enfants, notamment :",
+        "complianceItems": [
+          "Directive 2009/48/CE sur la sécurité des jouets.",
+          "EN 71-1 : Propriétés mécaniques et physiques.",
+          "EN 71-2 : Inflammabilité.",
+          "EN 71-3 : Migration de certains éléments."
+        ],
+        "materialsItems": [
+          "Mousse XPE (polyéthylène réticulé) de haute qualité.",
+          "Matériau non toxique, sans BPA, phtalates, PVC et métaux lourds.",
+          "Surface avec revêtement protecteur intégré, résistant et facile à nettoyer."
+        ]
+      },
+      "section2": {
+        "number": "02",
+        "title": "SAC EN PU (EMBALLAGE ET TRANSPORT)",
+        "subtitle": "⚠️ N'EST PAS UN JOUET",
+        "alert": "⚠️ N'EST PAS UN JOUET",
+        "alertText": "Le sac en PU inclus avec le produit est destiné exclusivement au transport et au rangement par des adultes.",
+        "intendedUse": "Usage prévu :",
+        "intendedUseItems": [
+          "Transport du tapis.",
+          "Rangement du produit lorsqu'il n'est pas utilisé."
+        ],
+        "warning": "Avertissement important :",
+        "warningText": "⚠️ Tenir hors de portée des bébés et des enfants.",
+        "restrictions": "Restrictions d'utilisation :",
+        "restrictionsItems": [
+          "Ne pas permettre aux bébés ou aux enfants de manipuler le sac.",
+          "Ne pas utiliser comme élément de jeu.",
+          "Ne pas placer sur la tête ni permettre l'utilisation sans supervision."
+        ]
+      },
+      "section3": {
+        "number": "03",
+        "title": "CARTES SENSORIELLES",
+        "subtitle": "Accessoire éducatif complémentaire",
+        "description": "Accessoire éducatif complémentaire :",
+        "descriptionText": "Les cartes sensorielles incluses constituent un accessoire éducatif complémentaire, pas le produit principal.",
+        "recommendedAge": "Âge recommandé :",
+        "recommendedAgeText": "✔️ Utilisation recommandée à partir de 3 mois.",
+        "conditions": "Conditions d'utilisation :",
+        "conditionsItems": [
+          "Utilisation exclusivement sous supervision d'un adulte.",
+          "Conçues pour être montrées au bébé, pas pour manipulation libre."
+        ],
+        "warnings": "Avertissements :",
+        "warningsItems": [
+          "⚠️ Ne pas introduire dans la bouche.",
+          "⚠️ Ne pas mordre, sucer ni plier.",
+          "⚠️ Ne pas laisser le bébé seul avec les cartes.",
+          "⚠️ Retirer après utilisation."
+        ]
+      },
+      "section4": {
+        "number": "04",
+        "title": "UTILISATION RESPONSABLE ET SUPERVISION",
+        "text1": "L'utilisation correcte du produit et de ses accessoires conformément à ces instructions est de la responsabilité de l'adulte.",
+        "text2": "Le non-respect des avertissements et recommandations de sécurité peut compromettre la sécurité de l'enfant."
+      },
+      "section5": {
+        "number": "05",
+        "title": "INFORMATIONS COMPLÉMENTAIRES DE CONFORMITÉ",
+        "text1": "Cet avis numérique fait partie des mesures d'information préventive exigées par la réglementation européenne et par les plateformes de commerce électronique, y compris Amazon.",
+        "text2": "La documentation technique, les rapports d'essai et les certificats de conformité sont disponibles pour les autorités compétentes lorsque requis."
+      },
+      "footer": {
+        "brand": "Marque : ELEMATT®",
+        "tagline": "Conçu avec amour. Fabriqué avec responsabilité.<br>Pour bébés, avec critère adulte"
+      }
     }
   },
   "brandSignature": {

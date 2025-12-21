@@ -244,17 +244,101 @@
       "mainSubtitle": "Seguridad del producto en la UE & Cumplimiento Amazon FBA",
       "intro1": "La presente información forma parte de las obligaciones de información al consumidor exigidas por la normativa europea de seguridad de productos infantiles y por las plataformas de venta online, incluida Amazon.",
       "intro2": "Debe leerse atentamente antes de utilizar el producto.",
-      "section1Title": "PRODUCTO PRINCIPAL",
-      "section1Subtitle": "Alfombra plegable para bebé ELEMATT®",
-      "section2Title": "BOLSA DE PU (EMBALAJE Y TRANSPORTE)",
-      "section2Subtitle": "⚠️ NO ES UN JUGUETE",
-      "section3Title": "TARJETAS SENSORIALES",
-      "section3Subtitle": "Accesorio educativo complementario",
-      "section4Title": "USO RESPONSABLE Y SUPERVISIÓN",
-      "section5Title": "INFORMACIÓN ADICIONAL DE CUMPLIMIENTO",
-      "brandFooter": "Marca: ELEMATT®",
-      "brandTagline1": "Diseñado con amor. Fabricado con responsabilidad.",
-      "brandTagline2": "Para bebés, con criterio adulto"
+      "section1": {
+        "number": "01",
+        "title": "PRODUCTO PRINCIPAL",
+        "subtitle": "Alfombra plegable para bebé ELEMATT®",
+        "intendedUse": "Uso previsto:",
+        "intendedUseText": "La alfombra plegable ELEMATT está diseñada como superficie de juego, descanso y exploración sensorial para bebés y niños pequeños, en entornos domésticos.",
+        "recommendedAge": "Edad recomendada:",
+        "recommendedAgeText": "✔️ Apta desde 0 meses (0+), siempre bajo la supervisión de un adulto.",
+        "materials": "Materiales:",
+        "materialsText": "Espuma XPE (polietileno reticulado) de alta calidad.",
+        "finishes": "Acabados y confección:",
+        "finishesItems": [
+          "Bordes sellados y cosidos, sin riesgo de deshilachado.",
+          "Superficie continua, sin piezas pequeñas ni elementos desmontables.",
+          "Diseño plegable que facilita el uso y almacenamiento seguro."
+        ],
+        "warnings": "Advertencias de uso:",
+        "warningsItems": [
+          "Utilizar únicamente sobre superficies planas y estables.",
+          "No colocar cerca de fuentes de calor, fuego o llamas.",
+          "No dejar al bebé sin supervisión prolongada.",
+          "Revisar periódicamente el estado del producto y suspender su uso si presenta daños.",
+          "No utilizar como elemento de escalada ni como protección frente a caídas desde altura."
+        ],
+        "compliance": "Cumplimiento normativo:",
+        "complianceText": "El producto ha sido diseñado para cumplir con la normativa europea aplicable a productos infantiles, incluyendo:",
+        "complianceItems": [
+          "Directiva 2009/48/CE sobre la seguridad de los juguetes.",
+          "EN 71-1: Propiedades mecánicas y físicas.",
+          "EN 71-2: Inflamabilidad.",
+          "EN 71-3: Migración de determinados elementos."
+        ],
+        "materialsItems": [
+          "Espuma XPE (polietileno reticulado) de alta calidad.",
+          "Material no tóxico, libre de BPA, ftalatos, PVC y metales pesados.",
+          "Superficie con recubrimiento protector integrado, resistente y fácil de limpiar."
+        ]
+      },
+      "section2": {
+        "number": "02",
+        "title": "BOLSA DE PU (EMBALAJE Y TRANSPORTE)",
+        "subtitle": "⚠️ NO ES UN JUGUETE",
+        "alert": "⚠️ NO ES UN JUGUETE",
+        "alertText": "La bolsa de PU incluida con el producto está destinada exclusivamente al transporte y almacenamiento por parte de adultos.",
+        "intendedUse": "Uso previsto:",
+        "intendedUseItems": [
+          "Transporte de la alfombra.",
+          "Almacenamiento del producto cuando no esté en uso."
+        ],
+        "warning": "Advertencia importante:",
+        "warningText": "⚠️ Mantener fuera del alcance de bebés y niños.",
+        "restrictions": "Restricciones de uso:",
+        "restrictionsItems": [
+          "No permitir que bebés o niños manipulen la bolsa.",
+          "No utilizar como elemento de juego.",
+          "No colocar sobre la cabeza ni permitir su uso sin supervisión."
+        ]
+      },
+      "section3": {
+        "number": "03",
+        "title": "TARJETAS SENSORIALES",
+        "subtitle": "Accesorio educativo complementario",
+        "description": "Accesorio educativo complementario:",
+        "descriptionText": "Las tarjetas sensoriales incluidas constituyen un accesorio educativo complementario, no el producto principal.",
+        "recommendedAge": "Edad recomendada:",
+        "recommendedAgeText": "✔️ Uso recomendado a partir de 3 meses.",
+        "conditions": "Condiciones de uso:",
+        "conditionsItems": [
+          "Uso exclusivamente bajo supervisión de un adulto.",
+          "Diseñadas para ser mostradas al bebé, no para manipulación libre."
+        ],
+        "warnings": "Advertencias:",
+        "warningsItems": [
+          "⚠️ No introducir en la boca.",
+          "⚠️ No morder, chupar ni doblar.",
+          "⚠️ No dejar al bebé solo con las tarjetas.",
+          "⚠️ Retirar tras su uso."
+        ]
+      },
+      "section4": {
+        "number": "04",
+        "title": "USO RESPONSABLE Y SUPERVISIÓN",
+        "text1": "El uso correcto del producto y de sus accesorios conforme a estas instrucciones es responsabilidad del adulto.",
+        "text2": "El incumplimiento de las advertencias y recomendaciones de seguridad puede comprometer la seguridad del menor."
+      },
+      "section5": {
+        "number": "05",
+        "title": "INFORMACIÓN ADICIONAL DE CUMPLIMIENTO",
+        "text1": "Este aviso digital forma parte de las medidas de información preventiva exigidas por la normativa europea y por las plataformas de comercio electrónico, incluida Amazon.",
+        "text2": "La documentación técnica, informes de ensayo y certificados de conformidad están disponibles para las autoridades competentes cuando así se requiera."
+      },
+      "footer": {
+        "brand": "Marca: ELEMATT®",
+        "tagline": "Diseñado con amor. Fabricado con responsabilidad.<br>Para bebés, con criterio adulto"
+      }
     },
     "babyMat": {
       "name": "Alfombra Bebé Acolchada Plegable",
@@ -327,4 +411,3 @@
     }
   }
 }
-
