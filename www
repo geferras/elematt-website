@@ -1,58 +1,30 @@
-23:21:20.930 Running build in Washington, D.C., USA (East) – iad1
-23:21:20.931 Build machine configuration: 2 cores, 8 GB
-23:21:21.062 Cloning github.com/geferras/elematt-website (Branch: main, Commit: 58fe6bd)
-23:21:22.652 Cloning completed: 1.590s
-23:21:22.893 Restored build cache from previous deployment (ACZLqDJDC1avpUXasioD2Go1sw9t)
-23:21:23.381 Running "vercel build"
-23:21:23.808 Vercel CLI 50.1.3
-23:21:24.397 Installing dependencies...
-23:21:25.805
-23:21:25.806 up to date in 1s
-23:21:25.807
-23:21:25.807 174 packages are looking for funding
-23:21:25.808   run `npm fund` for details
-23:21:25.945
-23:21:25.946 > elemat@1.0.0 build
-23:21:25.946 > astro check && astro build
-23:21:25.946
-23:21:28.498 [2m22:21:28[22m [34m[content][39m Syncing content
-23:21:28.501 [33m[1m22:21:28[22m [WARN] [glob-loader][39m The base directory "/vercel/path0/src/content/blog/" does not exist.
-23:21:28.503 [33m[1m22:21:28[22m [WARN] [glob-loader][39m The base directory "/vercel/path0/src/content/faqs/" does not exist.
-23:21:28.507 [2m22:21:28[22m [34m[content][39m Synced content
-23:21:28.508 [2m22:21:28[22m [34m[types][39m Generated [2m452ms[22m
-23:21:28.516 [2m22:21:28[22m [34m[check][39m Getting diagnostics for Astro files in /vercel/path0...
-23:21:38.847 Result (84 files):
-23:21:38.848 - 0 errors
-23:21:38.848 - 0 warnings
-23:21:38.848 - 0 hints
-23:21:38.848
-23:21:40.522 [2m22:21:40[22m [34m[content][39m Syncing content
-23:21:40.524 [33m[1m22:21:40[22m [WARN] [glob-loader][39m The base directory "/vercel/path0/src/content/blog/" does not exist.
-23:21:40.526 [33m[1m22:21:40[22m [WARN] [glob-loader][39m The base directory "/vercel/path0/src/content/faqs/" does not exist.
-23:21:40.530 [2m22:21:40[22m [34m[content][39m Synced content
-23:21:40.531 [2m22:21:40[22m [34m[types][39m Generated [2m392ms[22m
-23:21:40.531 [2m22:21:40[22m [34m[build][39m output: [34m"static"[39m
-23:21:40.534 [2m22:21:40[22m [34m[build][39m mode: [34m"static"[39m
-23:21:40.534 [2m22:21:40[22m [34m[build][39m directory: [34m/vercel/path0/dist/[39m
-23:21:40.534 [2m22:21:40[22m [34m[build][39m Collecting build info...
-23:21:40.535 [2m22:21:40[22m [34m[build][39m [32m✓ Completed in 445ms.[39m
-23:21:40.537 [2m22:21:40[22m [34m[build][39m Building static entrypoints...
-23:21:44.247 [31m[1m22:21:44[22m [ERROR] [vite][39m [31m✗[39m Build failed in 3.68s
-23:21:44.431 [vite:json] [plugin vite:json] src/i18n/pt.json (287:5): Failed to parse JSON file, invalid JSON syntax found at position 17507
-23:21:44.431 file: /vercel/path0/src/i18n/pt.json:287:5
-23:21:44.431
-23:21:44.431 285:       "viewDetails": "Ver Detalhes",
-23:21:44.431 286:       "foamPU": "Espuma EPE + Capa PU"
-23:21:44.431 287:       "cardsCoastalText": "10 cartões dupla face (14×14 cm) com ilustrações do mundo costeiro",
-23:21:44.432           ^
-23:21:44.432 288:       "cardsJungleTitle": "Conjunto Selva Tropical",
-23:21:44.432 289:       "cardsJungleText": "10 cartões dupla face (14×14 cm) com ilustrações da selva",
-23:21:44.432
-23:21:44.432   [1mLocation:[22m
-23:21:44.433     [4m/vercel/path0/src/i18n/pt.json:287:5[24m
-23:21:44.433   [1mStack trace:[22m
-23:21:44.433 [2m    at getRollupError (file:///vercel/path0/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
-23:21:44.433     at Object.error (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:22104:20)
-23:21:44.433     at Object.handler (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:12175:16)
-23:21:44.433     at file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:22426:40[22m
-23:21:44.505 Error: Command "npm run build" exited with 1
+23:25:30.996 Running build in Washington, D.C., USA (East) – iad1
+23:25:30.996 Build machine configuration: 2 cores, 8 GB
+23:25:31.140 Cloning github.com/geferras/elematt-website (Branch: main, Commit: 2cdf1db)
+23:25:32.763 Cloning completed: 1.623s
+23:25:32.890 Restored build cache from previous deployment (ACZLqDJDC1avpUXasioD2Go1sw9t)
+23:25:33.437 Running "vercel build"
+23:25:33.857 Vercel CLI 50.1.3
+23:25:34.476 Installing dependencies...
+23:25:36.013
+23:25:36.014 up to date in 1s
+23:25:36.015
+23:25:36.015 174 packages are looking for funding
+23:25:36.016   run `npm fund` for details
+23:25:36.154
+23:25:36.154 > elemat@1.0.0 build
+23:25:36.154 > node scripts/validate-json.js && astro check && astro build
+23:25:36.154
+23:25:36.191 file:///vercel/path0/scripts/validate-json.js:3
+23:25:36.192 const fs = require('fs');
+23:25:36.192            ^
+23:25:36.192
+23:25:36.193 ReferenceError: require is not defined in ES module scope, you can use import instead
+23:25:36.193 This file is being treated as an ES module because it has a '.js' file extension and '/vercel/path0/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+23:25:36.193     at file:///vercel/path0/scripts/validate-json.js:3:12
+23:25:36.193     at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+23:25:36.193     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+23:25:36.193     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+23:25:36.193
+23:25:36.193 Node.js v22.21.1
+23:25:36.205 Error: Command "npm run build" exited with 1
