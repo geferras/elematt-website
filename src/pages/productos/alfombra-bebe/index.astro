@@ -26,6 +26,7 @@ const producto = {
       descripcion: 'Perfecta para espacios reducidos',
       imagen: '/products/baby-mat/shared/hero-alfombra.jpeg',
       url: '/productos/alfombra-bebe/150x180',
+      amazonLink: 'https://www.amazon.es/dp/B0DPXQY7YN',
       destacado: false,
       caracteristicas: [
         'Ideal para apartamentos',
@@ -47,6 +48,7 @@ const producto = {
       descripcion: 'Máximo espacio para jugar',
       imagen: '/products/baby-mat/shared/hero-alfombra.jpeg',
       url: '/productos/alfombra-bebe/180x200',
+      amazonLink: 'https://www.amazon.es/dp/B0DPXQY7YN',
       destacado: true,
       caracteristicas: [
         'Espacio extra para jugar',
@@ -112,7 +114,7 @@ const producto = {
 
       <div class="variantes-grid">
         {producto.variantes.map((variante) => (
-          <a href={variante.url} class={`variante-card ${variante.destacado ? 'destacado' : ''}`}>
+          <div class={`variante-card ${variante.destacado ? 'destacado' : ''}`}>
             {variante.destacado && (
               <div class="badge-destacado">
                 <span>Más Popular</span>
@@ -153,14 +155,22 @@ const producto = {
                 </div>
               </div>
 
-              <div class="variante-cta">
-                <span class="cta-text">Ver Detalles</span>
-                <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
+              <div class="variante-actions">
+                <a href={variante.url} class="btn-detalles">
+                  <span>Ver Detalles</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </a>
+                <a href={variante.amazonLink} target="_blank" rel="noopener noreferrer" class="btn-amazon">
+                  <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726-1.544.406-3.045.61-4.502.61-3.16 0-6.123-.663-8.89-1.997-1.656-.796-3.01-1.86-4.06-3.19-.12-.164-.12-.29 0-.38zm22.505-3.484c-.393-.586-.955-.88-1.687-.88-.613 0-1.103.213-1.47.64-.366.427-.55.96-.55 1.6 0 .613.18 1.11.54 1.492.36.382.84.573 1.44.573.524 0 .963-.15 1.32-.45.356-.3.534-.67.534-1.11 0-.11-.01-.24-.03-.39-.02-.15-.03-.27-.03-.36 0-.573-.19-1.03-.57-1.37zm-3.21 2.484c.02-.196.03-.36.03-.49 0-.866-.24-1.58-.72-2.14-.48-.56-1.13-.84-1.95-.84-.71 0-1.3.24-1.77.72-.47.48-.71 1.08-.71 1.8 0 .78.25 1.42.75 1.92.5.5 1.16.75 1.98.75.85 0 1.54-.28 2.07-.84.53-.56.8-1.27.8-2.13 0-.04-.01-.11-.03-.21-.02-.1-.03-.18-.03-.24zm-10.95-8.42c0 .74-.18 1.32-.54 1.74-.36.42-.87.63-1.53.63-.5 0-.92-.15-1.26-.45-.34-.3-.51-.68-.51-1.14 0-.52.19-.94.57-1.26.38-.32.88-.48 1.5-.48.61 0 1.09.16 1.44.48.35.32.53.73.53 1.23zm-4.97 8.42c.02-.196.03-.36.03-.49 0-.866-.24-1.58-.72-2.14-.48-.56-1.13-.84-1.95-.84-.71 0-1.3.24-1.77.72-.47.48-.71 1.08-.71 1.8 0 .78.25 1.42.75 1.92.5.5 1.16.75 1.98.75.85 0 1.54-.28 2.07-.84.53-.56.8-1.27.8-2.13 0-.04-.01-.11-.03-.21-.02-.1-.03-.18-.03-.24z"/>
+                  </svg>
+                  <span>Ver en Amazon</span>
+                </a>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
@@ -307,7 +317,6 @@ const producto = {
     background: white;
     border-radius: 1.5rem;
     overflow: hidden;
-    text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
@@ -317,8 +326,8 @@ const producto = {
   }
 
   .variante-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     border-color: var(--color-salvia-dark);
   }
 
@@ -432,35 +441,73 @@ const producto = {
     stroke-width: 2;
   }
 
-  .variante-cta {
+  .variante-actions {
     margin-top: auto;
     display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-detalles,
+  .btn-amazon {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 1.5rem;
-    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 0.75rem;
-    color: white;
     font-family: var(--font-primary);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    text-decoration: none;
     transition: all 0.3s ease;
+    cursor: pointer;
   }
 
-  .variante-card:hover .variante-cta {
+  .btn-detalles {
+    background: linear-gradient(135deg, var(--color-salvia-dark), var(--color-salvia));
+    color: white;
+    border: 2px solid transparent;
+  }
+
+  .btn-detalles:hover {
     background: linear-gradient(135deg, var(--color-salvia), var(--color-salvia-dark));
-    transform: translateX(4px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 127, 94, 0.3);
   }
 
-  .cta-arrow {
-    width: 24px;
-    height: 24px;
+  .btn-amazon {
+    background: white;
+    color: #FF9900;
+    border: 2px solid #FF9900;
+  }
+
+  .btn-amazon:hover {
+    background: #FF9900;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.3);
+  }
+
+  .btn-icon {
+    width: 20px;
+    height: 20px;
     stroke-width: 2.5;
     transition: transform 0.3s ease;
   }
 
-  .variante-card:hover .cta-arrow {
-    transform: translateX(6px);
+  .btn-detalles:hover .btn-icon {
+    transform: translateX(4px);
+  }
+
+  .amazon-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-amazon:hover .amazon-icon {
+    transform: scale(1.1);
   }
 
   /* ===== RESPONSIVE ===== */
